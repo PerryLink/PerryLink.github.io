@@ -555,4 +555,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- articles:start -->
+  <url><loc>https://perrylink.github.io/zh/articles/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://perrylink.github.io/zh/articles/hazchem-register-selfcheck/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://perrylink.github.io/zh/articles/medical-record-selfcheck/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- articles:end -->
 </urlset>
