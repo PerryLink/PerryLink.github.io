@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PerryLink DSH Plugin Family — 53 compliance checkers and 43 plugins for DeepSeek Harness</title>
+<meta name="description" content="Two plugin families for DeepSeek Harness: 53 Chinese-canonical compliance checkers that compare a document against the regulations and standards it cites, and 43 general-purpose plugins. Versions, licences, rule counts and install commands.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/">
+<link rel="alternate" hreflang="en" href="https://perrylink.github.io/">
+<link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/zh/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/">
+<link rel="alternate" type="application/json" href="./catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="./sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "PerryLink DSH Plugin Family",
+      "url": "https://perrylink.github.io/",
+      "description": "Two plugin families for DeepSeek Harness: 53 Chinese-canonical compliance checkers that compare a document against the regulations and standards it cites, and 43 general-purpose plugins. Versions, licences, rule counts and install commands.",
+      "inLanguage": [
+        "en",
+        "zh-Hans"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "PerryLink",
+        "url": "https://github.com/PerryLink"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "numberOfItems": 53,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "养殖投入品核对",
+          "url": "https://perrylink.github.io/checkers/dsh-aqua-input-check/",
+          "description": "水产养殖投入品记录核对（按投入品用量、休药期与起捕间隔核对记录自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "档案归档核对",
+          "url": "https://perrylink.github.io/checkers/dsh-archive-check/",
+          "description": "档案归档完整性与保管期限核对（依据《档案法》及配套规定，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "投标符合性预检",
+          "url": "https://perrylink.github.io/checkers/dsh-bid-ca-precheck/",
+          "description": "投标文件符合性预检（按招标文件逐条核对响应情况，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "资格条件核对",
+          "url": "https://perrylink.github.io/checkers/dsh-bid-qual-check/",
+          "description": "投标人资格条件核对（按资格条件与证明材料核对逐条响应，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "合同立场核对",
+          "url": "https://perrylink.github.io/checkers/dsh-contract-stance/",
+          "description": "合同条款立场台账核对（按立场、风险等级与退让底线核对台账自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "报关单证核对",
+          "url": "https://perrylink.github.io/checkers/dsh-customs-doc-check/",
+          "description": "报关单证一致性核对（按公开的报关单填制规范核对单证间字段一致性，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "滞箱费台账核对",
+          "url": "https://perrylink.github.io/checkers/dsh-demurrage-ledger/",
+          "description": "滞箱费台账核对（按免箱期与费率核对超期天数与金额的自洽性，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "演练脚本核对",
+          "url": "https://perrylink.github.io/checkers/dsh-drill-script-check/",
+          "description": "应急演练脚本核对（按阶段、响应分级、指挥与资源要素核对脚本齐备，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "环评导则核对",
+          "url": "https://perrylink.github.io/checkers/dsh-eia-guide-check/",
+          "description": "环评导则适用性核对（按要素、导则名称与执行标准核对台账自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "应急预案要素校验",
+          "url": "https://perrylink.github.io/checkers/dsh-emergency-plan/",
+          "description": "应急预案要素齐备性与条款级页码定位（依据 GB/T 29639-2020 等公开文件，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "量表评分核对",
+          "url": "https://perrylink.github.io/checkers/dsh-essay-rubric-check/",
+          "description": "作文量表评分核对（按评分项、原文定位与分值算术核对评分自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "证据清单核对",
+          "url": "https://perrylink.github.io/checkers/dsh-evidence-check/",
+          "description": "证据清单齐备性核对（按待证事实与证据要素核对清单自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "出口管制核对",
+          "url": "https://perrylink.github.io/checkers/dsh-export-ctl-check/",
+          "description": "出口管制物项核对（按管制清单、最终用途与许可证核对台账齐备，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "FMEA 表核对",
+          "url": "https://perrylink.github.io/checkers/dsh-fmea-table-check/",
+          "description": "FMEA 分析表要素齐备性与风险顺序数一致性核对（按公开的 FMEA 方法标准核对表内自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "预测考核核对",
+          "url": "https://perrylink.github.io/checkers/dsh-forecast-penalty/",
+          "description": "预测准确率考核核对（按准确率、门槛与考核单价核对考核费用的算术自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "公文流转核对",
+          "url": "https://perrylink.github.io/checkers/dsh-gongwen-flow-check/",
+          "description": "公文流转与办理时限核对（按公开的公文处理规范核对环节完整性与时限，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "公文格式核对",
+          "url": "https://perrylink.github.io/checkers/dsh-gongwen-word-check/",
+          "description": "公文格式要素核对（按公开的党政机关公文格式标准核对版头与主体要素，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "防护用品配置核对",
+          "url": "https://perrylink.github.io/checkers/dsh-guard-plan-qc/",
+          "description": "劳动保护与安全防护用品配置表核对（按公开的配备标准核对品名规格与配置数量，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "危化品临界量核对",
+          "url": "https://perrylink.github.io/checkers/dsh-hazchem-check/",
+          "description": "危险化学品临界量与重大危险源辨识核对（按储存量与临界量核对台账自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "HAZOP 分析表核对",
+          "url": "https://perrylink.github.io/checkers/dsh-hazplan-check/",
+          "description": "HAZOP 分析表要素齐备性与偏差推导一致性核对（依据公开的危险与可操作性分析标准，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "重大隐患条款映射",
+          "url": "https://perrylink.github.io/checkers/dsh-hidden-risk-map/",
+          "description": "安全隐患台账→《工贸企业重大事故隐患判定标准》（应急管理部令第10号）条款映射提示（仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "归类层级核对",
+          "url": "https://perrylink.github.io/checkers/dsh-hs-classify/",
+          "description": "商品归类层级一致性核对（按章、品目、子目与商品编号的层级关系核对自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "ICD 编码规则校验",
+          "url": "https://perrylink.github.io/checkers/dsh-icd-rule-check/",
+          "description": "ICD 合并编码与星剑号配对提示（依据 GB/T 14396-2016 与公开的 ICD 使用说明，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "法条引用核对",
+          "url": "https://perrylink.github.io/checkers/dsh-lawcite-adapter/",
+          "description": "法条引用与文书要素核对（按名称、条号、原文与效力状态核对引用可核验性，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "信用证单据核对",
+          "url": "https://perrylink.github.io/checkers/dsh-lc-doc-check/",
+          "description": "信用证单据条款核对（按单据种类、份数、期限与不符点核对交单自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "能力差距核对",
+          "url": "https://perrylink.github.io/checkers/dsh-learning-gap-check/",
+          "description": "能力差距与培养计划核对（按能力等级差、培养措施与完成期限核对台账闭环，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "病案首页质控",
+          "url": "https://perrylink.github.io/checkers/dsh-medrec-qc/",
+          "description": "病案首页形式质控与逻辑矛盾提示（依据国卫办医发〔2016〕24号等公开文件，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "基金申请书形式审查",
+          "url": "https://perrylink.github.io/checkers/dsh-nsfc-form-check/",
+          "description": "国家自然科学基金申请书形式审查与匿名化提示（依据《国家自然科学基金条例》与申请人导入的当年指南，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "护理记录时限、签名与评估表完整性校验",
+          "url": "https://perrylink.github.io/checkers/dsh-nurse-record-check/",
+          "description": "护理记录时限、签名与评估表完整性校验（依据《病历书写基本规范》等公开文件，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "原产地 RVC 核对",
+          "url": "https://perrylink.github.io/checkers/dsh-origin-rvc-check/",
+          "description": "原产地区域价值成分核对（按 RVC 定义式与门槛核对原产地判定自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "点评回复核对",
+          "url": "https://perrylink.github.io/checkers/dsh-ota-review-check/",
+          "description": "在线点评回复台账核对（按回复时限、问题分类与整改状态核对台账闭环，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "试卷结构核对",
+          "url": "https://perrylink.github.io/checkers/dsh-paper-doc-adapter/",
+          "description": "试卷解析结构核对（按题型、答案、分值与 yotta 标识核对试卷结构自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "许可办理核对",
+          "url": "https://perrylink.github.io/checkers/dsh-permit-report-check/",
+          "description": "行政许可办理核对（按申请材料、法定时限与决定记录核对台账闭环，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "项目链条核对",
+          "url": "https://perrylink.github.io/checkers/dsh-pipeline-check/",
+          "description": "项目全流程文件链条核对（按环节先后与金额口径核对链条自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "诉状要素核对",
+          "url": "https://perrylink.github.io/checkers/dsh-pleading-draft/",
+          "description": "起诉状要素齐备性核对（按诉请、事实、证据、法条四要素核对文书齐备，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "政策专报核对",
+          "url": "https://perrylink.github.io/checkers/dsh-policy-brief-draft/",
+          "description": "政策专报要素核对（按观点、依据、出处与建议核对专报齐备，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "线损拆分核对",
+          "url": "https://perrylink.github.io/checkers/dsh-power-loss-split/",
+          "description": "线损电量拆分与考核表核对（依据公开的线损计算口径，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "电力工作票核对",
+          "url": "https://perrylink.github.io/checkers/dsh-power-ticket-check/",
+          "description": "电力工作票要素齐备性与签发许可顺序核对（依据现行电力安全工作规程，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "PPAP 要素核对",
+          "url": "https://perrylink.github.io/checkers/dsh-ppap-check/",
+          "description": "PPAP 提交要素齐备性核对（按公开的 PPAP 手册与提交等级核对要素齐备与版本填写，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "质疑投诉期限核对",
+          "url": "https://perrylink.github.io/checkers/dsh-protest-deadline/",
+          "description": "质疑与投诉期限核对（按公开的政府采购质疑投诉规定核对期限与台账自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "施工天窗核对",
+          "url": "https://perrylink.github.io/checkers/dsh-railway-window/",
+          "description": "铁路施工天窗台账核对（按时间窗、时长算术与命令号核对台账自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "维修工单核对",
+          "url": "https://perrylink.github.io/checkers/dsh-repair-order-qc/",
+          "description": "维修工单结算核对（按项目金额、配件工时合计与结算总额核对算术自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "审稿回应核对",
+          "url": "https://perrylink.github.io/checkers/dsh-review-reply-check/",
+          "description": "审稿意见逐条回应覆盖核对（按意见与回应一一对应核对覆盖完整性，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "规则库自检",
+          "url": "https://perrylink.github.io/checkers/dsh-rulefile-check/",
+          "description": "规则库文件自检核对（按条款引用纪律与效力上限核对规则库自身合规，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "安全技术交底核对",
+          "url": "https://perrylink.github.io/checkers/dsh-safety-brief-check/",
+          "description": "安全技术交底记录要素齐备性与签字闭环核对（依据公开的安全生产法规与检查标准，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "监理日志校验",
+          "url": "https://perrylink.github.io/checkers/dsh-site-log-check/",
+          "description": "监理日志跨日连续性与旁站覆盖提示（依据 GB/T 50319-2013 等公开文件，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "决策程序核对",
+          "url": "https://perrylink.github.io/checkers/dsh-soe-decision-check/",
+          "description": "三重一大决策台账核对（按前置研究、会议审议与决议记录核对程序留痕，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "土壤地下水监测核对",
+          "url": "https://perrylink.github.io/checkers/dsh-soilwater-check/",
+          "description": "土壤与地下水监测台账核对（按点位、监测项目、限值与超标判定核对台账自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "规程同步核对",
+          "url": "https://perrylink.github.io/checkers/dsh-sop-sync-check/",
+          "description": "作业规程与 FMEA／控制计划一致性核对（按编号与版本核对三份文件是否同步，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "控制图常数核对",
+          "url": "https://perrylink.github.io/checkers/dsh-spc-gbt-adapter/",
+          "description": "控制图常数与过程能力指数核对（按 GB/T 4091 的常规控制图常数表核对控制限与 Cp/Cpk 的自洽性，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "招标条款摘录核对",
+          "url": "https://perrylink.github.io/checkers/dsh-tender-extract/",
+          "description": "招标文件条款摘录核对（按出处与原文逐字核对摘录完整性，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "评分矩阵核对",
+          "url": "https://perrylink.github.io/checkers/dsh-tender-matrix/",
+          "description": "评标因素评分矩阵核对（按分值上限与合计核对矩阵自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "质保索赔核对",
+          "url": "https://perrylink.github.io/checkers/dsh-warranty-calc/",
+          "description": "质保期与索赔金额核对（按质保期月数与里程、索赔金额算式核对自洽，仅提示差异，不作出定性结论）"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./">PerryLink DSH Plugin Family</a>
+    <nav aria-label="主导航"><a href="./">Home</a><a href="./plugins/">Plugins</a><a href="./zh/checkers/">核查插件 (ZH)</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+
+<h1>PerryLink DSH Plugin Family</h1>
+<p class="lede">53 compliance checkers and 43 general-purpose plugins for DeepSeek Harness. This page is the orientation; the two indexes below are where the actual listings are.</p>
+
+<h2 id="what">What this family is</h2>
+<p>Two plugin families that share an author and a contract, published to npm and developed in the open on GitHub.</p>
+<p><strong>The compliance checkers</strong> (53 plugins) take a document — a hazardous-chemical register, a medical record front sheet, a bid response, a FMEA worksheet, a letter of credit — and compare it, item by item, against the regulations, national standards and ministry documents the plugin declares as its basis. Each plugin ships a versioned rule pack as data, not code, so the rule set can be replaced without touching the plugin. The output is a list of differences with positions and the clause each difference was checked against. The family's standing rule is that the plugins <em>list differences; they do not adjudicate</em> — no compliance verdicts, no liability findings, no substitutes for a reviewer.</p>
+<p>Those 53 plugins are Chinese-canonical and documented in Chinese, because the documents they check against are Chinese. They are indexed under <a href="./zh/checkers/">核查插件总览</a>, grouped by profession, with a decision table at <a href="./zh/checkers/choose/">该用哪个核查插件</a> that maps “what document do I have?” to “which plugin do I run?”.</p>
+<p><strong>The general-purpose plugins</strong> (43 plugins) extend DeepSeek Harness itself: tools, model routing, session management, memory, observability, integrations and development quality gates. They are grouped by category at <a href="./plugins/">/plugins/</a>.</p>
+
+<h2 id="checkers">The 53 compliance checkers, by profession</h2>
+<ul>
+<li><a href="./zh/checkers/tender/">招投标</a> — 面向招标人、招标代理与投标人的文件级核对：投标文件符合性、投标人资格、评标因素评分矩阵、质疑与投诉期限。</li>
+<li><a href="./zh/checkers/construction/">工程建设</a> — 面向施工、监理与建设单位的现场与报批文件核对：安全技术交底、监理日志、危大工程、环评导则、土壤与地下水监测。</li>
+<li><a href="./zh/checkers/safety/">安全生产</a> — 面向生产经营单位安全管理岗的台账与预案核对：危化品临界量、应急预案要素、演练脚本、隐患判定、两票与线损。</li>
+<li><a href="./zh/checkers/medical/">医疗病案</a> — 面向病案室、质控科与临床科室的病历与编码核对：病案首页、护理记录、ICD 编码结构与星剑号配对。</li>
+<li><a href="./zh/checkers/gongwen/">公文档案</a> — 面向办公室、文秘与档案室的公文与归档核对：公文格式要素、文种与发文字号、流转时限、归档完整性与保管期限。</li>
+<li><a href="./zh/checkers/customs/">关务外贸</a> — 面向报关、单证与供应链合规岗的关务核对：报关单证一致、商品归类层级、原产地 RVC、出口管制、信用证与滞箱费台账。</li>
+<li><a href="./zh/checkers/quality/">质量制造</a> — 面向质量管理与工艺岗的体系文件核对：FMEA 分析表、PPAP 提交要素、SPC 控制图常数与过程能力、审核意见闭环。</li>
+<li><a href="./zh/checkers/research/">科研教育</a> — 面向科研管理、基金管理与教研岗的申报与评审材料核对：基金申请书形式审查、试卷解析结构、作文量表评分、政策专报。</li>
+<li><a href="./zh/checkers/legal/">法律诉讼</a> — 面向律师与法务的诉讼文书核对：起诉状四要素、证据清单齐备性、法条引用与文书要素的可核验性。</li>
+<li><a href="./zh/checkers/governance/">国企治理</a> — 面向国有企业治理与内控岗的程序留痕核对：三重一大决策台账、作业规程与 FMEA／控制计划的一致性。</li>
+</ul>
+<p>Start from <a href="./zh/checkers/choose/"><strong>该用哪个核查插件</strong></a> if you already know what document you are holding.</p>
+
+<h2 id="numbers">Numbers, as of this build</h2>
+<dl class="meta">
+  <dt>Compliance checkers</dt><dd>53</dd>
+  <dt>General-purpose plugins</dt><dd>43</dd>
+  <dt>Profession groups</dt><dd>10</dd>
+  <dt>Rules across all checkers</dt><dd>408</dd>
+  <dt>Rules that are direct clause comparisons</dt><dd>86</dd>
+  <dt>Rules derived from principle</dt><dd>322</dd>
+  <dt>Rules whose basis is institutional configuration</dt><dd>66</dd>
+  <dt>Rules marked “clause not obtained this time”</dt><dd>163</dd>
+  <dt>Checkers with no direct-clause rule</dt><dd>32</dd>
+  <dt>Checkers using the error severity</dt><dd>5</dd>
+  <dt>Licences</dt><dd>Apache-2.0 (96)</dd>
+</dl>
+<div class="note">
+<p>The citation count is the point of this family, so it is stated plainly: of 408 rules, 163 rest on a clause whose verbatim text could not be obtained. Those rules are labelled <em>derived from principle</em>, their severity is capped at <em>warn</em>, and the rule pack says so in the field where the quotation would go. Nothing is paraphrased and then presented as a quotation.</p>
+</div>
+
+<h2 id="pages">Where to go next</h2>
+<ul>
+<li><a href="./zh/checkers/choose/">该用哪个核查插件</a> — decision table: profession/scenario → plugin → standards → install command. Chinese.</li>
+<li><a href="./zh/checkers/">核查插件总览</a> — all 53 checkers grouped by profession. Chinese.</li>
+<li><a href="./plugins/">Plugins</a> — all 43 general-purpose plugins by category. English.</li>
+<li><a href="./zh/">中文首页</a> — the same orientation in Chinese.</li>
+<li><a href="./catalog.json">catalog.json</a> — the whole catalog as machine-readable JSON.</li>
+</ul>
+
+<h2 id="static">About this site</h2>
+<p>This is plain static HTML. Every page is complete in the served response — there is no client-side rendering, no SPA shell, and no JavaScript at all. The build is a single zero-dependency Node ESM script that reads a pinned snapshot of the catalog and each plugin's own rule pack, and writes the HTML. Search engines and language models see exactly the text a browser sees.</p>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>This site is plain static HTML: all text is present in the served HTML with no JavaScript rendering. Content is generated by the build script from each plugin’s own rule pack and package metadata.</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="./catalog.json">catalog.json</a> · <a href="./sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

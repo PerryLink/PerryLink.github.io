@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plugin Kit — DeepSeek Harness plugin (@perrylink/dsh-plugin-kit) | PerryLink DSH Plugin Family</title>
+<meta name="description" content="Plugin Kit: Shared zero-runtime-dependency toolkit for PerryLink DSH plugins: a pluggable Provider registry seam, fail-closed approval and adaptive session-event … npm @perrylink/dsh-plugin-kit, version 0.1.16, Apache-2.0.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/plugins/dsh-plugin-kit/">
+<link rel="alternate" hreflang="en" href="https://perrylink.github.io/plugins/dsh-plugin-kit/">
+<link rel="alternate" hreflang="zh-Hans" href="https://github.com/PerryLink/dsh-plugin-kit/blob/HEAD/README-zh.md">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/plugins/dsh-plugin-kit/">
+<link rel="alternate" type="application/json" href="../../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Plugin Kit",
+      "alternateName": "@perrylink/dsh-plugin-kit",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Development & quality",
+      "softwareVersion": "0.1.16",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "USD"
+      },
+      "isAccessibleForFree": true,
+      "description": "Shared zero-runtime-dependency toolkit for PerryLink DSH plugins: a pluggable Provider registry seam, fail-closed approval and adaptive session-event gates, mechanical verify scripts, shared sanitize/pricing/judge modules, and a new-plugin skeleton.",
+      "url": "https://perrylink.github.io/plugins/dsh-plugin-kit/",
+      "codeRepository": "https://github.com/PerryLink/dsh-plugin-kit",
+      "programmingLanguage": "TypeScript",
+      "author": {
+        "@type": "Organization",
+        "name": "PerryLink",
+        "url": "https://github.com/PerryLink"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://perrylink.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Plugins",
+          "item": "https://perrylink.github.io/plugins/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Plugin Kit"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../">PerryLink DSH Plugin Family</a>
+    <nav aria-label="主导航"><a href="../../">Home</a><a href="../../plugins/">Plugins</a><a href="../../zh/checkers/">核查插件 (ZH)</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../../">Home</a> &rsaquo; <a href="../../plugins/">Plugins</a> &rsaquo; <span aria-current="page">Plugin Kit</span></nav>
+<h1>Plugin Kit</h1>
+<p class="lede">Shared zero-runtime-dependency toolkit for PerryLink DSH plugins: a pluggable Provider registry seam, fail-closed approval and adaptive session-event gates, mechanical verify scripts, shared sanitize/pricing/judge modules, and a new-plugin skeleton.</p>
+<dl class="meta">
+  <dt>npm package</dt><dd><code>@perrylink/dsh-plugin-kit</code></dd>
+  <dt>Category</dt><dd>Development &amp; quality</dd>
+  <dt>Version</dt><dd>0.1.16 <span class="tag">from package.json</span></dd>
+  <dt>Licence</dt><dd>Apache-2.0 <span class="tag">from package.json</span></dd>
+  <dt>Runtime</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code></dd>
+  <dt>Repository</dt><dd><a href="https://github.com/PerryLink/dsh-plugin-kit">PerryLink/dsh-plugin-kit</a></dd>
+  
+</dl>
+
+<h2 id="about">What it is</h2>
+<p>Plugin Kit is a DeepSeek Harness plugin in the development &amp; quality group, published to npm as `@perrylink/dsh-plugin-kit`. Shared zero-runtime-dependency toolkit for PerryLink DSH plugins: a pluggable Provider registry seam, fail-closed approval and adaptive session-event gates, mechanical verify scripts, shared sanitize/pricing/judge modules, and a new-plugin skeleton.</p>
+<p>Version 0.1.16, licensed Apache-2.0, Node ^22.19.0 || &gt;=24.0.0.</p>
+<p>The repository is available as a local checkout, so the version and licence above are read from the package manifest that is actually published rather than from a registry copy.</p>
+<p>Other plugins in the same group: Defend, Observe, Plugin Doctor, Plugin Upgrade, Score, Test Drive.</p>
+
+
+
+<h2 id="install">Install</h2>
+<p>The plugin is installed with <code>dsh plugin add</code>. Same command on both platforms — only the verification line differs.</p>
+<h3>bash / sh</h3>
+<pre><code>dsh plugin --profile default add @perrylink/dsh-plugin-kit
+dsh --profile default --dump-config | grep &#39;@perrylink/dsh-plugin-kit&#39;</code></pre>
+<h3>PowerShell</h3>
+<pre><code>dsh plugin --profile default add @perrylink/dsh-plugin-kit
+dsh --profile default --dump-config | Select-String &#39;@perrylink/dsh-plugin-kit&#39;</code></pre>
+<p>Replace <code>default</code> with the profile you actually use. Restart the session afterwards so the plugin’s tools are registered.</p>
+
+<h2 id="docs">Full documentation</h2>
+<p>This page covers what the plugin is, how to install it, and where it comes from. Configuration keys, tool schemas and the full manual live in the repository.</p>
+<p><a href="https://github.com/PerryLink/dsh-plugin-kit"><strong>Full documentation → GitHub</strong></a> · <a href="https://github.com/PerryLink/dsh-plugin-kit/blob/HEAD/README-zh.md">中文说明</a></p>
+<h2 id="related">Related plugins</h2>
+<ul><li><a href="../../plugins/dsh-defend/">Defend</a> — Prompt-injection, jailbreak, and secret-leak defense for DeepSeek Harness: Aho-Corasick detection with allow/a…</li><li><a href="../../plugins/dsh-observe/">Observe</a> — Observability for DeepSeek Harness: request tracing, telemetry, log buffering, and retry visibility.</li><li><a href="../../plugins/dsh-plugin-doctor/">Plugin Doctor</a> — Zero-dependency static + sandbox smoke detector for DeepSeek Harness plugins: package-structure gates (R), cor…</li><li><a href="../../plugins/dsh-plugin-upgrade/">Plugin Upgrade</a> — Plugin-author upgrade skill for DeepSeek Harness, new-generation single package: one corridor index reads the …</li><li><a href="../../plugins/dsh-score/">Score</a> — Plugin quality scoring for the DSH ecosystem: evaluate plugins against checks and produce evidence-backed comp…</li><li><a href="../../plugins/dsh-test-drive/">Test Drive</a> — Test Drive: run plugins in a disposable sandbox environment (temporary DSH_HOME) and score the results as JSON…</li></ul>
+<h2 id="more">More</h2>
+<ul>
+<li><a href="../../plugins/">All 43 non-checker plugins</a></li>
+<li><a href="../../zh/checkers/">The 53 compliance checkers (Chinese)</a> — a separate family, grouped by profession.</li>
+<li><a href="../../">Home</a></li>
+</ul>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>This site is plain static HTML: all text is present in the served HTML with no JavaScript rendering. Content is generated by the build script from each plugin’s own rule pack and package metadata.</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../../catalog.json">catalog.json</a> · <a href="../../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

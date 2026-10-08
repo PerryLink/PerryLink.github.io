@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>归类层级核对（dsh-hs-classify）——关务外贸核查插件 | PerryLink DSH 插件家族</title>
+<meta name="description" content="归类层级核对：商品归类层级一致性核对。核对 6 条规则，依据 《中华人民共和国进出口税则》、《商品名称及编码协调制度》、《中华人民共和国进出口关税条例》 等文件。npm 包 dsh-hs-classify，版本 0.2.1，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/checkers/dsh-hs-classify/">
+<link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-hs-classify/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/checkers/dsh-hs-classify/">
+<link rel="alternate" type="application/json" href="../../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "归类层级核对",
+      "alternateName": "dsh-hs-classify",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "关务外贸",
+      "softwareVersion": "0.2.1",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "CNY"
+      },
+      "isAccessibleForFree": true,
+      "description": "商品归类层级一致性核对（按章、品目、子目与商品编号的层级关系核对自洽，仅提示差异，不作出定性结论）",
+      "url": "https://perrylink.github.io/checkers/dsh-hs-classify/",
+      "codeRepository": "https://github.com/PerryLink/dsh-hs-classify",
+      "programmingLanguage": "TypeScript",
+      "author": {
+        "@type": "Organization",
+        "name": "PerryLink",
+        "url": "https://github.com/PerryLink"
+      },
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://perrylink.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "核查插件",
+          "item": "https://perrylink.github.io/zh/checkers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "关务外贸",
+          "item": "https://perrylink.github.io/zh/checkers/customs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "归类层级核对"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../">PerryLink DSH 插件家族</a>
+    <nav aria-label="主导航"><a href="../../zh/">首页</a><a href="../../zh/checkers/">核查插件</a><a href="../../zh/checkers/choose/">该用哪个</a><a href="../../plugins/">其他插件</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../../zh/">首页</a> &rsaquo; <a href="../../zh/checkers/">核查插件</a> &rsaquo; <a href="../../zh/checkers/customs/">关务外贸</a> &rsaquo; <span aria-current="page">归类层级核对</span></nav>
+<h1>归类层级核对</h1>
+<p class="lede">商品归类层级一致性核对（按章、品目、子目与商品编号的层级关系核对自洽，仅提示差异，不作出定性结论）</p>
+<dl class="meta">
+  <dt>npm 包</dt><dd><code>dsh-hs-classify</code></dd>
+  <dt>职业分组</dt><dd><a href="../../zh/checkers/customs/">关务外贸</a></dd>
+  <dt>版本</dt><dd>0.2.1（规则库 2026.1）</dd>
+  <dt>许可</dt><dd>Apache-2.0</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
+  <dt>规则条数</dt><dd>6 条，其中 1 条为条文直接规定，5 条的条文本次未取得逐字文本</dd>
+  <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-hs-classify">PerryLink/dsh-hs-classify</a></dd>
+</dl>
+
+<h2 id="what">这个插件核对什么</h2>
+<p>归类层级核对（dsh-hs-classify）是一个面向关务外贸场景的 DeepSeek Harness 核查插件。商品归类层级一致性核对（按章、品目、子目与商品编号的层级关系核对自洽，仅提示差异，不作出定性结论）</p>
+<p>规则库只有 6 条规则，是本族里最精简的一档；它不追求把材料过一遍，只盯住这类材料上最容易出错的地方。该规则库同时包含「条文直接规定」与「由原则推导」两类依据：前者 1 条，后者 5 条。</p>
+
+<h2 id="how">核对方式</h2>
+<p>归类层级核对的检查手段集中在以下几类，都不依赖模型判断：格式须匹配规定形式（1 条）、前缀层级关系（1 条）、必填项存在性（1 条）、表头要素存在性（1 条）、编号或键不得重复（1 条）、须包含给定要素之一（1 条）。</p>
+<p>插件不会替你查证。它只比较材料自身各处之间、以及材料与所引条款之间是否一致；材料里写错的事实，只要内部自洽，就查不出来。</p>
+<p>这里没有算术核对——规则库处理的是齐备性、取值合法性与字段关系，不重算任何金额或数量。</p>
+
+<h2 id="boundary">它不作什么判断</h2>
+<p>共同约定只有一条——插件只做「指出不一致」，不做「下结论」。差异清单里每条都带规则编号、依据的文件与条款、以及差异落在材料里的位置。</p>
+<p>本插件不产生「错误」级结果，严重度最高为「提示」。它指出的是「此处与依据不一致」，而不是「此处是错的」。</p>
+<p>结果里的空清单有明确含义，插件对此不作暗示：规则库覆盖不到的部分、以及因缺少必要字段而无法执行的检查，都会单独列出原因。</p>
+
+<h2 id="rules">规则清单</h2>
+<table>
+<caption>规则库 hs-classify.yaml 的全部 6 条规则（规则库版本 2026.1）</caption>
+<thead><tr><th>规则</th><th>检查内容</th><th>严重度</th><th>依据类型</th></tr></thead>
+<tbody>
+<tr><td><code>HC-001</code></td><td>商品编号应为十位数字</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>HC-002</code></td><td>章、品目、子目应为商品编号的逐级前缀</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>HC-003</code></td><td>每条归类都应填写归类依据</td><td class="sev-warn">提示</td><td>条文直接规定</td></tr>
+<tr><td><code>HC-004</code></td><td>台账应声明商品编码适用的税则版本</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>HC-005</code></td><td>项号不应在台账内重复</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>HC-006</code></td><td>品名栏不应残留未替换的占位符</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+</tbody></table>
+<p>严重度含义：<strong>提示</strong>（6 条）——差异成立，但条文未直接规定，或需人工判断后确认。</p>
+<p>依据类型含义：<strong>由原则推导</strong>（5 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」；<strong>条文直接规定</strong>（1 条）——该规则的依据条文已取得逐字文本，规则直接对照条文规定。</p>
+
+<h2 id="standards">依据的标准</h2>
+<table>
+<caption>依据的标准 —— 逐条取自插件自身声明的 normativeBasis（共 4 条）</caption>
+<thead><tr><th>依据</th><th>类型</th><th>引用该依据的规则数</th></tr></thead>
+<tbody>
+<tr><td>《中华人民共和国进出口税则》</td><td>文件／标准</td><td>4 条</td></tr>
+<tr><td>《商品名称及编码协调制度》</td><td>文件／标准</td><td>1 条</td></tr>
+<tr><td>《中华人民共和国进出口关税条例》</td><td>文件／标准</td><td>1 条</td></tr>
+<tr><td>国务院令第392号</td><td>编号</td><td>—</td></tr>
+</tbody></table>
+<h3>编号、版本与效力说明</h3>
+<ul>
+<li>国务院令第392号（2003年11月23日公布；根据2011年1月8日、2013年12月7日、2016年2月6日三次《国务院关于修改（废止）部分行政法规的决定》修订）</li>
+</ul>
+<p>这是引用取证记录中的完整编号与效力说明，含发布日期、实施日期、代替关系与强制性说明。规则库核对时对照的是这里列出的版本；若本单位执行的是其他版本，结论不直接适用。</p>
+<p>以上文件是插件自己声明的核对依据。规则库中每条规则还单独记录了它对照的具体条款；条款文本能否逐字取得，见下一节。</p>
+
+<h2 id="evidence">引用取证状态</h2>
+<p>引用取证：6 条规则中有 5 条的条文本次未能取得逐字文本，规则库如实写明「本次未取得」并把依据类型标为「由原则推导」，而不是用概括或改写冒充条文。其余 1 条为条文直接规定。</p>
+<p>被规则引用的文件共 3 份，按引用次数从多到少是：《中华人民共和国进出口税则》（4 条）、《商品名称及编码协调制度》（1 条）、《中华人民共和国进出口关税条例》（1 条）。同一份文件在不同规则中可能被引用于不同条款。</p>
+
+<h2 id="reading">结果怎么读</h2>
+<p>本插件共 6 条规则，其中严重度最高的一档是「提示」，共 6 条：<code>HC-001</code>、<code>HC-002</code>、<code>HC-003</code>、<code>HC-004</code>、<code>HC-005</code>、<code>HC-006</code>。结果里先看这几条，再回头处理其他规则报出的差异。</p>
+<p>另有 5 条规则的条文本次未取得逐字文本（<code>HC-001</code>、<code>HC-002</code>、<code>HC-004</code>、<code>HC-005</code>、<code>HC-006</code>）。这几条的结果适合作为自查提示，若要对外引用，需要先自行补齐条文原文。</p>
+
+<h2 id="usage">适用场景与同组插件</h2>
+<p>面向报关、单证与供应链合规岗的关务核对：报关单证一致、商品归类层级、原产地 RVC、出口管制、信用证与滞箱费台账。</p>
+<p>同一职业分组「关务外贸」下还有 7 个核查插件，分别是报关单证核对（dsh-customs-doc-check）、滞箱费台账核对（dsh-demurrage-ledger）、出口管制核对（dsh-export-ctl-check）、预测考核核对（dsh-forecast-penalty）、信用证单据核对（dsh-lc-doc-check）、原产地 RVC 核对（dsh-origin-rvc-check） 等。实际使用中往往要跑不止一个：单个插件只负责它自己那份规则库声明过的范围，范围之间不重叠，合起来才接近一次完整复核。</p>
+<p>npm 包名 dsh-hs-classify，仓库 PerryLink/dsh-hs-classify，Apache-2.0 许可。页面上的规则与依据由构建脚本从规则库（版本 2026.1）与包的 locale 资源读出，与仓库内容一致。</p>
+<ul><li><a href="../../checkers/dsh-customs-doc-check/">报关单证核对</a> <code>dsh-customs-doc-check</code> —— 报关单证一致性核对</li><li><a href="../../checkers/dsh-demurrage-ledger/">滞箱费台账核对</a> <code>dsh-demurrage-ledger</code> —— 滞箱费台账核对</li><li><a href="../../checkers/dsh-export-ctl-check/">出口管制核对</a> <code>dsh-export-ctl-check</code> —— 出口管制物项核对</li><li><a href="../../checkers/dsh-forecast-penalty/">预测考核核对</a> <code>dsh-forecast-penalty</code> —— 预测准确率考核核对</li><li><a href="../../checkers/dsh-lc-doc-check/">信用证单据核对</a> <code>dsh-lc-doc-check</code> —— 信用证单据条款核对</li><li><a href="../../checkers/dsh-origin-rvc-check/">原产地 RVC 核对</a> <code>dsh-origin-rvc-check</code> —— 原产地区域价值成分核对</li><li><a href="../../checkers/dsh-railway-window/">施工天窗核对</a> <code>dsh-railway-window</code> —— 铁路施工天窗台账核对</li></ul>
+
+<h2 id="install">安装</h2>
+<p>下面是安装命令。两个平台用的都是 <code>dsh</code>，第二行是确认安装结果的写法，按你所在的 shell 选一条：</p>
+<h3>bash / sh</h3>
+<pre><code>dsh plugin --profile default add dsh-hs-classify
+dsh --profile default --dump-config | grep &#39;dsh-hs-classify&#39;</code></pre>
+<h3>PowerShell</h3>
+<pre><code>dsh plugin --profile default add dsh-hs-classify
+dsh --profile default --dump-config | Select-String &#39;dsh-hs-classify&#39;</code></pre>
+<p>若你用的不是 <code>default</code> profile，把名字替换掉即可。安装后需要重启会话，工具才会注册进来。</p>
+
+<h2 id="docs">完整文档</h2>
+<p>本页只覆盖 归类层级核对 核对什么、依据什么、边界在哪里。材料格式、配置项、每条规则的参数与返回结构，见仓库中的完整文档。</p>
+<p><a href="https://github.com/PerryLink/dsh-hs-classify"><strong>完整文档 → GitHub</strong></a>（<code>PerryLink/dsh-hs-classify</code>）</p>
+<p>也可以先看该用哪个核查插件那一页，按材料类型定位到本插件；或回到关务外贸分组看同类插件。
+<a href="../../zh/checkers/choose/">该用哪个核查插件</a> ·
+<a href="../../zh/checkers/customs/">关务外贸</a> ·
+<a href="../../zh/checkers/">全部核查插件</a></p>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>本站为静态 HTML：全部正文都在服务端返回的 HTML 中，无 JavaScript 渲染。内容由构建脚本从各插件的规则库与包元数据生成。</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../../catalog.json">catalog.json</a> · <a href="../../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

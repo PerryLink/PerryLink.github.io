@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>法条引用核对（dsh-lawcite-adapter）——法律诉讼核查插件 | PerryLink DSH 插件家族</title>
+<meta name="description" content="法条引用核对：法条引用与文书要素核对。核对 8 条规则，依据 本机构法律文书审查口径（本机构配置）—— 原挂《中华人民共和国立法法》，已核实其第六十五条为立法技术条款、本机构法律文书审查口径（本机构配置）—— 原挂《党政机关公文格式》GB/T 9704—2012，已核实为版式标准、本机构法律文书审查办法（本机构配置） 等文件。npm 包 dsh-lawcite-adapter，版本 0.2.1，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/checkers/dsh-lawcite-adapter/">
+<link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-lawcite-adapter/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/checkers/dsh-lawcite-adapter/">
+<link rel="alternate" type="application/json" href="../../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "法条引用核对",
+      "alternateName": "dsh-lawcite-adapter",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "法律诉讼",
+      "softwareVersion": "0.2.1",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "CNY"
+      },
+      "isAccessibleForFree": true,
+      "description": "法条引用与文书要素核对（按名称、条号、原文与效力状态核对引用可核验性，仅提示差异，不作出定性结论）",
+      "url": "https://perrylink.github.io/checkers/dsh-lawcite-adapter/",
+      "codeRepository": "https://github.com/PerryLink/dsh-lawcite-adapter",
+      "programmingLanguage": "TypeScript",
+      "author": {
+        "@type": "Organization",
+        "name": "PerryLink",
+        "url": "https://github.com/PerryLink"
+      },
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://perrylink.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "核查插件",
+          "item": "https://perrylink.github.io/zh/checkers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "法律诉讼",
+          "item": "https://perrylink.github.io/zh/checkers/legal/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "法条引用核对"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../">PerryLink DSH 插件家族</a>
+    <nav aria-label="主导航"><a href="../../zh/">首页</a><a href="../../zh/checkers/">核查插件</a><a href="../../zh/checkers/choose/">该用哪个</a><a href="../../plugins/">其他插件</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../../zh/">首页</a> &rsaquo; <a href="../../zh/checkers/">核查插件</a> &rsaquo; <a href="../../zh/checkers/legal/">法律诉讼</a> &rsaquo; <span aria-current="page">法条引用核对</span></nav>
+<h1>法条引用核对</h1>
+<p class="lede">法条引用与文书要素核对（按名称、条号、原文与效力状态核对引用可核验性，仅提示差异，不作出定性结论）</p>
+<dl class="meta">
+  <dt>npm 包</dt><dd><code>dsh-lawcite-adapter</code></dd>
+  <dt>职业分组</dt><dd><a href="../../zh/checkers/legal/">法律诉讼</a></dd>
+  <dt>版本</dt><dd>0.2.1（规则库 2026.1）</dd>
+  <dt>许可</dt><dd>Apache-2.0</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
+  <dt>规则条数</dt><dd>8 条，全部为「由原则推导」，8 条依据本机构配置，7 条的条文本次未取得逐字文本</dd>
+  <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-lawcite-adapter">PerryLink/dsh-lawcite-adapter</a></dd>
+</dl>
+
+<h2 id="what">这个插件核对什么</h2>
+<p>法条引用核对（dsh-lawcite-adapter）是一个面向法律诉讼场景的 DeepSeek Harness 核查插件。法条引用与文书要素核对（按名称、条号、原文与效力状态核对引用可核验性，仅提示差异，不作出定性结论）</p>
+<p>规则库 8 条规则，数量居中：既能覆盖这类材料的主要要素，又不会把无关项也拉进来。按依据类型拆开看：本机构配置 8 条。</p>
+
+<h2 id="how">核对方式</h2>
+<p>法条引用核对的检查手段集中在以下几类，都不依赖模型判断：多字段至少填一（2 条）、格式须匹配规定形式（1 条）、必填项存在性（1 条）、取值须在允许清单内（1 条）、表头要素存在性（1 条）、编号或键不得重复（1 条）。此外还有 1 类出现频次较低的检查方式。</p>
+<p>检查过程不引入任何外部信息：没有数据库查询、没有网络请求、没有模型参与，同样输入必然得到同样输出。</p>
+<p>需要说明的是，该规则库不做任何数值运算，核对的是要素是否齐备、取值是否在允许范围内、字段之间的关系是否自洽。</p>
+
+<h2 id="boundary">它不作什么判断</h2>
+<p>本族插件的共同约定是：只列出材料内部可以逐条指认的差异，不判定合规、不认定责任、不替代主管部门或审核人的结论。报告里每一条差异都会带上它对照的规则、依据的文件与条款，以及差异的具体位置。</p>
+<p>本插件不产生「错误」级结果，严重度最高为「提示」。它指出的是「此处与依据不一致」，而不是「此处是错的」。</p>
+<p>需要注意 8 条「本机构配置」类规则：它们的阈值与清单由使用机构自己填入，插件不自带。配置为空时这些规则不会执行，而是把自己列进跳过项。</p>
+<p>规则库中未被命中的规则同样会出现在结果里：无法执行的检查会连同原因一起列出，空的结果列表不等于材料没有问题，只等于规则库覆盖到的那部分没有发现差异。</p>
+
+<h2 id="rules">规则清单</h2>
+<table>
+<caption>规则库 lawcite-adapter.yaml 的全部 8 条规则（规则库版本 2026.1）</caption>
+<thead><tr><th>规则</th><th>检查内容</th><th>严重度</th><th>依据类型</th></tr></thead>
+<tbody>
+<tr><td><code>LC-001</code></td><td>每处引用都应写明法律名称与条号</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>LC-002</code></td><td>条号应写成规范的中文形式</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>LC-003</code></td><td>直接引用应抄录原文</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>LC-004</code></td><td>效力状态应使用本机构口径的取值</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>LC-005</code></td><td>每处引用都应写明引用位置与论证作用</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>LC-006</code></td><td>文书应声明标题与文书类型</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>LC-007</code></td><td>引用编号不应在清单内重复</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>LC-008</code></td><td>引用原文栏不应残留未替换的占位符</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+</tbody></table>
+<p>严重度含义：<strong>参考</strong>（8 条）——只作提示，供人工复核，不构成任何结论。</p>
+<p>依据类型含义：<strong>本机构配置</strong>（8 条）——阈值或清单来自使用机构自身配置而非国家标准，严重度上限为「参考」。</p>
+
+<h2 id="standards">依据的标准</h2>
+<table>
+<caption>依据的标准 —— 逐条取自插件自身声明的 normativeBasis（共 4 条）</caption>
+<thead><tr><th>依据</th><th>类型</th><th>引用该依据的规则数</th></tr></thead>
+<tbody>
+<tr><td>本机构法律文书审查口径（本机构配置）—— 原挂《中华人民共和国立法法》，已核实其第六十五条为立法技术条款</td><td>文件／标准</td><td>1 条</td></tr>
+<tr><td>本机构法律文书审查口径（本机构配置）—— 原挂《党政机关公文格式》GB/T 9704—2012，已核实为版式标准</td><td>文件／标准</td><td>6 条</td></tr>
+<tr><td>本机构法律文书审查办法（本机构配置）</td><td>文件／标准</td><td>1 条</td></tr>
+<tr><td>无统一标准</td><td>编号</td><td>—</td></tr>
+</tbody></table>
+<h3>编号、版本与效力说明</h3>
+<ul>
+<li>无统一标准（本条依据为本机构配置的引用管理口径）—— ⚠️ 《立法法》2023 年第二次修正文本已核实，本条不引用该法</li>
+<li>无统一标准（本条依据为本机构配置的效力口径）</li>
+</ul>
+<p>这是引用取证记录中的完整编号与效力说明，含发布日期、实施日期、代替关系与强制性说明。规则库核对时对照的是这里列出的版本；若本单位执行的是其他版本，结论不直接适用。</p>
+<p>上表来自插件声明的 normativeBasis；规则库内部还会把每条规则落到具体条款上。条款原文的取证情况见下一节。</p>
+
+<h2 id="evidence">引用取证状态</h2>
+<p>引用取证：8 条规则全部为「由原则推导」，没有一条声称依据了逐字条文。其中 7 条如实标注「本次未取得」。这意味着结果里的每一条差异都只能作为线索，不能作为「违反某条条文」的结论。</p>
+<p>规则库落在 3 份文件上，分布如下：本机构法律文书审查口径（本机构配置）—— 原挂《党政机关公文格式》GB/T 9704—2012，已核实为版式标准（6 条）、本机构法律文书审查口径（本机构配置）—— 原挂《中华人民共和国立法法》，已核实其第六十五条为立法技术条款（1 条）、本机构法律文书审查办法（本机构配置）（1 条）。引用数统计到文件一层；同一文件内的不同条款可能分别支撑不同规则。</p>
+
+<h2 id="reading">结果怎么读</h2>
+<p>本插件共 8 条规则，其中严重度最高的一档是「参考」，共 8 条：<code>LC-001</code>、<code>LC-002</code>、<code>LC-003</code>、<code>LC-004</code>、<code>LC-005</code>、<code>LC-006</code>、<code>LC-007</code>、<code>LC-008</code>。结果里先看这几条，再回头处理其他规则报出的差异。</p>
+<p>另有 7 条规则的条文本次未取得逐字文本（<code>LC-002</code>、<code>LC-003</code>、<code>LC-004</code>、<code>LC-005</code>、<code>LC-006</code>、<code>LC-007</code>、<code>LC-008</code>）。这些规则报出的差异只能作为线索，不能当作「违反某条条文」来引用。</p>
+<p>还有 8 条规则属于「本机构配置」（<code>LC-001</code>、<code>LC-002</code>、<code>LC-003</code>、<code>LC-004</code>、<code>LC-005</code>、<code>LC-006</code>、<code>LC-007</code>、<code>LC-008</code>）。它们的判据来自配置项而不是国家标准，配置未填时这几条会进入跳过项。</p>
+
+<h2 id="usage">适用场景与同组插件</h2>
+<p>面向律师与法务的诉讼文书核对：起诉状四要素、证据清单齐备性、法条引用与文书要素的可核验性。</p>
+<p>同一职业分组「法律诉讼」下还有 2 个核查插件，分别是证据清单核对（dsh-evidence-check）、诉状要素核对（dsh-pleading-draft）。实际使用中往往要跑不止一个：单个插件只负责它自己那份规则库声明过的范围，范围之间不重叠，合起来才接近一次完整复核。</p>
+<p>该插件以 npm 包 dsh-lawcite-adapter 发布，仓库在 GitHub 的 PerryLink/dsh-lawcite-adapter，采用 Apache-2.0 许可。本页内容由构建脚本从插件自身的规则库与 locale 资源生成，与仓库中的规则库版本 2026.1 对应。</p>
+<ul><li><a href="../../checkers/dsh-evidence-check/">证据清单核对</a> <code>dsh-evidence-check</code> —— 证据清单齐备性核对</li><li><a href="../../checkers/dsh-pleading-draft/">诉状要素核对</a> <code>dsh-pleading-draft</code> —— 起诉状要素齐备性核对</li></ul>
+
+<h2 id="install">安装</h2>
+<p>下面是安装命令。两个平台用的都是 <code>dsh</code>，第二行是确认安装结果的写法，按你所在的 shell 选一条：</p>
+<h3>bash / sh</h3>
+<pre><code>dsh plugin --profile default add dsh-lawcite-adapter
+dsh --profile default --dump-config | grep &#39;dsh-lawcite-adapter&#39;</code></pre>
+<h3>PowerShell</h3>
+<pre><code>dsh plugin --profile default add dsh-lawcite-adapter
+dsh --profile default --dump-config | Select-String &#39;dsh-lawcite-adapter&#39;</code></pre>
+<p>profile 名按实际情况替换。注意安装本身不会热加载——重开会话之后插件才生效。</p>
+
+<h2 id="docs">完整文档</h2>
+<p>以上是 法条引用核对 的核对范围与依据。至于怎么把材料交给它、有哪些配置项可调、每条规则的参数与输出结构，在仓库文档里。</p>
+<p><a href="https://github.com/PerryLink/dsh-lawcite-adapter"><strong>完整文档 → GitHub</strong></a>（<code>PerryLink/dsh-lawcite-adapter</code>）</p>
+<p>同类材料还有哪些插件可选，见法律诉讼分组；不确定选哪个，见对照表。
+<a href="../../zh/checkers/choose/">该用哪个核查插件</a> ·
+<a href="../../zh/checkers/legal/">法律诉讼</a> ·
+<a href="../../zh/checkers/">全部核查插件</a></p>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>本站为静态 HTML：全部正文都在服务端返回的 HTML 中，无 JavaScript 渲染。内容由构建脚本从各插件的规则库与包元数据生成。</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../../catalog.json">catalog.json</a> · <a href="../../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

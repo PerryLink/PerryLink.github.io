@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>控制图常数核对（dsh-spc-gbt-adapter）——质量制造核查插件 | PerryLink DSH 插件家族</title>
+<meta name="description" content="控制图常数核对：控制图常数与过程能力指数核对。核对 7 条规则，依据 《常规控制图》 等文件。npm 包 dsh-spc-gbt-adapter，版本 0.2.1，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/checkers/dsh-spc-gbt-adapter/">
+<link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-spc-gbt-adapter/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/checkers/dsh-spc-gbt-adapter/">
+<link rel="alternate" type="application/json" href="../../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "控制图常数核对",
+      "alternateName": "dsh-spc-gbt-adapter",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "质量制造",
+      "softwareVersion": "0.2.1",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "CNY"
+      },
+      "isAccessibleForFree": true,
+      "description": "控制图常数与过程能力指数核对（按 GB/T 4091 的常规控制图常数表核对控制限与 Cp/Cpk 的自洽性，仅提示差异，不作出定性结论）",
+      "url": "https://perrylink.github.io/checkers/dsh-spc-gbt-adapter/",
+      "codeRepository": "https://github.com/PerryLink/dsh-spc-gbt-adapter",
+      "programmingLanguage": "TypeScript",
+      "author": {
+        "@type": "Organization",
+        "name": "PerryLink",
+        "url": "https://github.com/PerryLink"
+      },
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://perrylink.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "核查插件",
+          "item": "https://perrylink.github.io/zh/checkers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "质量制造",
+          "item": "https://perrylink.github.io/zh/checkers/quality/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "控制图常数核对"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../">PerryLink DSH 插件家族</a>
+    <nav aria-label="主导航"><a href="../../zh/">首页</a><a href="../../zh/checkers/">核查插件</a><a href="../../zh/checkers/choose/">该用哪个</a><a href="../../plugins/">其他插件</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../../zh/">首页</a> &rsaquo; <a href="../../zh/checkers/">核查插件</a> &rsaquo; <a href="../../zh/checkers/quality/">质量制造</a> &rsaquo; <span aria-current="page">控制图常数核对</span></nav>
+<h1>控制图常数核对</h1>
+<p class="lede">控制图常数与过程能力指数核对（按 GB/T 4091 的常规控制图常数表核对控制限与 Cp/Cpk 的自洽性，仅提示差异，不作出定性结论）</p>
+<dl class="meta">
+  <dt>npm 包</dt><dd><code>dsh-spc-gbt-adapter</code></dd>
+  <dt>职业分组</dt><dd><a href="../../zh/checkers/quality/">质量制造</a></dd>
+  <dt>版本</dt><dd>0.2.1（规则库 2026.1）</dd>
+  <dt>许可</dt><dd>Apache-2.0</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
+  <dt>规则条数</dt><dd>7 条，全部为「由原则推导」，1 条依据本机构配置，7 条的条文本次未取得逐字文本</dd>
+  <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-spc-gbt-adapter">PerryLink/dsh-spc-gbt-adapter</a></dd>
+</dl>
+
+<h2 id="what">这个插件核对什么</h2>
+<p>控制图常数核对（dsh-spc-gbt-adapter）是一个面向质量制造场景的 DeepSeek Harness 核查插件。控制图常数与过程能力指数核对（按 GB/T 4091 的常规控制图常数表核对控制限与 Cp/Cpk 的自洽性，仅提示差异，不作出定性结论）</p>
+<p>规则库共 7 条规则，覆盖面与人工复核一遍的注意力分配大致相当。该规则库的规则依据构成为：由原则推导 6 条、本机构配置 1 条。</p>
+
+<h2 id="how">核对方式</h2>
+<p>控制图常数核对的检查手段集中在以下几类，都不依赖模型判断：。</p>
+<p>检查过程不引入任何外部信息：没有数据库查询、没有网络请求、没有模型参与，同样输入必然得到同样输出。</p>
+<p>该规则库不涉及数值计算：它看的是要素齐不齐、取值在不在允许范围内、字段之间对不对得上。</p>
+
+<h2 id="boundary">它不作什么判断</h2>
+<p>把它当成一次机械的交叉核对，而不是一次评审。核对结果里不会出现「合规」「不合格」这类字样，只有「此处与所引依据不一致」以及不一致的具体位置。</p>
+<p>结果里最高的严重度是「提示」。这不是保守，而是如实的：这些规则所对照的条文没有逐字文本，凭原则推导不足以支撑更强的结论。</p>
+<p>其中 1 条规则的阈值或清单来自使用机构自身配置，而不是国家标准。这类规则在更换机构后必须先改配置再使用，否则会拿别的机构的口径核对本机构的材料。</p>
+<p>规则库中未被命中的规则同样会出现在结果里：无法执行的检查会连同原因一起列出，空的结果列表不等于材料没有问题，只等于规则库覆盖到的那部分没有发现差异。</p>
+
+<h2 id="rules">规则清单</h2>
+<table>
+<caption>规则库 spc-gbt-adapter.yaml 的全部 7 条规则（规则库版本 2026.1）</caption>
+<thead><tr><th>规则</th><th>检查内容</th><th>严重度</th><th>依据类型</th></tr></thead>
+<tbody>
+<tr><td><code>SP-001</code></td><td>控制图台账应填写特性名称与控制图类型</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>SP-002</code></td><td>控制限应等于中心线加减常数与极差之积</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>SP-003</code></td><td>中心线应落在上下控制限之间</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>SP-004</code></td><td>过程能力指数应符合 Cp 与 Cpk 的定义式</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>SP-005</code></td><td>过程能力应不低于本机构配置的接收准则</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>SP-006</code></td><td>控制图台账应能识别产品与工序</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>SP-007</code></td><td>子组大小应在常数表覆盖的范围内</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+</tbody></table>
+<p>严重度含义：<strong>提示</strong>（6 条）——差异成立，但条文未直接规定，或需人工判断后确认；<strong>参考</strong>（1 条）——只作提示，供人工复核，不构成任何结论。</p>
+<p>依据类型含义：<strong>由原则推导</strong>（6 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」；<strong>本机构配置</strong>（1 条）——阈值或清单来自使用机构自身配置而非国家标准，严重度上限为「参考」。</p>
+
+<h2 id="standards">依据的标准</h2>
+<table>
+<caption>依据的标准 —— 逐条取自插件自身声明的 normativeBasis（共 1 条）</caption>
+<thead><tr><th>依据</th><th>类型</th><th>引用该依据的规则数</th></tr></thead>
+<tbody>
+<tr><td>《常规控制图》</td><td>文件／标准</td><td>7 条</td></tr>
+</tbody></table>
+<p>该插件的引用取证记录中没有单独的编号与效力说明条目；依据的文件已在上一张表中完整列出。</p>
+<p>以上文件是插件自己声明的核对依据。规则库中每条规则还单独记录了它对照的具体条款；条款文本能否逐字取得，见下一节。</p>
+
+<h2 id="evidence">引用取证状态</h2>
+<p>引用取证：这套规则库没有任何一条规则可以直接对照逐字条文，全部属于「由原则推导」；其中 7 条在规则库中明确写着条文本次未取得，其余 0 条同样没有条文比对，只是未标记取证状态。</p>
+<p>被规则引用的文件共 1 份，按引用次数从多到少是：《常规控制图》（7 条）。同一份文件在不同规则中可能被引用于不同条款。</p>
+
+<h2 id="reading">结果怎么读</h2>
+<p>本插件共 7 条规则，其中严重度最高的一档是「提示」，共 6 条：<code>SP-001</code>、<code>SP-002</code>、<code>SP-003</code>、<code>SP-004</code>、<code>SP-006</code>、<code>SP-007</code>。这些规则命中时应当优先处理，其余规则的结果可以在其后逐条确认。</p>
+<p>另有 7 条规则的条文本次未取得逐字文本（<code>SP-001</code>、<code>SP-002</code>、<code>SP-003</code>、<code>SP-004</code>、<code>SP-005</code>、<code>SP-006</code>、<code>SP-007</code>）。引用这部分结果时请注意措辞：它们是原则推导的产物，不是条文比对的结果。</p>
+<p>还有 1 条规则属于「本机构配置」（<code>SP-005</code>）。它们的判据来自配置项而不是国家标准，配置未填时这几条会进入跳过项。</p>
+
+<h2 id="usage">适用场景与同组插件</h2>
+<p>面向质量管理与工艺岗的体系文件核对：FMEA 分析表、PPAP 提交要素、SPC 控制图常数与过程能力、审核意见闭环。</p>
+<p>同一职业分组「质量制造」下还有 7 个核查插件，分别是FMEA 表核对（dsh-fmea-table-check）、点评回复核对（dsh-ota-review-check）、项目链条核对（dsh-pipeline-check）、PPAP 要素核对（dsh-ppap-check）、维修工单核对（dsh-repair-order-qc）、审稿回应核对（dsh-review-reply-check） 等。这类材料通常需要同时过几个插件：一个插件只覆盖它自己那份规则库声明过的范围，把几个插件的结果合起来看才是完整的一次复核。</p>
+<p>npm 包名 dsh-spc-gbt-adapter，仓库 PerryLink/dsh-spc-gbt-adapter，Apache-2.0 许可。页面上的规则与依据由构建脚本从规则库（版本 2026.1）与包的 locale 资源读出，与仓库内容一致。</p>
+<ul><li><a href="../../checkers/dsh-fmea-table-check/">FMEA 表核对</a> <code>dsh-fmea-table-check</code> —— FMEA 分析表要素齐备性与风险顺序数一致性核对</li><li><a href="../../checkers/dsh-ota-review-check/">点评回复核对</a> <code>dsh-ota-review-check</code> —— 在线点评回复台账核对</li><li><a href="../../checkers/dsh-pipeline-check/">项目链条核对</a> <code>dsh-pipeline-check</code> —— 项目全流程文件链条核对</li><li><a href="../../checkers/dsh-ppap-check/">PPAP 要素核对</a> <code>dsh-ppap-check</code> —— PPAP 提交要素齐备性核对</li><li><a href="../../checkers/dsh-repair-order-qc/">维修工单核对</a> <code>dsh-repair-order-qc</code> —— 维修工单结算核对</li><li><a href="../../checkers/dsh-review-reply-check/">审稿回应核对</a> <code>dsh-review-reply-check</code> —— 审稿意见逐条回应覆盖核对</li><li><a href="../../checkers/dsh-warranty-calc/">质保索赔核对</a> <code>dsh-warranty-calc</code> —— 质保期与索赔金额核对</li></ul>
+
+<h2 id="install">安装</h2>
+<p>插件通过 <code>dsh plugin add</code> 安装，两条命令的主体一致，区别只在装完后用什么方式确认它已经注册：</p>
+<h3>bash / sh</h3>
+<pre><code>dsh plugin --profile default add dsh-spc-gbt-adapter
+dsh --profile default --dump-config | grep &#39;dsh-spc-gbt-adapter&#39;</code></pre>
+<h3>PowerShell</h3>
+<pre><code>dsh plugin --profile default add dsh-spc-gbt-adapter
+dsh --profile default --dump-config | Select-String &#39;dsh-spc-gbt-adapter&#39;</code></pre>
+<p>上面的 <code>default</code> 是占位，换成你自己的 profile。确认配置里能搜到包名，再重开会话使用。</p>
+
+<h2 id="docs">完整文档</h2>
+<p>本页回答的是「它查什么、依据什么、查不到什么」。使用层面的内容——材料格式、配置键、规则参数、报告结构——以下面的仓库文档为准。</p>
+<p><a href="https://github.com/PerryLink/dsh-spc-gbt-adapter"><strong>完整文档 → GitHub</strong></a>（<code>PerryLink/dsh-spc-gbt-adapter</code>）</p>
+<p>也可以先看该用哪个核查插件那一页，按材料类型定位到本插件；或回到质量制造分组看同类插件。
+<a href="../../zh/checkers/choose/">该用哪个核查插件</a> ·
+<a href="../../zh/checkers/quality/">质量制造</a> ·
+<a href="../../zh/checkers/">全部核查插件</a></p>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>本站为静态 HTML：全部正文都在服务端返回的 HTML 中，无 JavaScript 渲染。内容由构建脚本从各插件的规则库与包元数据生成。</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../../catalog.json">catalog.json</a> · <a href="../../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

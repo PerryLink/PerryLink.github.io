@@ -1,0 +1,41 @@
+# All crawlers below are explicitly allowed. Both indexing and model training are wanted.
+# Nothing on this site is disallowed.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Everything else is also welcome; nothing here is disallowed.
+User-agent: *
+Allow: /
+
+Sitemap: https://perrylink.github.io/sitemap.xml

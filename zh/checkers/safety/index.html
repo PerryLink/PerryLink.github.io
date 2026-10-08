@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>安全生产核查插件（7 个）—— 规则、依据的标准与安装 | PerryLink DSH 插件家族</title>
+<meta name="description" content="安全生产分组共 7 个 DSH 核查插件，规则库合计 48 条。覆盖 水产养殖投入品记录核对、应急演练脚本核对、应急预案要素齐备性与条款级页码定位、危险化学品临界量与重大危险源辨识核对、安全隐患台账→《工贸企业重大事故隐患判定标准》、线损电量拆分与考核表核对、电力工作票要素齐备性与签发许可顺序核对。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/zh/checkers/safety/">
+<link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/zh/checkers/safety/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/zh/checkers/safety/">
+<link rel="alternate" type="application/json" href="../../../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../../../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "numberOfItems": 7,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "养殖投入品核对",
+          "url": "https://perrylink.github.io/checkers/dsh-aqua-input-check/",
+          "description": "水产养殖投入品记录核对（按投入品用量、休药期与起捕间隔核对记录自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "演练脚本核对",
+          "url": "https://perrylink.github.io/checkers/dsh-drill-script-check/",
+          "description": "应急演练脚本核对（按阶段、响应分级、指挥与资源要素核对脚本齐备，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "应急预案要素校验",
+          "url": "https://perrylink.github.io/checkers/dsh-emergency-plan/",
+          "description": "应急预案要素齐备性与条款级页码定位（依据 GB/T 29639-2020 等公开文件，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "危化品临界量核对",
+          "url": "https://perrylink.github.io/checkers/dsh-hazchem-check/",
+          "description": "危险化学品临界量与重大危险源辨识核对（按储存量与临界量核对台账自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "重大隐患条款映射",
+          "url": "https://perrylink.github.io/checkers/dsh-hidden-risk-map/",
+          "description": "安全隐患台账→《工贸企业重大事故隐患判定标准》（应急管理部令第10号）条款映射提示（仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "线损拆分核对",
+          "url": "https://perrylink.github.io/checkers/dsh-power-loss-split/",
+          "description": "线损电量拆分与考核表核对（依据公开的线损计算口径，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "电力工作票核对",
+          "url": "https://perrylink.github.io/checkers/dsh-power-ticket-check/",
+          "description": "电力工作票要素齐备性与签发许可顺序核对（依据现行电力安全工作规程，仅提示差异，不作出定性结论）"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://perrylink.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "核查插件",
+          "item": "https://perrylink.github.io/zh/checkers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "安全生产"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../../">PerryLink DSH 插件家族</a>
+    <nav aria-label="主导航"><a href="../../../zh/">首页</a><a href="../../../zh/checkers/">核查插件</a><a href="../../../zh/checkers/choose/">该用哪个</a><a href="../../../plugins/">其他插件</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../../../zh/">首页</a> &rsaquo; <a href="../../../zh/checkers/">核查插件</a> &rsaquo; <span aria-current="page">安全生产</span></nav>
+<h1>安全生产核查插件</h1>
+<p class="lede">7 个插件，规则库合计 48 条。</p>
+<p>安全生产分组共 7 个核查插件，规则库合计 48 条，其中 11 条为条文直接规定、17 条的条文本次未取得逐字文本。该分组有 1 个插件使用「错误」级严重度，命中即可作为返工依据。面向生产经营单位安全管理岗的台账与预案核对：危化品临界量、应急预案要素、演练脚本、隐患判定、两票与线损。</p>
+<p>面向生产经营单位安全管理岗的台账与预案核对：危化品临界量、应急预案要素、演练脚本、隐患判定、两票与线损。</p>
+<p>同一份材料往往需要同时跑两个以上插件：每个插件只覆盖它自己那份规则库声明过的范围，范围之间不重叠也不互相替代。下面这张表按插件列出核对对象与依据的标准，便于确定该跑哪几个。</p>
+
+<table>
+<caption>安全生产分组的 7 个核查插件</caption>
+<thead><tr><th>插件</th><th>核对对象</th><th>依据的标准</th><th>规则</th><th>版本</th></tr></thead>
+<tbody>
+<tr><td><a href="../../../checkers/dsh-aqua-input-check/">养殖投入品核对</a><br><code>dsh-aqua-input-check</code></td><td>水产养殖投入品记录核对</td><td>《水产养殖质量安全管理规定》、《绿色食品 渔药使用准则》、本机构养殖生产管理口径（本机构配置） 等</td><td>7 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-drill-script-check/">演练脚本核对</a><br><code>dsh-drill-script-check</code></td><td>应急演练脚本核对</td><td>《生产安全事故应急演练基本规范》、本单位应急预案体系（本机构配置）、无统一标准</td><td>8 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-emergency-plan/">应急预案要素校验</a><br><code>dsh-emergency-plan</code></td><td>应急预案要素齐备性与条款级页码定位</td><td>《生产经营单位生产安全事故应急预案编制导则》、《生产安全事故应急预案管理办法》、GB/T 29639-2020 等</td><td>9 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-hazchem-check/">危化品临界量核对</a><br><code>dsh-hazchem-check</code></td><td>危险化学品临界量与重大危险源辨识核对</td><td>《危险化学品安全管理条例》、《危险化学品重大危险源辨识》、国务院令第591号 等</td><td>8 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-hidden-risk-map/">重大隐患条款映射</a><br><code>dsh-hidden-risk-map</code></td><td>安全隐患台账→《工贸企业重大事故隐患判定标准》</td><td>《工贸企业重大事故隐患判定标准》、应急管理部令第10号</td><td>4 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-power-loss-split/">线损拆分核对</a><br><code>dsh-power-loss-split</code></td><td>线损电量拆分与考核表核对</td><td>《电力网电能损耗计算导则》、DL/T 686-2018、GB/T 8170-2008</td><td>5 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-power-ticket-check/">电力工作票核对</a><br><code>dsh-power-ticket-check</code></td><td>电力工作票要素齐备性与签发许可顺序核对</td><td>《电力安全工作规程 发电厂和变电站电气部分》、GB 26860—2011</td><td>7 条（含错误级）</td><td>0.2.1</td></tr>
+</tbody></table>
+
+<h2 id="list">逐个插件</h2>
+<div class="card">
+<h3><a href="../../../checkers/dsh-aqua-input-check/">养殖投入品核对</a></h3>
+<p>水产养殖投入品记录核对（按投入品用量、休药期与起捕间隔核对记录自洽，仅提示差异，不作出定性结论）</p>
+<p>规则库 7 条，全部为「由原则推导」，1 条依据本机构配置，7 条的条文本次未取得逐字文本；严重度分布：提示 6 条、参考 1 条。</p>
+<p>依据：《水产养殖质量安全管理规定》、《绿色食品 渔药使用准则》、本机构养殖生产管理口径（本机构配置）、无统一标准</p>
+<p>安装：<code>dsh plugin --profile default add dsh-aqua-input-check</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-drill-script-check/">演练脚本核对</a></h3>
+<p>应急演练脚本核对（按阶段、响应分级、指挥与资源要素核对脚本齐备，仅提示差异，不作出定性结论）</p>
+<p>规则库 8 条，全部为「由原则推导」，1 条依据本机构配置，8 条的条文本次未取得逐字文本；严重度分布：提示 7 条、参考 1 条。</p>
+<p>依据：《生产安全事故应急演练基本规范》、本单位应急预案体系（本机构配置）、无统一标准</p>
+<p>安装：<code>dsh plugin --profile default add dsh-drill-script-check</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-emergency-plan/">应急预案要素校验</a></h3>
+<p>应急预案要素齐备性与条款级页码定位（依据 GB/T 29639-2020 等公开文件，仅提示差异，不作出定性结论）</p>
+<p>规则库 9 条，其中 5 条为条文直接规定，1 条依据本机构配置；严重度分布：提示 5 条、参考 4 条。</p>
+<p>依据：《生产经营单位生产安全事故应急预案编制导则》、《生产安全事故应急预案管理办法》、GB/T 29639-2020、国家安全生产监督管理总局令第88号</p>
+<p>安装：<code>dsh plugin --profile default add dsh-emergency-plan</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-hazchem-check/">危化品临界量核对</a></h3>
+<p>危险化学品临界量与重大危险源辨识核对（按储存量与临界量核对台账自洽，仅提示差异，不作出定性结论）</p>
+<p>规则库 8 条，全部为「由原则推导」，2 条的条文本次未取得逐字文本；严重度分布：提示 8 条。</p>
+<p>依据：《危险化学品安全管理条例》、《危险化学品重大危险源辨识》、国务院令第591号、GB 18218—2018</p>
+<p>安装：<code>dsh plugin --profile default add dsh-hazchem-check</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-hidden-risk-map/">重大隐患条款映射</a></h3>
+<p>安全隐患台账→《工贸企业重大事故隐患判定标准》（应急管理部令第10号）条款映射提示（仅提示差异，不作出定性结论）</p>
+<p>规则库 4 条，其中 1 条为条文直接规定；严重度分布：提示 3 条、参考 1 条。</p>
+<p>依据：《工贸企业重大事故隐患判定标准》、应急管理部令第10号</p>
+<p>安装：<code>dsh plugin --profile default add dsh-hidden-risk-map</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-power-loss-split/">线损拆分核对</a></h3>
+<p>线损电量拆分与考核表核对（依据公开的线损计算口径，仅提示差异，不作出定性结论）</p>
+<p>规则库 5 条，全部为「由原则推导」，2 条依据本机构配置；严重度分布：提示 3 条、参考 2 条。</p>
+<p>依据：《电力网电能损耗计算导则》、DL/T 686-2018、GB/T 8170-2008</p>
+<p>安装：<code>dsh plugin --profile default add dsh-power-loss-split</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-power-ticket-check/">电力工作票核对</a></h3>
+<p>电力工作票要素齐备性与签发许可顺序核对（依据现行电力安全工作规程，仅提示差异，不作出定性结论）</p>
+<p>规则库 7 条，其中 5 条为条文直接规定，1 条依据本机构配置；严重度分布：错误 1 条、提示 5 条、参考 1 条。</p>
+<p>依据：《电力安全工作规程 发电厂和变电站电气部分》、GB 26860—2011</p>
+<p>安装：<code>dsh plugin --profile default add dsh-power-ticket-check</code></p>
+</div>
+
+<h2 id="nav">相关页面</h2>
+<ul>
+<li><a href="../../../zh/checkers/choose/">该用哪个核查插件</a>——按材料类型定位插件的对照表。</li>
+<li><a href="../../../zh/checkers/">全部 53 个核查插件</a>——按 10 个职业分组的总览。</li>
+<li><a href="../../../zh/">首页</a>——这一族插件是什么、共同约定是什么。</li>
+</ul>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>本站为静态 HTML：全部正文都在服务端返回的 HTML 中，无 JavaScript 渲染。内容由构建脚本从各插件的规则库与包元数据生成。</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../../../catalog.json">catalog.json</a> · <a href="../../../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

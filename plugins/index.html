@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All 43 non-checker DeepSeek Harness plugins | PerryLink DSH Plugin Family</title>
+<meta name="description" content="The 43 general-purpose plugins in the PerryLink DeepSeek Harness family, grouped by category — Agents &amp; orchestration (3), Development &amp; quality (7), Integrations (7), Interface (1), Knowledge &amp; research (5), Memory (1), Models &amp; routing (3), Sessions (4), Tools (10), Workflow &amp; approvals (2). Version, licence, runtime and install command for each.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/plugins/">
+<link rel="alternate" hreflang="en" href="https://perrylink.github.io/plugins/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/plugins/">
+<link rel="alternate" type="application/json" href="../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "numberOfItems": 43,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Auto Review",
+          "url": "https://perrylink.github.io/plugins/dsh-auto-review/",
+          "description": "Second-model AI auto-review for DeepSeek Harness approval requests: a read-only reviewer subagent decides allow/deny on the approval answerer chain, with fail-closed fallback and full session-log audit."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Autotier",
+          "url": "https://perrylink.github.io/plugins/dsh-autotier/",
+          "description": "Automatic strong/cheap model-tier routing for DeepSeek Harness: intent-gated tier landing on the agent/request waterfall, plan-mode handoff (strong plans, cheap implements), deterministic high-risk guards on tools/pre-execute, and failure escalation with TTL fallback."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Background Agents",
+          "url": "https://perrylink.github.io/plugins/dsh-background-agents/",
+          "description": "Background agents for DeepSeek Harness: run subagents as background jobs with a structured task board and approval controls."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Budget",
+          "url": "https://perrylink.github.io/plugins/dsh-budget/",
+          "description": "Cost governance for DeepSeek Harness: aggregated token/cost metering per model, session and day, budget caps with threshold alerts and over-limit policies, carbon footprint estimation, per-model latency benchmarks, and the /budget command."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Certification MCP",
+          "url": "https://perrylink.github.io/plugins/dsh-cert-mcp/",
+          "description": "Read-only MCP server exposing the dsh-plugin-certification registry: certification grades, snapshots and five-dimension evidence for DeepSeek Harness plugins."
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Checkpoint Rewind",
+          "url": "https://perrylink.github.io/plugins/dsh-checkpoint-rewind/",
+          "description": "Unified DSH checkpoints: session, workspace, and config three-state snapshots with one-shot /checkpoint and /rewind rollback, a checkpoint tool, automatic interval snapshots, a Settings-page timeline with pairwise diffs, and seed-replay session recovery."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Claude Move",
+          "url": "https://perrylink.github.io/plugins/dsh-claude-move/",
+          "description": "Claude Code to DeepSeek Harness migration: import CLAUDE.md/AGENTS.md, slash commands, and session history — approval-gated and idempotent."
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Click",
+          "url": "https://perrylink.github.io/plugins/dsh-click/",
+          "description": "Cross-platform native desktop control for DeepSeek Harness (Windows first): screen_shot, screen_read, click/type/scroll/key, and app_list/app_launch — approval-gated, never stealing foreground focus."
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Composer History",
+          "url": "https://perrylink.github.io/plugins/dsh-composer-history/",
+          "description": "Terminal-style input history for the DeepSeek Harness web composer: edge-first arrows with exact draft/caret restore, browser-local persisted history, Ctrl+R reverse search, workspace recall, and sliding-context awareness."
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Data Quality",
+          "url": "https://perrylink.github.io/plugins/dsh-data-quality/",
+          "description": "Deterministic data profiling, cleaning, and verification for DeepSeek Harness: DAMA scorecard, content-hash dedupe, metric expectations, and drift checks."
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Defend",
+          "url": "https://perrylink.github.io/plugins/dsh-defend/",
+          "description": "Prompt-injection, jailbreak, and secret-leak defense for DeepSeek Harness: Aho-Corasick detection with allow/ask/block interception, sanitized audit events, and a recursive-delete pre-execution gate."
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "DoubleCheck",
+          "url": "https://perrylink.github.io/plugins/dsh-doublecheck/",
+          "description": "Delivery quality gate for DeepSeek Harness: grill the requirements, test the implementation, prove the delivery, and gate the handoff with a deliverable/rework decision."
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Draw",
+          "url": "https://perrylink.github.io/plugins/dsh-draw/",
+          "description": "Unified static-image generation router for DeepSeek Harness: one image_generate tool with standard parameters, config-driven engine routing (OpenAI Images, Zhipu CogView, and any compatible endpoint), health-aware fallback, durable workspace attachments, and per-session quota accounting."
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Fast",
+          "url": "https://perrylink.github.io/plugins/dsh-fast/",
+          "description": "Read-only performance diagnostics for DeepSeek Harness: session load/restore timing, spill-hit counts, compaction count and trigger, context-injection volume (AGENTS.md/skills/tool-schema token share), and LLM cache hit rate — surfaced via /fast."
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Fund Research",
+          "url": "https://perrylink.github.io/plugins/dsh-fund-research/",
+          "description": "Fund research: analyze funds with returns, holdings, and performance decomposition."
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "GitHub",
+          "url": "https://perrylink.github.io/plugins/dsh-github/",
+          "description": "GitHub for DeepSeek Harness: PR/issue/repo/file tools, reviews, and CI checks — every write gated by human approval, token never logged."
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Industry Research",
+          "url": "https://perrylink.github.io/plugins/dsh-industry-research/",
+          "description": "Industry research toolkit: structured company/industry dives with source capture and auditable research trails."
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Laya",
+          "url": "https://perrylink.github.io/plugins/dsh-laya/",
+          "description": "Laya typed decisions — noul (yes/no), choice and score — as a first-class Cordis service and model-visible tools for DeepSeek Harness, backed by a locally hosted Laya decision sidecar."
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Library",
+          "url": "https://perrylink.github.io/plugins/dsh-library/",
+          "description": "Local document knowledge base for DeepSeek Harness: library_add/remove/list, hybrid semantic+keyword library_search with diversity re-ranking and lost-in-the-middle avoidance, citation-aware injection, library_cite_check and library_diagnose — SQLite-backed index, local embedding, zero model downloads."
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Local AI",
+          "url": "https://perrylink.github.io/plugins/dsh-local-ai/",
+          "description": "Run local AI models inside DeepSeek Harness: Ollama/LM Studio/local endpoints as drop-in model routes."
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "LSP Actions",
+          "url": "https://perrylink.github.io/plugins/dsh-lsp-actions/",
+          "description": "LSP actions for DeepSeek Harness: the IDE-integration plugin that exposes language-server diagnostics, definitions, references, and fixes to the agent."
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Mask",
+          "url": "https://perrylink.github.io/plugins/dsh-mask/",
+          "description": "Mask sensitive values in DeepSeek Harness sessions: redaction rules for secrets, with an in-memory allowlist and a controlled reveal workflow."
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "MCP Panel",
+          "url": "https://perrylink.github.io/plugins/dsh-mcp-panel/",
+          "description": "Web panel for managing MCP (Model Context Protocol) servers in DeepSeek Harness: inspect, start/stop, view logs, and configure servers, with automatic backups."
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Memento",
+          "url": "https://perrylink.github.io/plugins/dsh-memento/",
+          "description": "Bounded, layered, approval-gated, auditable cross-session memory for DeepSeek Harness — a capability seam (ctx.memory service + local SQLite provider + memory tool + frozen snapshot injection), not another memory warehouse."
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Observe",
+          "url": "https://perrylink.github.io/plugins/dsh-observe/",
+          "description": "Observability for DeepSeek Harness: request tracing, telemetry, log buffering, and retry visibility."
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Output Styles",
+          "url": "https://perrylink.github.io/plugins/dsh-output-styles/",
+          "description": "Runtime-switchable model output styles for DeepSeek Harness: a Markdown style library (six built-ins, Claude Code-parity proactive/learning), /style command, session-scoped persistence, system-prompt injection, a plugin renderer registry, per-session/per-tool rules, and /export rendering."
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Permission Rules",
+          "url": "https://perrylink.github.io/plugins/dsh-permission-rules/",
+          "description": "Declarative, ordered allow/deny/ask permission rules for DeepSeek Harness: match tool names, arguments (glob/regex), workspace paths, and network targets (domain/IP/port/scheme), plus a Codex-style process-level network policy."
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Phocinae",
+          "url": "https://perrylink.github.io/plugins/dsh-phocinae/",
+          "description": "Local non-generative decision layer for DeepSeek Harness: phocinae_ask / phocinae_gate tools plus a fail-closed approval gate"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Plugin Doctor",
+          "url": "https://perrylink.github.io/plugins/dsh-plugin-doctor/",
+          "description": "Zero-dependency static + sandbox smoke detector for DeepSeek Harness plugins: package-structure gates (R), cordis contract scans (K), keyless-headless sandbox smoke (D), and ecosystem-listing checks (CC)."
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Plugin Guide",
+          "url": "https://perrylink.github.io/plugins/dsh-plugin-guide/",
+          "description": "The DSH plugin development guide as an installable skill: packaging, contracts, checks, and a pack verifier for builds."
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Plugin Kit",
+          "url": "https://perrylink.github.io/plugins/dsh-plugin-kit/",
+          "description": "Shared zero-runtime-dependency toolkit for PerryLink DSH plugins: a pluggable Provider registry seam, fail-closed approval and adaptive session-event gates, mechanical verify scripts, shared sanitize/pricing/judge modules, and a new-plugin skeleton."
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Plugin Upgrade",
+          "url": "https://perrylink.github.io/plugins/dsh-plugin-upgrade/",
+          "description": "Plugin-author upgrade skill for DeepSeek Harness, new-generation single package: one corridor index reads the caller peer band and routes it to the matching closed corridor card (dsh 0.1.3-alpha.1 -> 0.1.5-rc.1 and 0.1.5-rc.2 -> 0.1.6-alpha.2), with a zero-dependency seam scanner shipped as a bundle skill and an npx CLI."
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Reach",
+          "url": "https://perrylink.github.io/plugins/dsh-reach/",
+          "description": "Multi-channel decision and remote-control bridge for DeepSeek Harness: approval/question cards from any workspace mirrored to IM chat (WeChat iLink, Telegram, Feishu) with stable #token ids and P{n} numbering, answered from chat through the native pending waterfall — fail-closed sender ownership, session console, and proactive reach_send."
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Research Report",
+          "url": "https://perrylink.github.io/plugins/dsh-research-report/",
+          "description": "Research reports with integrity: evidence-linked reports whose content hash seals the directory of sources."
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Score",
+          "url": "https://perrylink.github.io/plugins/dsh-score/",
+          "description": "Plugin quality scoring for the DSH ecosystem: evaluate plugins against checks and produce evidence-backed compliance reports."
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Session Pin",
+          "url": "https://perrylink.github.io/plugins/dsh-session-pin/",
+          "description": "Pin important sessions in DeepSeek Harness so they stay visible, sorted first, and protected from cleanup."
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Session Sync",
+          "url": "https://perrylink.github.io/plugins/dsh-session-sync/",
+          "description": "Session synchronization for DeepSeek Harness: push/pull session logs to remote storage with configurable auto push/pull."
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Skill Pack Security Provider",
+          "url": "https://perrylink.github.io/plugins/dsh-skill-pack-security/",
+          "description": "Security skill-pack provider: pre-packaged security review skills with a risk card; ships both host and client faces."
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Talk",
+          "url": "https://perrylink.github.io/plugins/dsh-talk/",
+          "description": "Voice for DeepSeek Harness: text-to-speech and speech-to-text with mute and speak-to-chat controls."
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Team Rooms",
+          "url": "https://perrylink.github.io/plugins/dsh-team-rooms/",
+          "description": "Team rooms for DeepSeek Harness: persistent shared rooms across independent sessions — a message bus, a shared task board and a timeline. Extracted from dsh-background-agents, whose background-agent half is superseded by DSH's native continuable subagents."
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Test Drive",
+          "url": "https://perrylink.github.io/plugins/dsh-test-drive/",
+          "description": "Test Drive: run plugins in a disposable sandbox environment (temporary DSH_HOME) and score the results as JSON/Markdown."
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "TickTick",
+          "url": "https://perrylink.github.io/plugins/dsh-ticktick/",
+          "description": "TickTick (Dida365) task bridge for DeepSeek Harness: a session-header task panel (list filter, quick add, complete, delete, due dates, drag reorder), eleven curated ticktick_* tools, and a plugin settings card over the official TickTick MCP endpoint."
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Translate",
+          "url": "https://perrylink.github.io/plugins/dsh-translate/",
+          "description": "Translate text and files inside DeepSeek Harness with quality checks; also fixes broken JSON output from models."
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://perrylink.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Plugins"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../">PerryLink DSH Plugin Family</a>
+    <nav aria-label="主导航"><a href="../">Home</a><a href="../plugins/">Plugins</a><a href="../zh/checkers/">核查插件 (ZH)</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../">Home</a> &rsaquo; <span aria-current="page">Plugins</span></nav>
+<h1>Plugins</h1>
+<p class="lede">43 general-purpose plugins for DeepSeek Harness, grouped into 10 categories.</p>
+<p>These are the non-checker half of the family. They add capabilities to DeepSeek Harness itself — tools, model routing, session handling, integrations, memory, observability. Every one is published to npm, and every one is Apache-2.0 or MIT.</p>
+<p>The other half of the family is a set of 53 compliance checkers. Those are Chinese-canonical and live under a separate index: <a href="../zh/checkers/">核查插件总览</a> (Chinese). They are grouped by profession rather than by capability, and each one checks a specific kind of document against the regulations or standards it cites.</p>
+<div class="note">
+<p>Two entries in the catalog are listed twice — see the naming-caution note on the <a href="../plugins/dsh-github/">GitHub</a> and <a href="../plugins/dsh-ticktick/">TickTick</a> pages. Both bare npm names belong to unrelated third-party packages on the registry, so only the scoped names are installable. This page therefore lists 43 plugins, not 45.</p>
+</div>
+
+<h2 id="agent">Agents &amp; orchestration (3)</h2>
+<p>3 plugins in this group. 代理与编排：Background Agents、Skill Pack Security Provider、Team Rooms。</p>
+<div class="grid">
+<div class="card">
+<h3><a href="../plugins/dsh-background-agents/">Background Agents</a></h3>
+<p>Background agents for DeepSeek Harness: run subagents as background jobs with a structured task board and approval controls.</p>
+<p><span class="tag">dsh-background-agents</span><span class="tag">v0.10.2</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-skill-pack-security/">Skill Pack Security Provider</a></h3>
+<p>Security skill-pack provider: pre-packaged security review skills with a risk card; ships both host and client faces.</p>
+<p><span class="tag">@perrylink/dsh-skill-pack-security-provider</span><span class="tag">v2.2.22</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-team-rooms/">Team Rooms</a></h3>
+<p>Team rooms for DeepSeek Harness: persistent shared rooms across independent sessions — a message bus, a shared task board and a timeline. Extracted from dsh-background-agents, whose background-agent half is superseded by DSH&#39;s native continuable subagents.</p>
+<p><span class="tag">dsh-team-rooms</span><span class="tag">v1.0.8</span><span class="tag">Apache-2.0</span></p>
+</div>
+</div>
+
+<h2 id="dev">Development &amp; quality (7)</h2>
+<p>7 plugins in this group. 开发与质量：Defend、Observe、Plugin Doctor、Plugin Kit 等。</p>
+<div class="grid">
+<div class="card">
+<h3><a href="../plugins/dsh-defend/">Defend</a></h3>
+<p>Prompt-injection, jailbreak, and secret-leak defense for DeepSeek Harness: Aho-Corasick detection with allow/ask/block interception, sanitized audit events, and a recursive-delete pre-execution gate.</p>
+<p><span class="tag">dsh-defend</span><span class="tag">v0.3.20</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-observe/">Observe</a></h3>
+<p>Observability for DeepSeek Harness: request tracing, telemetry, log buffering, and retry visibility.</p>
+<p><span class="tag">dsh-observe</span><span class="tag">v0.2.21</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-plugin-doctor/">Plugin Doctor</a></h3>
+<p>Zero-dependency static + sandbox smoke detector for DeepSeek Harness plugins: package-structure gates (R), cordis contract scans (K), keyless-headless sandbox smoke (D), and ecosystem-listing checks (CC).</p>
+<p><span class="tag">@perrylink/dsh-plugin-doctor</span><span class="tag">v0.6.3</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-plugin-kit/">Plugin Kit</a></h3>
+<p>Shared zero-runtime-dependency toolkit for PerryLink DSH plugins: a pluggable Provider registry seam, fail-closed approval and adaptive session-event gates, mechanical verify scripts, shared sanitize/pricing/judge modules, and a new-plugin skeleton.</p>
+<p><span class="tag">@perrylink/dsh-plugin-kit</span><span class="tag">v0.1.16</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-plugin-upgrade/">Plugin Upgrade</a></h3>
+<p>Plugin-author upgrade skill for DeepSeek Harness, new-generation single package: one corridor index reads the caller peer band and routes it to the matching closed corridor card (dsh 0.1.3-alpha.1 -&gt; 0.1.5-rc.1 and 0.1.5-rc.2 -&gt; 0.1.6-alpha.2), with a zero-dependency seam scanner shipped as a bundle skill and an npx CLI.</p>
+<p><span class="tag">dsh-plugin-upgrade</span><span class="tag">v2.0.7</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-score/">Score</a></h3>
+<p>Plugin quality scoring for the DSH ecosystem: evaluate plugins against checks and produce evidence-backed compliance reports.</p>
+<p><span class="tag">dsh-score</span><span class="tag">v0.2.19</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-test-drive/">Test Drive</a></h3>
+<p>Test Drive: run plugins in a disposable sandbox environment (temporary DSH_HOME) and score the results as JSON/Markdown.</p>
+<p><span class="tag">dsh-test-drive</span><span class="tag">v0.3.14</span><span class="tag">Apache-2.0</span></p>
+</div>
+</div>
+
+<h2 id="integration">Integrations (7)</h2>
+<p>7 plugins in this group. 集成：Certification MCP、Claude Move、GitHub、MCP Panel 等。</p>
+<div class="grid">
+<div class="card">
+<h3><a href="../plugins/dsh-cert-mcp/">Certification MCP</a></h3>
+<p>Read-only MCP server exposing the dsh-plugin-certification registry: certification grades, snapshots and five-dimension evidence for DeepSeek Harness plugins.</p>
+<p><span class="tag">dsh-cert-mcp</span><span class="tag">v0.2.4</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-claude-move/">Claude Move</a></h3>
+<p>Claude Code to DeepSeek Harness migration: import CLAUDE.md/AGENTS.md, slash commands, and session history — approval-gated and idempotent.</p>
+<p><span class="tag">dsh-claude-move</span><span class="tag">v0.4.7</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-github/">GitHub</a></h3>
+<p>GitHub for DeepSeek Harness: PR/issue/repo/file tools, reviews, and CI checks — every write gated by human approval, token never logged.</p>
+<p><span class="tag">@perrylink/dsh-github</span><span class="tag">v0.7.19</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-mcp-panel/">MCP Panel</a></h3>
+<p>Web panel for managing MCP (Model Context Protocol) servers in DeepSeek Harness: inspect, start/stop, view logs, and configure servers, with automatic backups.</p>
+<p><span class="tag">dsh-mcp-panel</span><span class="tag">v0.6.22</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-phocinae/">Phocinae</a></h3>
+<p>Local non-generative decision layer for DeepSeek Harness: phocinae_ask / phocinae_gate tools plus a fail-closed approval gate</p>
+<p><span class="tag">dsh-phocinae</span><span class="tag">v0.2.2</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-reach/">Reach</a></h3>
+<p>Multi-channel decision and remote-control bridge for DeepSeek Harness: approval/question cards from any workspace mirrored to IM chat (WeChat iLink, Telegram, Feishu) with stable #token ids and P{n} numbering, answered from chat through the native pending waterfall — fail-closed sender ownership, session console, and proactive reach_send.</p>
+<p><span class="tag">dsh-reach</span><span class="tag">v0.1.17</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-ticktick/">TickTick</a></h3>
+<p>TickTick (Dida365) task bridge for DeepSeek Harness: a session-header task panel (list filter, quick add, complete, delete, due dates, drag reorder), eleven curated ticktick_* tools, and a plugin settings card over the official TickTick MCP endpoint.</p>
+<p><span class="tag">@perrylink/dsh-ticktick</span><span class="tag">v0.1.15</span><span class="tag">Apache-2.0</span></p>
+</div>
+</div>
+
+<h2 id="interface">Interface (1)</h2>
+<p>1 plugin in this group. 界面：Output Styles。</p>
+<div class="grid">
+<div class="card">
+<h3><a href="../plugins/dsh-output-styles/">Output Styles</a></h3>
+<p>Runtime-switchable model output styles for DeepSeek Harness: a Markdown style library (six built-ins, Claude Code-parity proactive/learning), /style command, session-scoped persistence, system-prompt injection, a plugin renderer registry, per-session/per-tool rules, and /export rendering.</p>
+<p><span class="tag">dsh-output-styles</span><span class="tag">v0.6.25</span><span class="tag">Apache-2.0</span></p>
+</div>
+</div>
+
+<h2 id="knowledge">Knowledge &amp; research (5)</h2>
+<p>5 plugins in this group. 知识与研究：Fund Research、Industry Research、Library、Plugin Guide 等。</p>
+<div class="grid">
+<div class="card">
+<h3><a href="../plugins/dsh-fund-research/">Fund Research</a></h3>
+<p>Fund research: analyze funds with returns, holdings, and performance decomposition.</p>
+<p><span class="tag">dsh-fund-research</span><span class="tag">v0.4.19</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-industry-research/">Industry Research</a></h3>
+<p>Industry research toolkit: structured company/industry dives with source capture and auditable research trails.</p>
+<p><span class="tag">dsh-industry-research</span><span class="tag">v0.3.18</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-library/">Library</a></h3>
+<p>Local document knowledge base for DeepSeek Harness: library_add/remove/list, hybrid semantic+keyword library_search with diversity re-ranking and lost-in-the-middle avoidance, citation-aware injection, library_cite_check and library_diagnose — SQLite-backed index, local embedding, zero model downloads.</p>
+<p><span class="tag">dsh-library</span><span class="tag">v0.2.19</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-plugin-guide/">Plugin Guide</a></h3>
+<p>The DSH plugin development guide as an installable skill: packaging, contracts, checks, and a pack verifier for builds.</p>
+<p><span class="tag">dsh-plugin-guide</span><span class="tag">v0.3.26</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-research-report/">Research Report</a></h3>
+<p>Research reports with integrity: evidence-linked reports whose content hash seals the directory of sources.</p>
+<p><span class="tag">dsh-research-report</span><span class="tag">v0.3.21</span><span class="tag">Apache-2.0</span></p>
+</div>
+</div>
+
+<h2 id="memory">Memory (1)</h2>
+<p>1 plugin in this group. 记忆：Memento。</p>
+<div class="grid">
+<div class="card">
+<h3><a href="../plugins/dsh-memento/">Memento</a></h3>
+<p>Bounded, layered, approval-gated, auditable cross-session memory for DeepSeek Harness — a capability seam (ctx.memory service + local SQLite provider + memory tool + frozen snapshot injection), not another memory warehouse.</p>
+<p><span class="tag">dsh-memento</span><span class="tag">v0.5.22</span><span class="tag">Apache-2.0</span></p>
+</div>
+</div>
+
+<h2 id="model">Models &amp; routing (3)</h2>
+<p>3 plugins in this group. 模型与路由：Autotier、Laya、Local AI。</p>
+<div class="grid">
+<div class="card">
+<h3><a href="../plugins/dsh-autotier/">Autotier</a></h3>
+<p>Automatic strong/cheap model-tier routing for DeepSeek Harness: intent-gated tier landing on the agent/request waterfall, plan-mode handoff (strong plans, cheap implements), deterministic high-risk guards on tools/pre-execute, and failure escalation with TTL fallback.</p>
+<p><span class="tag">dsh-autotier</span><span class="tag">v0.2.15</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-laya/">Laya</a></h3>
+<p>Laya typed decisions — noul (yes/no), choice and score — as a first-class Cordis service and model-visible tools for DeepSeek Harness, backed by a locally hosted Laya decision sidecar.</p>
+<p><span class="tag">dsh-laya</span><span class="tag">v0.1.4</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-local-ai/">Local AI</a></h3>
+<p>Run local AI models inside DeepSeek Harness: Ollama/LM Studio/local endpoints as drop-in model routes.</p>
+<p><span class="tag">dsh-local-ai</span><span class="tag">v0.2.18</span><span class="tag">Apache-2.0</span></p>
+</div>
+</div>
+
+<h2 id="session">Sessions (4)</h2>
+<p>4 plugins in this group. 会话：Checkpoint Rewind、Composer History、Session Pin、Session Sync。</p>
+<div class="grid">
+<div class="card">
+<h3><a href="../plugins/dsh-checkpoint-rewind/">Checkpoint Rewind</a></h3>
+<p>Unified DSH checkpoints: session, workspace, and config three-state snapshots with one-shot /checkpoint and /rewind rollback, a checkpoint tool, automatic interval snapshots, a Settings-page timeline with pairwise diffs, and seed-replay session recovery.</p>
+<p><span class="tag">dsh-checkpoint-rewind</span><span class="tag">v0.6.23</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-composer-history/">Composer History</a></h3>
+<p>Terminal-style input history for the DeepSeek Harness web composer: edge-first arrows with exact draft/caret restore, browser-local persisted history, Ctrl+R reverse search, workspace recall, and sliding-context awareness.</p>
+<p><span class="tag">dsh-composer-history</span><span class="tag">v0.8.10</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-session-pin/">Session Pin</a></h3>
+<p>Pin important sessions in DeepSeek Harness so they stay visible, sorted first, and protected from cleanup.</p>
+<p><span class="tag">dsh-session-pin</span><span class="tag">v0.7.19</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-session-sync/">Session Sync</a></h3>
+<p>Session synchronization for DeepSeek Harness: push/pull session logs to remote storage with configurable auto push/pull.</p>
+<p><span class="tag">dsh-session-sync</span><span class="tag">v0.2.23</span><span class="tag">Apache-2.0</span></p>
+</div>
+</div>
+
+<h2 id="tools">Tools (10)</h2>
+<p>10 plugins in this group. 工具：Budget、Click、Data Quality、DoubleCheck 等。</p>
+<div class="grid">
+<div class="card">
+<h3><a href="../plugins/dsh-budget/">Budget</a></h3>
+<p>Cost governance for DeepSeek Harness: aggregated token/cost metering per model, session and day, budget caps with threshold alerts and over-limit policies, carbon footprint estimation, per-model latency benchmarks, and the /budget command.</p>
+<p><span class="tag">dsh-budget</span><span class="tag">v0.4.16</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-click/">Click</a></h3>
+<p>Cross-platform native desktop control for DeepSeek Harness (Windows first): screen_shot, screen_read, click/type/scroll/key, and app_list/app_launch — approval-gated, never stealing foreground focus.</p>
+<p><span class="tag">dsh-click</span><span class="tag">v0.3.18</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-data-quality/">Data Quality</a></h3>
+<p>Deterministic data profiling, cleaning, and verification for DeepSeek Harness: DAMA scorecard, content-hash dedupe, metric expectations, and drift checks.</p>
+<p><span class="tag">dsh-data-quality</span><span class="tag">v0.3.18</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-doublecheck/">DoubleCheck</a></h3>
+<p>Delivery quality gate for DeepSeek Harness: grill the requirements, test the implementation, prove the delivery, and gate the handoff with a deliverable/rework decision.</p>
+<p><span class="tag">dsh-doublecheck</span><span class="tag">v0.9.23</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-draw/">Draw</a></h3>
+<p>Unified static-image generation router for DeepSeek Harness: one image_generate tool with standard parameters, config-driven engine routing (OpenAI Images, Zhipu CogView, and any compatible endpoint), health-aware fallback, durable workspace attachments, and per-session quota accounting.</p>
+<p><span class="tag">dsh-draw</span><span class="tag">v0.2.21</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-fast/">Fast</a></h3>
+<p>Read-only performance diagnostics for DeepSeek Harness: session load/restore timing, spill-hit counts, compaction count and trigger, context-injection volume (AGENTS.md/skills/tool-schema token share), and LLM cache hit rate — surfaced via /fast.</p>
+<p><span class="tag">dsh-fast</span><span class="tag">v0.2.20</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-lsp-actions/">LSP Actions</a></h3>
+<p>LSP actions for DeepSeek Harness: the IDE-integration plugin that exposes language-server diagnostics, definitions, references, and fixes to the agent.</p>
+<p><span class="tag">dsh-lsp-actions</span><span class="tag">v0.5.11</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-mask/">Mask</a></h3>
+<p>Mask sensitive values in DeepSeek Harness sessions: redaction rules for secrets, with an in-memory allowlist and a controlled reveal workflow.</p>
+<p><span class="tag">dsh-mask</span><span class="tag">v0.2.19</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-talk/">Talk</a></h3>
+<p>Voice for DeepSeek Harness: text-to-speech and speech-to-text with mute and speak-to-chat controls.</p>
+<p><span class="tag">dsh-talk</span><span class="tag">v0.3.19</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-translate/">Translate</a></h3>
+<p>Translate text and files inside DeepSeek Harness with quality checks; also fixes broken JSON output from models.</p>
+<p><span class="tag">dsh-translate</span><span class="tag">v0.2.20</span><span class="tag">Apache-2.0</span></p>
+</div>
+</div>
+
+<h2 id="workflow">Workflow &amp; approvals (2)</h2>
+<p>2 plugins in this group. 工作流与审批：Auto Review、Permission Rules。</p>
+<div class="grid">
+<div class="card">
+<h3><a href="../plugins/dsh-auto-review/">Auto Review</a></h3>
+<p>Second-model AI auto-review for DeepSeek Harness approval requests: a read-only reviewer subagent decides allow/deny on the approval answerer chain, with fail-closed fallback and full session-log audit.</p>
+<p><span class="tag">dsh-auto-review</span><span class="tag">v0.12.15</span><span class="tag">Apache-2.0</span></p>
+</div>
+<div class="card">
+<h3><a href="../plugins/dsh-permission-rules/">Permission Rules</a></h3>
+<p>Declarative, ordered allow/deny/ask permission rules for DeepSeek Harness: match tool names, arguments (glob/regex), workspace paths, and network targets (domain/IP/port/scheme), plus a Codex-style process-level network policy.</p>
+<p><span class="tag">dsh-permission-rules</span><span class="tag">v0.7.14</span><span class="tag">Apache-2.0</span></p>
+</div>
+</div>
+
+<h2 id="all">All plugins, alphabetically</h2>
+<table>
+<thead><tr><th>Plugin</th><th>npm package</th><th>Version</th><th>Licence</th><th>Group</th></tr></thead>
+<tbody>
+<tr><td><a href="../plugins/dsh-auto-review/">Auto Review</a></td><td><code>dsh-auto-review</code></td><td>0.12.15</td><td>Apache-2.0</td><td>Workflow &amp; approvals</td></tr>
+<tr><td><a href="../plugins/dsh-autotier/">Autotier</a></td><td><code>dsh-autotier</code></td><td>0.2.15</td><td>Apache-2.0</td><td>Models &amp; routing</td></tr>
+<tr><td><a href="../plugins/dsh-background-agents/">Background Agents</a></td><td><code>dsh-background-agents</code></td><td>0.10.2</td><td>Apache-2.0</td><td>Agents &amp; orchestration</td></tr>
+<tr><td><a href="../plugins/dsh-budget/">Budget</a></td><td><code>dsh-budget</code></td><td>0.4.16</td><td>Apache-2.0</td><td>Tools</td></tr>
+<tr><td><a href="../plugins/dsh-cert-mcp/">Certification MCP</a></td><td><code>dsh-cert-mcp</code></td><td>0.2.4</td><td>Apache-2.0</td><td>Integrations</td></tr>
+<tr><td><a href="../plugins/dsh-checkpoint-rewind/">Checkpoint Rewind</a></td><td><code>dsh-checkpoint-rewind</code></td><td>0.6.23</td><td>Apache-2.0</td><td>Sessions</td></tr>
+<tr><td><a href="../plugins/dsh-claude-move/">Claude Move</a></td><td><code>dsh-claude-move</code></td><td>0.4.7</td><td>Apache-2.0</td><td>Integrations</td></tr>
+<tr><td><a href="../plugins/dsh-click/">Click</a></td><td><code>dsh-click</code></td><td>0.3.18</td><td>Apache-2.0</td><td>Tools</td></tr>
+<tr><td><a href="../plugins/dsh-composer-history/">Composer History</a></td><td><code>dsh-composer-history</code></td><td>0.8.10</td><td>Apache-2.0</td><td>Sessions</td></tr>
+<tr><td><a href="../plugins/dsh-data-quality/">Data Quality</a></td><td><code>dsh-data-quality</code></td><td>0.3.18</td><td>Apache-2.0</td><td>Tools</td></tr>
+<tr><td><a href="../plugins/dsh-defend/">Defend</a></td><td><code>dsh-defend</code></td><td>0.3.20</td><td>Apache-2.0</td><td>Development &amp; quality</td></tr>
+<tr><td><a href="../plugins/dsh-doublecheck/">DoubleCheck</a></td><td><code>dsh-doublecheck</code></td><td>0.9.23</td><td>Apache-2.0</td><td>Tools</td></tr>
+<tr><td><a href="../plugins/dsh-draw/">Draw</a></td><td><code>dsh-draw</code></td><td>0.2.21</td><td>Apache-2.0</td><td>Tools</td></tr>
+<tr><td><a href="../plugins/dsh-fast/">Fast</a></td><td><code>dsh-fast</code></td><td>0.2.20</td><td>Apache-2.0</td><td>Tools</td></tr>
+<tr><td><a href="../plugins/dsh-fund-research/">Fund Research</a></td><td><code>dsh-fund-research</code></td><td>0.4.19</td><td>Apache-2.0</td><td>Knowledge &amp; research</td></tr>
+<tr><td><a href="../plugins/dsh-github/">GitHub</a></td><td><code>@perrylink/dsh-github</code></td><td>0.7.19</td><td>Apache-2.0</td><td>Integrations</td></tr>
+<tr><td><a href="../plugins/dsh-industry-research/">Industry Research</a></td><td><code>dsh-industry-research</code></td><td>0.3.18</td><td>Apache-2.0</td><td>Knowledge &amp; research</td></tr>
+<tr><td><a href="../plugins/dsh-laya/">Laya</a></td><td><code>dsh-laya</code></td><td>0.1.4</td><td>Apache-2.0</td><td>Models &amp; routing</td></tr>
+<tr><td><a href="../plugins/dsh-library/">Library</a></td><td><code>dsh-library</code></td><td>0.2.19</td><td>Apache-2.0</td><td>Knowledge &amp; research</td></tr>
+<tr><td><a href="../plugins/dsh-local-ai/">Local AI</a></td><td><code>dsh-local-ai</code></td><td>0.2.18</td><td>Apache-2.0</td><td>Models &amp; routing</td></tr>
+<tr><td><a href="../plugins/dsh-lsp-actions/">LSP Actions</a></td><td><code>dsh-lsp-actions</code></td><td>0.5.11</td><td>Apache-2.0</td><td>Tools</td></tr>
+<tr><td><a href="../plugins/dsh-mask/">Mask</a></td><td><code>dsh-mask</code></td><td>0.2.19</td><td>Apache-2.0</td><td>Tools</td></tr>
+<tr><td><a href="../plugins/dsh-mcp-panel/">MCP Panel</a></td><td><code>dsh-mcp-panel</code></td><td>0.6.22</td><td>Apache-2.0</td><td>Integrations</td></tr>
+<tr><td><a href="../plugins/dsh-memento/">Memento</a></td><td><code>dsh-memento</code></td><td>0.5.22</td><td>Apache-2.0</td><td>Memory</td></tr>
+<tr><td><a href="../plugins/dsh-observe/">Observe</a></td><td><code>dsh-observe</code></td><td>0.2.21</td><td>Apache-2.0</td><td>Development &amp; quality</td></tr>
+<tr><td><a href="../plugins/dsh-output-styles/">Output Styles</a></td><td><code>dsh-output-styles</code></td><td>0.6.25</td><td>Apache-2.0</td><td>Interface</td></tr>
+<tr><td><a href="../plugins/dsh-permission-rules/">Permission Rules</a></td><td><code>dsh-permission-rules</code></td><td>0.7.14</td><td>Apache-2.0</td><td>Workflow &amp; approvals</td></tr>
+<tr><td><a href="../plugins/dsh-phocinae/">Phocinae</a></td><td><code>dsh-phocinae</code></td><td>0.2.2</td><td>Apache-2.0</td><td>Integrations</td></tr>
+<tr><td><a href="../plugins/dsh-plugin-doctor/">Plugin Doctor</a></td><td><code>@perrylink/dsh-plugin-doctor</code></td><td>0.6.3</td><td>Apache-2.0</td><td>Development &amp; quality</td></tr>
+<tr><td><a href="../plugins/dsh-plugin-guide/">Plugin Guide</a></td><td><code>dsh-plugin-guide</code></td><td>0.3.26</td><td>Apache-2.0</td><td>Knowledge &amp; research</td></tr>
+<tr><td><a href="../plugins/dsh-plugin-kit/">Plugin Kit</a></td><td><code>@perrylink/dsh-plugin-kit</code></td><td>0.1.16</td><td>Apache-2.0</td><td>Development &amp; quality</td></tr>
+<tr><td><a href="../plugins/dsh-plugin-upgrade/">Plugin Upgrade</a></td><td><code>dsh-plugin-upgrade</code></td><td>2.0.7</td><td>Apache-2.0</td><td>Development &amp; quality</td></tr>
+<tr><td><a href="../plugins/dsh-reach/">Reach</a></td><td><code>dsh-reach</code></td><td>0.1.17</td><td>Apache-2.0</td><td>Integrations</td></tr>
+<tr><td><a href="../plugins/dsh-research-report/">Research Report</a></td><td><code>dsh-research-report</code></td><td>0.3.21</td><td>Apache-2.0</td><td>Knowledge &amp; research</td></tr>
+<tr><td><a href="../plugins/dsh-score/">Score</a></td><td><code>dsh-score</code></td><td>0.2.19</td><td>Apache-2.0</td><td>Development &amp; quality</td></tr>
+<tr><td><a href="../plugins/dsh-session-pin/">Session Pin</a></td><td><code>dsh-session-pin</code></td><td>0.7.19</td><td>Apache-2.0</td><td>Sessions</td></tr>
+<tr><td><a href="../plugins/dsh-session-sync/">Session Sync</a></td><td><code>dsh-session-sync</code></td><td>0.2.23</td><td>Apache-2.0</td><td>Sessions</td></tr>
+<tr><td><a href="../plugins/dsh-skill-pack-security/">Skill Pack Security Provider</a></td><td><code>@perrylink/dsh-skill-pack-security-provider</code></td><td>2.2.22</td><td>Apache-2.0</td><td>Agents &amp; orchestration</td></tr>
+<tr><td><a href="../plugins/dsh-talk/">Talk</a></td><td><code>dsh-talk</code></td><td>0.3.19</td><td>Apache-2.0</td><td>Tools</td></tr>
+<tr><td><a href="../plugins/dsh-team-rooms/">Team Rooms</a></td><td><code>dsh-team-rooms</code></td><td>1.0.8</td><td>Apache-2.0</td><td>Agents &amp; orchestration</td></tr>
+<tr><td><a href="../plugins/dsh-test-drive/">Test Drive</a></td><td><code>dsh-test-drive</code></td><td>0.3.14</td><td>Apache-2.0</td><td>Development &amp; quality</td></tr>
+<tr><td><a href="../plugins/dsh-ticktick/">TickTick</a></td><td><code>@perrylink/dsh-ticktick</code></td><td>0.1.15</td><td>Apache-2.0</td><td>Integrations</td></tr>
+<tr><td><a href="../plugins/dsh-translate/">Translate</a></td><td><code>dsh-translate</code></td><td>0.2.20</td><td>Apache-2.0</td><td>Tools</td></tr>
+</tbody></table>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>This site is plain static HTML: all text is present in the served HTML with no JavaScript rendering. Content is generated by the build script from each plugin’s own rule pack and package metadata.</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../catalog.json">catalog.json</a> · <a href="../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

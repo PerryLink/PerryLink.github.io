@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>应急预案要素校验（dsh-emergency-plan）——安全生产核查插件 | PerryLink DSH 插件家族</title>
+<meta name="description" content="应急预案要素校验：应急预案要素齐备性与条款级页码定位。核对 9 条规则，依据 《生产经营单位生产安全事故应急预案编制导则》、《生产安全事故应急预案管理办法》、GB/T 29639-2020 等文件。npm 包 dsh-emergency-plan，版本 0.2.1，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/checkers/dsh-emergency-plan/">
+<link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-emergency-plan/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/checkers/dsh-emergency-plan/">
+<link rel="alternate" type="application/json" href="../../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "应急预案要素校验",
+      "alternateName": "dsh-emergency-plan",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "安全生产",
+      "softwareVersion": "0.2.1",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "CNY"
+      },
+      "isAccessibleForFree": true,
+      "description": "应急预案要素齐备性与条款级页码定位（依据 GB/T 29639-2020 等公开文件，仅提示差异，不作出定性结论）",
+      "url": "https://perrylink.github.io/checkers/dsh-emergency-plan/",
+      "codeRepository": "https://github.com/PerryLink/dsh-emergency-plan",
+      "programmingLanguage": "TypeScript",
+      "author": {
+        "@type": "Organization",
+        "name": "PerryLink",
+        "url": "https://github.com/PerryLink"
+      },
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://perrylink.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "核查插件",
+          "item": "https://perrylink.github.io/zh/checkers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "安全生产",
+          "item": "https://perrylink.github.io/zh/checkers/safety/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "应急预案要素校验"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../">PerryLink DSH 插件家族</a>
+    <nav aria-label="主导航"><a href="../../zh/">首页</a><a href="../../zh/checkers/">核查插件</a><a href="../../zh/checkers/choose/">该用哪个</a><a href="../../plugins/">其他插件</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../../zh/">首页</a> &rsaquo; <a href="../../zh/checkers/">核查插件</a> &rsaquo; <a href="../../zh/checkers/safety/">安全生产</a> &rsaquo; <span aria-current="page">应急预案要素校验</span></nav>
+<h1>应急预案要素校验</h1>
+<p class="lede">应急预案要素齐备性与条款级页码定位（依据 GB/T 29639-2020 等公开文件，仅提示差异，不作出定性结论）</p>
+<dl class="meta">
+  <dt>npm 包</dt><dd><code>dsh-emergency-plan</code></dd>
+  <dt>职业分组</dt><dd><a href="../../zh/checkers/safety/">安全生产</a></dd>
+  <dt>版本</dt><dd>0.2.1（规则库 2026.1）</dd>
+  <dt>许可</dt><dd>Apache-2.0</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
+  <dt>规则条数</dt><dd>9 条，其中 5 条为条文直接规定，1 条依据本机构配置</dd>
+  <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-emergency-plan">PerryLink/dsh-emergency-plan</a></dd>
+</dl>
+
+<h2 id="what">这个插件核对什么</h2>
+<p>应急预案要素校验（dsh-emergency-plan）是一个面向安全生产场景的 DeepSeek Harness 核查插件。应急预案要素齐备性与条款级页码定位（依据 GB/T 29639-2020 等公开文件，仅提示差异，不作出定性结论）</p>
+<p>规则库共 9 条规则，覆盖面与人工复核一遍的注意力分配大致相当。该规则库同时包含「条文直接规定」与「由原则推导」两类依据：前者 5 条，后者 3 条，另有 1 条取自使用机构自身配置。</p>
+
+<h2 id="how">核对方式</h2>
+<p>从检查方式看，应急预案要素校验用的是几类可以机械判定的手段：。</p>
+<p>检查过程不引入任何外部信息：没有数据库查询、没有网络请求、没有模型参与，同样输入必然得到同样输出。</p>
+<p>这里没有算术核对——规则库处理的是齐备性、取值合法性与字段关系，不重算任何金额或数量。</p>
+
+<h2 id="boundary">它不作什么判断</h2>
+<p>本族插件的共同约定是：只列出材料内部可以逐条指认的差异，不判定合规、不认定责任、不替代主管部门或审核人的结论。报告里每一条差异都会带上它对照的规则、依据的文件与条款，以及差异的具体位置。</p>
+<p>本插件不产生「错误」级结果，严重度最高为「提示」。它指出的是「此处与依据不一致」，而不是「此处是错的」。</p>
+<p>另有 1 条规则的判据来自使用机构自己的配置项，不是国家标准。换机构使用前必须先替换这份配置，否则核对的是别人的口径。</p>
+<p>规则库中未被命中的规则同样会出现在结果里：无法执行的检查会连同原因一起列出，空的结果列表不等于材料没有问题，只等于规则库覆盖到的那部分没有发现差异。</p>
+
+<h2 id="rules">规则清单</h2>
+<table>
+<caption>规则库 emergency-plan.yaml 的全部 9 条规则（规则库版本 2026.1）</caption>
+<thead><tr><th>规则</th><th>检查内容</th><th>严重度</th><th>依据类型</th></tr></thead>
+<tbody>
+<tr><td><code>EP-001</code></td><td>专项应急预案应包含 7.1~7.4 要素</td><td class="sev-warn">提示</td><td>条文直接规定</td></tr>
+<tr><td><code>EP-002</code></td><td>综合应急预案应包含第 6 章 6.1~6.5 要素</td><td class="sev-warn">提示</td><td>条文直接规定</td></tr>
+<tr><td><code>EP-003</code></td><td>现场处置方案应包含 8.1~8.4 要素</td><td class="sev-warn">提示</td><td>条文直接规定</td></tr>
+<tr><td><code>EP-004</code></td><td>材料应声明预案类型</td><td class="sev-warn">提示</td><td>条文直接规定</td></tr>
+<tr><td><code>EP-005</code></td><td>要素顺序应与导则的要素清单一致</td><td class="sev-info">参考</td><td>由原则推导</td></tr>
+<tr><td><code>EP-006</code></td><td>章节应带页码以便要素定位</td><td class="sev-info">参考</td><td>由原则推导</td></tr>
+<tr><td><code>EP-007</code></td><td>同一要素不应在预案中重复出现</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>EP-008</code></td><td>应按本机构配置核对版本与修订标识</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>EP-009</code></td><td>预案附件应包含规定的附件信息</td><td class="sev-info">参考</td><td>条文直接规定</td></tr>
+</tbody></table>
+<p>严重度含义：<strong>提示</strong>（5 条）——差异成立，但条文未直接规定，或需人工判断后确认；<strong>参考</strong>（4 条）——只作提示，供人工复核，不构成任何结论。</p>
+<p>依据类型含义：<strong>条文直接规定</strong>（5 条）——该规则的依据条文已取得逐字文本，规则直接对照条文规定；<strong>由原则推导</strong>（3 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」；<strong>本机构配置</strong>（1 条）——阈值或清单来自使用机构自身配置而非国家标准，严重度上限为「参考」。</p>
+
+<h2 id="standards">依据的标准</h2>
+<table>
+<caption>依据的标准 —— 逐条取自插件自身声明的 normativeBasis（共 4 条）</caption>
+<thead><tr><th>依据</th><th>类型</th><th>引用该依据的规则数</th></tr></thead>
+<tbody>
+<tr><td>《生产经营单位生产安全事故应急预案编制导则》</td><td>文件／标准</td><td>8 条</td></tr>
+<tr><td>《生产安全事故应急预案管理办法》</td><td>文件／标准</td><td>1 条</td></tr>
+<tr><td>GB/T 29639-2020</td><td>编号</td><td>—</td></tr>
+<tr><td>国家安全生产监督管理总局令第88号</td><td>编号</td><td>—</td></tr>
+</tbody></table>
+<h3>编号、版本与效力说明</h3>
+<ul>
+<li>GB/T 29639-2020</li>
+<li>国家安全生产监督管理总局令第88号（应急管理部令第2号修正）</li>
+</ul>
+<p>这是引用取证记录中的完整编号与效力说明，含发布日期、实施日期、代替关系与强制性说明。规则库核对时对照的是这里列出的版本；若本单位执行的是其他版本，结论不直接适用。</p>
+<p>这是插件声明的依据清单。要注意它是文件层面的：每条规则实际对照的是文件中的某个具体条款，取证进度按条款记录。</p>
+
+<h2 id="evidence">引用取证状态</h2>
+<p>引用取证：可以逐字对照条文的规则共 5 条，没有一条规则标注「本次未取得」。这意味着规则库对自身依据的声明是完整的：要么引用条文原文，要么明确说明依据并非条文。</p>
+<p>规则库落在 2 份文件上，分布如下：《生产经营单位生产安全事故应急预案编制导则》（8 条）、《生产安全事故应急预案管理办法》（1 条）。同一份文件在不同规则中可能被引用于不同条款。</p>
+
+<h2 id="reading">结果怎么读</h2>
+<p>本插件共 9 条规则，其中严重度最高的一档是「提示」，共 5 条：<code>EP-001</code>、<code>EP-002</code>、<code>EP-003</code>、<code>EP-004</code>、<code>EP-007</code>。这几条是清单里最需要先看的；其余条目按材料实际内容逐条判断即可。</p>
+<p>还有 1 条规则属于「本机构配置」（<code>EP-008</code>）。使用前请确认这几条的配置与本机构口径一致，否则核对的是别人的标准。</p>
+
+<h2 id="usage">适用场景与同组插件</h2>
+<p>面向生产经营单位安全管理岗的台账与预案核对：危化品临界量、应急预案要素、演练脚本、隐患判定、两票与线损。</p>
+<p>同一职业分组「安全生产」下还有 6 个核查插件，分别是养殖投入品核对（dsh-aqua-input-check）、演练脚本核对（dsh-drill-script-check）、危化品临界量核对（dsh-hazchem-check）、重大隐患条款映射（dsh-hidden-risk-map）、线损拆分核对（dsh-power-loss-split）、电力工作票核对（dsh-power-ticket-check）。这几个插件的范围彼此不重叠，也不会互相替代；要覆盖这类材料的全貌，需要挑出对应的几个分别跑。</p>
+<p>发布渠道是 npm 包 dsh-emergency-plan，源码在 GitHub 的 PerryLink/dsh-emergency-plan，许可为 Apache-2.0。本页的规则清单直接取自仓库里的规则库文件（版本 2026.1），不是手写的介绍。</p>
+<ul><li><a href="../../checkers/dsh-aqua-input-check/">养殖投入品核对</a> <code>dsh-aqua-input-check</code> —— 水产养殖投入品记录核对</li><li><a href="../../checkers/dsh-drill-script-check/">演练脚本核对</a> <code>dsh-drill-script-check</code> —— 应急演练脚本核对</li><li><a href="../../checkers/dsh-hazchem-check/">危化品临界量核对</a> <code>dsh-hazchem-check</code> —— 危险化学品临界量与重大危险源辨识核对</li><li><a href="../../checkers/dsh-hidden-risk-map/">重大隐患条款映射</a> <code>dsh-hidden-risk-map</code> —— 安全隐患台账→《工贸企业重大事故隐患判定标准》</li><li><a href="../../checkers/dsh-power-loss-split/">线损拆分核对</a> <code>dsh-power-loss-split</code> —— 线损电量拆分与考核表核对</li><li><a href="../../checkers/dsh-power-ticket-check/">电力工作票核对</a> <code>dsh-power-ticket-check</code> —— 电力工作票要素齐备性与签发许可顺序核对</li></ul>
+
+<h2 id="install">安装</h2>
+<p>安装命令对两个平台是同一个 <code>dsh</code> 子命令，只有随后确认安装结果的那一步按 shell 不同：</p>
+<h3>bash / sh</h3>
+<pre><code>dsh plugin --profile default add dsh-emergency-plan
+dsh --profile default --dump-config | grep &#39;dsh-emergency-plan&#39;</code></pre>
+<h3>PowerShell</h3>
+<pre><code>dsh plugin --profile default add dsh-emergency-plan
+dsh --profile default --dump-config | Select-String &#39;dsh-emergency-plan&#39;</code></pre>
+<p>profile 名按实际情况替换。注意安装本身不会热加载——重开会话之后插件才生效。</p>
+
+<h2 id="docs">完整文档</h2>
+<p>以上是 应急预案要素校验 的核对范围与依据。至于怎么把材料交给它、有哪些配置项可调、每条规则的参数与输出结构，在仓库文档里。</p>
+<p><a href="https://github.com/PerryLink/dsh-emergency-plan"><strong>完整文档 → GitHub</strong></a>（<code>PerryLink/dsh-emergency-plan</code>）</p>
+<p>同类材料还有哪些插件可选，见安全生产分组；不确定选哪个，见对照表。
+<a href="../../zh/checkers/choose/">该用哪个核查插件</a> ·
+<a href="../../zh/checkers/safety/">安全生产</a> ·
+<a href="../../zh/checkers/">全部核查插件</a></p>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>本站为静态 HTML：全部正文都在服务端返回的 HTML 中，无 JavaScript 渲染。内容由构建脚本从各插件的规则库与包元数据生成。</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../../catalog.json">catalog.json</a> · <a href="../../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

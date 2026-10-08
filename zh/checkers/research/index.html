@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>科研教育核查插件（5 个）—— 规则、依据的标准与安装 | PerryLink DSH 插件家族</title>
+<meta name="description" content="科研教育分组共 5 个 DSH 核查插件，规则库合计 44 条。覆盖 作文量表评分核对、能力差距与培养计划核对、国家自然科学基金申请书形式审查与匿名化提示、试卷解析结构核对、政策专报要素核对。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/zh/checkers/research/">
+<link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/zh/checkers/research/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/zh/checkers/research/">
+<link rel="alternate" type="application/json" href="../../../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../../../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "量表评分核对",
+          "url": "https://perrylink.github.io/checkers/dsh-essay-rubric-check/",
+          "description": "作文量表评分核对（按评分项、原文定位与分值算术核对评分自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "能力差距核对",
+          "url": "https://perrylink.github.io/checkers/dsh-learning-gap-check/",
+          "description": "能力差距与培养计划核对（按能力等级差、培养措施与完成期限核对台账闭环，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "基金申请书形式审查",
+          "url": "https://perrylink.github.io/checkers/dsh-nsfc-form-check/",
+          "description": "国家自然科学基金申请书形式审查与匿名化提示（依据《国家自然科学基金条例》与申请人导入的当年指南，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "试卷结构核对",
+          "url": "https://perrylink.github.io/checkers/dsh-paper-doc-adapter/",
+          "description": "试卷解析结构核对（按题型、答案、分值与 yotta 标识核对试卷结构自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "政策专报核对",
+          "url": "https://perrylink.github.io/checkers/dsh-policy-brief-draft/",
+          "description": "政策专报要素核对（按观点、依据、出处与建议核对专报齐备，仅提示差异，不作出定性结论）"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://perrylink.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "核查插件",
+          "item": "https://perrylink.github.io/zh/checkers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "科研教育"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../../">PerryLink DSH 插件家族</a>
+    <nav aria-label="主导航"><a href="../../../zh/">首页</a><a href="../../../zh/checkers/">核查插件</a><a href="../../../zh/checkers/choose/">该用哪个</a><a href="../../../plugins/">其他插件</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../../../zh/">首页</a> &rsaquo; <a href="../../../zh/checkers/">核查插件</a> &rsaquo; <span aria-current="page">科研教育</span></nav>
+<h1>科研教育核查插件</h1>
+<p class="lede">5 个插件，规则库合计 44 条。</p>
+<p>科研教育分组共 5 个核查插件，规则库合计 44 条，其中 0 条为条文直接规定、29 条的条文本次未取得逐字文本。该分组所有插件最高只到「提示」级，命中表示需要人工确认。面向科研管理、基金管理与教研岗的申报与评审材料核对：基金申请书形式审查、试卷解析结构、作文量表评分、政策专报。</p>
+<p>面向科研管理、基金管理与教研岗的申报与评审材料核对：基金申请书形式审查、试卷解析结构、作文量表评分、政策专报。</p>
+<p>同一份材料往往需要同时跑两个以上插件：每个插件只覆盖它自己那份规则库声明过的范围，范围之间不重叠也不互相替代。下面这张表按插件列出核对对象与依据的标准，便于确定该跑哪几个。</p>
+
+<table>
+<caption>科研教育分组的 5 个核查插件</caption>
+<thead><tr><th>插件</th><th>核对对象</th><th>依据的标准</th><th>规则</th><th>版本</th></tr></thead>
+<tbody>
+<tr><td><a href="../../../checkers/dsh-essay-rubric-check/">量表评分核对</a><br><code>dsh-essay-rubric-check</code></td><td>作文量表评分核对</td><td>《普通高中语文课程标准》、《普通高等学校招生全国统一考试评卷工作规定》</td><td>6 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-learning-gap-check/">能力差距核对</a><br><code>dsh-learning-gap-check</code></td><td>能力差距与培养计划核对</td><td>《质量管理 能力管理和人员发展指南》、本机构培训与发展管理口径（本机构配置）、无统一标准</td><td>7 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-nsfc-form-check/">基金申请书形式审查</a><br><code>dsh-nsfc-form-check</code></td><td>国家自然科学基金申请书形式审查与匿名化提示</td><td>《国家自然科学基金条例》、《2026 年度国家自然科学基金项目指南·申请规定》、国务院令第796号 等</td><td>15 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-paper-doc-adapter/">试卷结构核对</a><br><code>dsh-paper-doc-adapter</code></td><td>试卷解析结构核对</td><td>《试题元数据规范》、本机构题库与命题口径（本机构配置）、无统一标准</td><td>8 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-policy-brief-draft/">政策专报核对</a><br><code>dsh-policy-brief-draft</code></td><td>政策专报要素核对</td><td>《党政机关公文处理工作条例》</td><td>8 条</td><td>0.2.1</td></tr>
+</tbody></table>
+
+<h2 id="list">逐个插件</h2>
+<div class="card">
+<h3><a href="../../../checkers/dsh-essay-rubric-check/">量表评分核对</a></h3>
+<p>作文量表评分核对（按评分项、原文定位与分值算术核对评分自洽，仅提示差异，不作出定性结论）</p>
+<p>规则库 6 条，全部为「由原则推导」，6 条的条文本次未取得逐字文本；严重度分布：提示 6 条。</p>
+<p>依据：《普通高中语文课程标准》、《普通高等学校招生全国统一考试评卷工作规定》</p>
+<p>安装：<code>dsh plugin --profile default add dsh-essay-rubric-check</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-learning-gap-check/">能力差距核对</a></h3>
+<p>能力差距与培养计划核对（按能力等级差、培养措施与完成期限核对台账闭环，仅提示差异，不作出定性结论）</p>
+<p>规则库 7 条，全部为「由原则推导」，2 条依据本机构配置，7 条的条文本次未取得逐字文本；严重度分布：提示 5 条、参考 2 条。</p>
+<p>依据：《质量管理 能力管理和人员发展指南》、本机构培训与发展管理口径（本机构配置）、无统一标准</p>
+<p>安装：<code>dsh plugin --profile default add dsh-learning-gap-check</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-nsfc-form-check/">基金申请书形式审查</a></h3>
+<p>国家自然科学基金申请书形式审查与匿名化提示（依据《国家自然科学基金条例》与申请人导入的当年指南，仅提示差异，不作出定性结论）</p>
+<p>规则库 15 条，全部为「由原则推导」，5 条依据本机构配置；严重度分布：提示 4 条、参考 11 条。</p>
+<p>依据：《国家自然科学基金条例》、《2026 年度国家自然科学基金项目指南·申请规定》、国务院令第796号、2026 年度</p>
+<p>安装：<code>dsh plugin --profile default add dsh-nsfc-form-check</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-paper-doc-adapter/">试卷结构核对</a></h3>
+<p>试卷解析结构核对（按题型、答案、分值与 yotta 标识核对试卷结构自洽，仅提示差异，不作出定性结论）</p>
+<p>规则库 8 条，全部为「由原则推导」，2 条依据本机构配置，8 条的条文本次未取得逐字文本；严重度分布：提示 6 条、参考 2 条。</p>
+<p>依据：《试题元数据规范》、本机构题库与命题口径（本机构配置）、无统一标准</p>
+<p>安装：<code>dsh plugin --profile default add dsh-paper-doc-adapter</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-policy-brief-draft/">政策专报核对</a></h3>
+<p>政策专报要素核对（按观点、依据、出处与建议核对专报齐备，仅提示差异，不作出定性结论）</p>
+<p>规则库 8 条，全部为「由原则推导」，8 条的条文本次未取得逐字文本；严重度分布：提示 7 条、参考 1 条。</p>
+<p>依据：《党政机关公文处理工作条例》</p>
+<p>安装：<code>dsh plugin --profile default add dsh-policy-brief-draft</code></p>
+</div>
+
+<h2 id="nav">相关页面</h2>
+<ul>
+<li><a href="../../../zh/checkers/choose/">该用哪个核查插件</a>——按材料类型定位插件的对照表。</li>
+<li><a href="../../../zh/checkers/">全部 53 个核查插件</a>——按 10 个职业分组的总览。</li>
+<li><a href="../../../zh/">首页</a>——这一族插件是什么、共同约定是什么。</li>
+</ul>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>本站为静态 HTML：全部正文都在服务端返回的 HTML 中，无 JavaScript 渲染。内容由构建脚本从各插件的规则库与包元数据生成。</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../../../catalog.json">catalog.json</a> · <a href="../../../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

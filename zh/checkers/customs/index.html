@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>关务外贸核查插件（8 个）—— 规则、依据的标准与安装 | PerryLink DSH 插件家族</title>
+<meta name="description" content="关务外贸分组共 8 个 DSH 核查插件，规则库合计 57 条。覆盖 报关单证一致性核对、滞箱费台账核对、出口管制物项核对、预测准确率考核核对、商品归类层级一致性核对、信用证单据条款核对、原产地区域价值成分核对、铁路施工天窗台账核对。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/zh/checkers/customs/">
+<link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/zh/checkers/customs/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/zh/checkers/customs/">
+<link rel="alternate" type="application/json" href="../../../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../../../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "报关单证核对",
+          "url": "https://perrylink.github.io/checkers/dsh-customs-doc-check/",
+          "description": "报关单证一致性核对（按公开的报关单填制规范核对单证间字段一致性，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "滞箱费台账核对",
+          "url": "https://perrylink.github.io/checkers/dsh-demurrage-ledger/",
+          "description": "滞箱费台账核对（按免箱期与费率核对超期天数与金额的自洽性，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "出口管制核对",
+          "url": "https://perrylink.github.io/checkers/dsh-export-ctl-check/",
+          "description": "出口管制物项核对（按管制清单、最终用途与许可证核对台账齐备，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "预测考核核对",
+          "url": "https://perrylink.github.io/checkers/dsh-forecast-penalty/",
+          "description": "预测准确率考核核对（按准确率、门槛与考核单价核对考核费用的算术自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "归类层级核对",
+          "url": "https://perrylink.github.io/checkers/dsh-hs-classify/",
+          "description": "商品归类层级一致性核对（按章、品目、子目与商品编号的层级关系核对自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "信用证单据核对",
+          "url": "https://perrylink.github.io/checkers/dsh-lc-doc-check/",
+          "description": "信用证单据条款核对（按单据种类、份数、期限与不符点核对交单自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "原产地 RVC 核对",
+          "url": "https://perrylink.github.io/checkers/dsh-origin-rvc-check/",
+          "description": "原产地区域价值成分核对（按 RVC 定义式与门槛核对原产地判定自洽，仅提示差异，不作出定性结论）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "施工天窗核对",
+          "url": "https://perrylink.github.io/checkers/dsh-railway-window/",
+          "description": "铁路施工天窗台账核对（按时间窗、时长算术与命令号核对台账自洽，仅提示差异，不作出定性结论）"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://perrylink.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "核查插件",
+          "item": "https://perrylink.github.io/zh/checkers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "关务外贸"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../../">PerryLink DSH 插件家族</a>
+    <nav aria-label="主导航"><a href="../../../zh/">首页</a><a href="../../../zh/checkers/">核查插件</a><a href="../../../zh/checkers/choose/">该用哪个</a><a href="../../../plugins/">其他插件</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../../../zh/">首页</a> &rsaquo; <a href="../../../zh/checkers/">核查插件</a> &rsaquo; <span aria-current="page">关务外贸</span></nav>
+<h1>关务外贸核查插件</h1>
+<p class="lede">8 个插件，规则库合计 57 条。</p>
+<p>关务外贸分组共 8 个核查插件，规则库合计 57 条，其中 5 条为条文直接规定、36 条的条文本次未取得逐字文本。该分组所有插件最高只到「提示」级，命中表示需要人工确认。面向报关、单证与供应链合规岗的关务核对：报关单证一致、商品归类层级、原产地 RVC、出口管制、信用证与滞箱费台账。</p>
+<p>面向报关、单证与供应链合规岗的关务核对：报关单证一致、商品归类层级、原产地 RVC、出口管制、信用证与滞箱费台账。</p>
+<p>同一份材料往往需要同时跑两个以上插件：每个插件只覆盖它自己那份规则库声明过的范围，范围之间不重叠也不互相替代。下面这张表按插件列出核对对象与依据的标准，便于确定该跑哪几个。</p>
+
+<table>
+<caption>关务外贸分组的 8 个核查插件</caption>
+<thead><tr><th>插件</th><th>核对对象</th><th>依据的标准</th><th>规则</th><th>版本</th></tr></thead>
+<tbody>
+<tr><td><a href="../../../checkers/dsh-customs-doc-check/">报关单证核对</a><br><code>dsh-customs-doc-check</code></td><td>报关单证一致性核对</td><td>《中华人民共和国海关进出口货物报关单填制规范》、《表示货币的代码》、《中华人民共和国海关进出口货物申报管理规定》</td><td>7 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-demurrage-ledger/">滞箱费台账核对</a><br><code>dsh-demurrage-ledger</code></td><td>滞箱费台账核对</td><td>承运人运价本与运输合同（无国家标准）、《表示货币的代码》、无统一标准</td><td>7 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-export-ctl-check/">出口管制核对</a><br><code>dsh-export-ctl-check</code></td><td>出口管制物项核对</td><td>《中华人民共和国出口管制法》、2020 年 10 月 17 日第十三届全国人大常委会第二十二次会议通过，主席令第五十八号公布，自 2020 年 12 月 1 日起施行</td><td>8 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-forecast-penalty/">预测考核核对</a><br><code>dsh-forecast-penalty</code></td><td>预测准确率考核核对</td><td>电力市场考核办法与并网调度协议（无国家标准）、《表示货币的代码》、无统一标准</td><td>7 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-hs-classify/">归类层级核对</a><br><code>dsh-hs-classify</code></td><td>商品归类层级一致性核对</td><td>《中华人民共和国进出口税则》、《商品名称及编码协调制度》、《中华人民共和国进出口关税条例》 等</td><td>6 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-lc-doc-check/">信用证单据核对</a><br><code>dsh-lc-doc-check</code></td><td>信用证单据条款核对</td><td>《跟单信用证统一惯例》（UCP600）、《表示货币的代码》</td><td>8 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-origin-rvc-check/">原产地 RVC 核对</a><br><code>dsh-origin-rvc-check</code></td><td>原产地区域价值成分核对</td><td>各自由贸易协定原产地规则（协定文本，本次未取得）</td><td>7 条</td><td>0.2.1</td></tr>
+<tr><td><a href="../../../checkers/dsh-railway-window/">施工天窗核对</a><br><code>dsh-railway-window</code></td><td>铁路施工天窗台账核对</td><td>《铁路营业线施工安全管理办法》、各铁路局集团公司施工天窗管理办法（本机构配置）、无统一标准</td><td>7 条</td><td>0.2.1</td></tr>
+</tbody></table>
+
+<h2 id="list">逐个插件</h2>
+<div class="card">
+<h3><a href="../../../checkers/dsh-customs-doc-check/">报关单证核对</a></h3>
+<p>报关单证一致性核对（按公开的报关单填制规范核对单证间字段一致性，仅提示差异，不作出定性结论）</p>
+<p>规则库 7 条，全部为「由原则推导」，7 条的条文本次未取得逐字文本；严重度分布：提示 7 条。</p>
+<p>依据：《中华人民共和国海关进出口货物报关单填制规范》、《表示货币的代码》、《中华人民共和国海关进出口货物申报管理规定》</p>
+<p>安装：<code>dsh plugin --profile default add dsh-customs-doc-check</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-demurrage-ledger/">滞箱费台账核对</a></h3>
+<p>滞箱费台账核对（按免箱期与费率核对超期天数与金额的自洽性，仅提示差异，不作出定性结论）</p>
+<p>规则库 7 条，全部为「由原则推导」，1 条的条文本次未取得逐字文本；严重度分布：提示 7 条。</p>
+<p>依据：承运人运价本与运输合同（无国家标准）、《表示货币的代码》、无统一标准</p>
+<p>安装：<code>dsh plugin --profile default add dsh-demurrage-ledger</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-export-ctl-check/">出口管制核对</a></h3>
+<p>出口管制物项核对（按管制清单、最终用途与许可证核对台账齐备，仅提示差异，不作出定性结论）</p>
+<p>规则库 8 条，其中 4 条为条文直接规定；严重度分布：提示 7 条、参考 1 条。</p>
+<p>依据：《中华人民共和国出口管制法》、2020 年 10 月 17 日第十三届全国人大常委会第二十二次会议通过，主席令第五十八号公布，自 2020 年 12 月 1 日起施行</p>
+<p>安装：<code>dsh plugin --profile default add dsh-export-ctl-check</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-forecast-penalty/">预测考核核对</a></h3>
+<p>预测准确率考核核对（按准确率、门槛与考核单价核对考核费用的算术自洽，仅提示差异，不作出定性结论）</p>
+<p>规则库 7 条，全部为「由原则推导」，2 条依据本机构配置，1 条的条文本次未取得逐字文本；严重度分布：提示 5 条、参考 2 条。</p>
+<p>依据：电力市场考核办法与并网调度协议（无国家标准）、《表示货币的代码》、无统一标准</p>
+<p>安装：<code>dsh plugin --profile default add dsh-forecast-penalty</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-hs-classify/">归类层级核对</a></h3>
+<p>商品归类层级一致性核对（按章、品目、子目与商品编号的层级关系核对自洽，仅提示差异，不作出定性结论）</p>
+<p>规则库 6 条，其中 1 条为条文直接规定，5 条的条文本次未取得逐字文本；严重度分布：提示 6 条。</p>
+<p>依据：《中华人民共和国进出口税则》、《商品名称及编码协调制度》、《中华人民共和国进出口关税条例》、国务院令第392号</p>
+<p>安装：<code>dsh plugin --profile default add dsh-hs-classify</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-lc-doc-check/">信用证单据核对</a></h3>
+<p>信用证单据条款核对（按单据种类、份数、期限与不符点核对交单自洽，仅提示差异，不作出定性结论）</p>
+<p>规则库 8 条，全部为「由原则推导」，8 条的条文本次未取得逐字文本；严重度分布：提示 7 条、参考 1 条。</p>
+<p>依据：《跟单信用证统一惯例》（UCP600）、《表示货币的代码》</p>
+<p>安装：<code>dsh plugin --profile default add dsh-lc-doc-check</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-origin-rvc-check/">原产地 RVC 核对</a></h3>
+<p>原产地区域价值成分核对（按 RVC 定义式与门槛核对原产地判定自洽，仅提示差异，不作出定性结论）</p>
+<p>规则库 7 条，全部为「由原则推导」，7 条的条文本次未取得逐字文本；严重度分布：提示 5 条、参考 2 条。</p>
+<p>依据：各自由贸易协定原产地规则（协定文本，本次未取得）</p>
+<p>安装：<code>dsh plugin --profile default add dsh-origin-rvc-check</code></p>
+</div>
+<div class="card">
+<h3><a href="../../../checkers/dsh-railway-window/">施工天窗核对</a></h3>
+<p>铁路施工天窗台账核对（按时间窗、时长算术与命令号核对台账自洽，仅提示差异，不作出定性结论）</p>
+<p>规则库 7 条，全部为「由原则推导」，2 条依据本机构配置，7 条的条文本次未取得逐字文本；严重度分布：提示 5 条、参考 2 条。</p>
+<p>依据：《铁路营业线施工安全管理办法》、各铁路局集团公司施工天窗管理办法（本机构配置）、无统一标准</p>
+<p>安装：<code>dsh plugin --profile default add dsh-railway-window</code></p>
+</div>
+
+<h2 id="nav">相关页面</h2>
+<ul>
+<li><a href="../../../zh/checkers/choose/">该用哪个核查插件</a>——按材料类型定位插件的对照表。</li>
+<li><a href="../../../zh/checkers/">全部 53 个核查插件</a>——按 10 个职业分组的总览。</li>
+<li><a href="../../../zh/">首页</a>——这一族插件是什么、共同约定是什么。</li>
+</ul>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>本站为静态 HTML：全部正文都在服务端返回的 HTML 中，无 JavaScript 渲染。内容由构建脚本从各插件的规则库与包元数据生成。</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../../../catalog.json">catalog.json</a> · <a href="../../../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

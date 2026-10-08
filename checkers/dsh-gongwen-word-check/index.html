@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>公文格式核对（dsh-gongwen-word-check）——公文档案核查插件 | PerryLink DSH 插件家族</title>
+<meta name="description" content="公文格式核对：公文格式要素核对。核对 7 条规则，依据 《党政机关公文格式》、《党政机关公文处理工作条例》、中办发〔2012〕14号 等文件。npm 包 dsh-gongwen-word-check，版本 0.2.2，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/checkers/dsh-gongwen-word-check/">
+<link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-gongwen-word-check/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/checkers/dsh-gongwen-word-check/">
+<link rel="alternate" type="application/json" href="../../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "公文格式核对",
+      "alternateName": "dsh-gongwen-word-check",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "公文档案",
+      "softwareVersion": "0.2.2",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "CNY"
+      },
+      "isAccessibleForFree": true,
+      "description": "公文格式要素核对（按公开的党政机关公文格式标准核对版头与主体要素，仅提示差异，不作出定性结论）",
+      "url": "https://perrylink.github.io/checkers/dsh-gongwen-word-check/",
+      "codeRepository": "https://github.com/PerryLink/dsh-gongwen-word-check",
+      "programmingLanguage": "TypeScript",
+      "author": {
+        "@type": "Organization",
+        "name": "PerryLink",
+        "url": "https://github.com/PerryLink"
+      },
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://perrylink.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "核查插件",
+          "item": "https://perrylink.github.io/zh/checkers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "公文档案",
+          "item": "https://perrylink.github.io/zh/checkers/gongwen/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "公文格式核对"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../">PerryLink DSH 插件家族</a>
+    <nav aria-label="主导航"><a href="../../zh/">首页</a><a href="../../zh/checkers/">核查插件</a><a href="../../zh/checkers/choose/">该用哪个</a><a href="../../plugins/">其他插件</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../../zh/">首页</a> &rsaquo; <a href="../../zh/checkers/">核查插件</a> &rsaquo; <a href="../../zh/checkers/gongwen/">公文档案</a> &rsaquo; <span aria-current="page">公文格式核对</span></nav>
+<h1>公文格式核对</h1>
+<p class="lede">公文格式要素核对（按公开的党政机关公文格式标准核对版头与主体要素，仅提示差异，不作出定性结论）</p>
+<dl class="meta">
+  <dt>npm 包</dt><dd><code>dsh-gongwen-word-check</code></dd>
+  <dt>职业分组</dt><dd><a href="../../zh/checkers/gongwen/">公文档案</a></dd>
+  <dt>版本</dt><dd>0.2.2（规则库 2026.1）</dd>
+  <dt>许可</dt><dd>Apache-2.0</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
+  <dt>规则条数</dt><dd>7 条，全部为「由原则推导」，1 条依据本机构配置，5 条的条文本次未取得逐字文本</dd>
+  <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-gongwen-word-check">PerryLink/dsh-gongwen-word-check</a></dd>
+</dl>
+
+<h2 id="what">这个插件核对什么</h2>
+<p>公文格式核对（dsh-gongwen-word-check）是一个面向公文档案场景的 DeepSeek Harness 核查插件。公文格式要素核对（按公开的党政机关公文格式标准核对版头与主体要素，仅提示差异，不作出定性结论）</p>
+<p>规则库 7 条规则，数量居中：既能覆盖这类材料的主要要素，又不会把无关项也拉进来。规则库的依据类型分布是 由原则推导 6 条、本机构配置 1 条。</p>
+
+<h2 id="how">核对方式</h2>
+<p>核对方式上，公文格式核对主要使用以下几类机械可判定的检查：。</p>
+<p>整个核对是封闭的：只看材料里写了什么，不去查任何外部数据源，也不让模型发表意见。这意味着结果可复现，也意味着无法核对材料之外的事实。</p>
+<p>需要说明的是，该规则库不做任何数值运算，核对的是要素是否齐备、取值是否在允许范围内、字段之间的关系是否自洽。</p>
+
+<h2 id="boundary">它不作什么判断</h2>
+<p>本族插件的共同约定是：只列出材料内部可以逐条指认的差异，不判定合规、不认定责任、不替代主管部门或审核人的结论。报告里每一条差异都会带上它对照的规则、依据的文件与条款，以及差异的具体位置。</p>
+<p>本插件不产生「错误」级结果，严重度最高为「提示」。它指出的是「此处与依据不一致」，而不是「此处是错的」。</p>
+<p>另有 1 条规则的判据来自使用机构自己的配置项，不是国家标准。换机构使用前必须先替换这份配置，否则核对的是别人的口径。</p>
+<p>规则库中未被命中的规则同样会出现在结果里：无法执行的检查会连同原因一起列出，空的结果列表不等于材料没有问题，只等于规则库覆盖到的那部分没有发现差异。</p>
+
+<h2 id="rules">规则清单</h2>
+<table>
+<caption>规则库 gongwen-word-check.yaml 的全部 7 条规则（规则库版本 2026.1）</caption>
+<thead><tr><th>规则</th><th>检查内容</th><th>严重度</th><th>依据类型</th></tr></thead>
+<tbody>
+<tr><td><code>GW-001</code></td><td>发文字号应符合机关代字〔年份〕序号的形式</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>GW-002</code></td><td>成文日期应可解析</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>GW-003</code></td><td>文种应使用本机构口径的取值</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>GW-004</code></td><td>公文台账应填写主送机关</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>GW-005</code></td><td>公文标题不应过长</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>GW-006</code></td><td>发文字号不应在台账内重复</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>GW-007</code></td><td>台账要素不应残留未替换的占位符</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+</tbody></table>
+<p>严重度含义：<strong>提示</strong>（6 条）——差异成立，但条文未直接规定，或需人工判断后确认；<strong>参考</strong>（1 条）——只作提示，供人工复核，不构成任何结论。</p>
+<p>依据类型含义：<strong>由原则推导</strong>（6 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」；<strong>本机构配置</strong>（1 条）——阈值或清单来自使用机构自身配置而非国家标准，严重度上限为「参考」。</p>
+
+<h2 id="standards">依据的标准</h2>
+<table>
+<caption>依据的标准 —— 逐条取自插件自身声明的 normativeBasis（共 3 条）</caption>
+<thead><tr><th>依据</th><th>类型</th><th>引用该依据的规则数</th></tr></thead>
+<tbody>
+<tr><td>《党政机关公文格式》</td><td>文件／标准</td><td>5 条</td></tr>
+<tr><td>《党政机关公文处理工作条例》</td><td>文件／标准</td><td>2 条</td></tr>
+<tr><td>中办发〔2012〕14号</td><td>编号</td><td>—</td></tr>
+</tbody></table>
+<h3>编号、版本与效力说明</h3>
+<ul>
+<li>中办发〔2012〕14号（自 2012 年 7 月 1 日起施行）</li>
+</ul>
+<p>这是引用取证记录中的完整编号与效力说明，含发布日期、实施日期、代替关系与强制性说明。规则库核对时对照的是这里列出的版本；若本单位执行的是其他版本，结论不直接适用。</p>
+<p>这是插件声明的依据清单。要注意它是文件层面的：每条规则实际对照的是文件中的某个具体条款，取证进度按条款记录。</p>
+
+<h2 id="evidence">引用取证状态</h2>
+<p>引用取证：7 条规则全部为「由原则推导」，没有一条声称依据了逐字条文。其中 5 条如实标注「本次未取得」。这意味着结果里的每一条差异都只能作为线索，不能作为「违反某条条文」的结论。</p>
+<p>被规则引用的文件共 2 份，按引用次数从多到少是：《党政机关公文格式》（5 条）、《党政机关公文处理工作条例》（2 条）。引用数统计到文件一层；同一文件内的不同条款可能分别支撑不同规则。</p>
+
+<h2 id="reading">结果怎么读</h2>
+<p>本插件共 7 条规则，其中严重度最高的一档是「提示」，共 6 条：<code>GW-001</code>、<code>GW-002</code>、<code>GW-004</code>、<code>GW-005</code>、<code>GW-006</code>、<code>GW-007</code>。这几条是清单里最需要先看的；其余条目按材料实际内容逐条判断即可。</p>
+<p>另有 5 条规则的条文本次未取得逐字文本（<code>GW-001</code>、<code>GW-002</code>、<code>GW-004</code>、<code>GW-005</code>、<code>GW-007</code>）。引用这部分结果时请注意措辞：它们是原则推导的产物，不是条文比对的结果。</p>
+<p>还有 1 条规则属于「本机构配置」（<code>GW-003</code>）。它们的判据来自配置项而不是国家标准，配置未填时这几条会进入跳过项。</p>
+
+<h2 id="usage">适用场景与同组插件</h2>
+<p>面向办公室、文秘与档案室的公文与归档核对：公文格式要素、文种与发文字号、流转时限、归档完整性与保管期限。</p>
+<p>同一职业分组「公文档案」下还有 2 个核查插件，分别是档案归档核对（dsh-archive-check）、公文流转核对（dsh-gongwen-flow-check）。这类材料通常需要同时过几个插件：一个插件只覆盖它自己那份规则库声明过的范围，把几个插件的结果合起来看才是完整的一次复核。</p>
+<p>该插件以 npm 包 dsh-gongwen-word-check 发布，仓库在 GitHub 的 PerryLink/dsh-gongwen-word-check，采用 Apache-2.0 许可。本页内容由构建脚本从插件自身的规则库与 locale 资源生成，与仓库中的规则库版本 2026.1 对应。</p>
+<ul><li><a href="../../checkers/dsh-archive-check/">档案归档核对</a> <code>dsh-archive-check</code> —— 档案归档完整性与保管期限核对</li><li><a href="../../checkers/dsh-gongwen-flow-check/">公文流转核对</a> <code>dsh-gongwen-flow-check</code> —— 公文流转与办理时限核对</li></ul>
+
+<h2 id="install">安装</h2>
+<p>先在 bash 或 PowerShell 里装上，再确认配置里出现了这个包名：</p>
+<h3>bash / sh</h3>
+<pre><code>dsh plugin --profile default add dsh-gongwen-word-check
+dsh --profile default --dump-config | grep &#39;dsh-gongwen-word-check&#39;</code></pre>
+<h3>PowerShell</h3>
+<pre><code>dsh plugin --profile default add dsh-gongwen-word-check
+dsh --profile default --dump-config | Select-String &#39;dsh-gongwen-word-check&#39;</code></pre>
+<p>把 <code>--profile default</code> 换成实际使用的 profile 名。装上之后重新启动会话，插件注册的工具才会出现。</p>
+
+<h2 id="docs">完整文档</h2>
+<p>这里只讲核对逻辑与取证状态。安装之后的实际操作细节（材料格式、规则开关、超时与跳过项的处理）不在本页，请看仓库文档。</p>
+<p><a href="https://github.com/PerryLink/dsh-gongwen-word-check"><strong>完整文档 → GitHub</strong></a>（<code>PerryLink/dsh-gongwen-word-check</code>）</p>
+<p>不确定是否该用这个插件，先看按材料类型组织的对照表；同类插件则在公文档案分组下。
+<a href="../../zh/checkers/choose/">该用哪个核查插件</a> ·
+<a href="../../zh/checkers/gongwen/">公文档案</a> ·
+<a href="../../zh/checkers/">全部核查插件</a></p>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>本站为静态 HTML：全部正文都在服务端返回的 HTML 中，无 JavaScript 渲染。内容由构建脚本从各插件的规则库与包元数据生成。</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../../catalog.json">catalog.json</a> · <a href="../../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>

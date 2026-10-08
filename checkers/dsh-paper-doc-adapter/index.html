@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>试卷结构核对（dsh-paper-doc-adapter）——科研教育核查插件 | PerryLink DSH 插件家族</title>
+<meta name="description" content="试卷结构核对：试卷解析结构核对。核对 8 条规则，依据 《试题元数据规范》、本机构题库与命题口径（本机构配置）、无统一标准 等文件。npm 包 dsh-paper-doc-adapter，版本 0.2.1，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://perrylink.github.io/checkers/dsh-paper-doc-adapter/">
+<link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-paper-doc-adapter/">
+<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/checkers/dsh-paper-doc-adapter/">
+<link rel="alternate" type="application/json" href="../../catalog.json" title="Catalog (JSON)">
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--fg:#1a1a1a;--muted:#5b6470;--bg:#fff;--panel:#f6f7f9;--line:#dfe3e8;--accent:#0b5fff;--warn:#8a5300;--err:#a3231b}
+@media (prefers-color-scheme:dark){:root{--fg:#e8eaed;--muted:#9aa3ad;--bg:#14171a;--panel:#1c2024;--line:#2c3238;--accent:#7aa7ff;--warn:#e0b070;--err:#ff8a80}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.1rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:baseline;padding-top:.85rem;padding-bottom:.85rem}
+header.site .brand{font-weight:700;color:var(--fg)}
+header.site nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.94rem}
+main{padding:1.6rem 0 3rem}
+h1{font-size:1.72rem;line-height:1.3;margin:.2rem 0 1rem}
+h2{font-size:1.24rem;margin:2.1rem 0 .7rem;padding-top:.35rem;border-top:1px solid var(--line)}
+h3{font-size:1.04rem;margin:1.4rem 0 .5rem}
+p{margin:.7rem 0}
+ul,ol{margin:.7rem 0;padding-left:1.35rem}
+li{margin:.32rem 0}
+.crumbs{font-size:.87rem;color:var(--muted);margin:.2rem 0 1rem}
+.crumbs a{color:var(--muted)}
+.lede{font-size:1.05rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.93rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel);font-weight:600;white-space:nowrap}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+code{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:.06em .32em;font-size:.9em}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.75rem .85rem;overflow-x:auto;font-size:.88rem;margin:.6rem 0}
+pre code{background:none;border:0;padding:0}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;font-size:.93rem;margin:1rem 0}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:.75rem 0;background:var(--panel)}
+.card h3{margin:0 0 .3rem;font-size:1rem}
+.card p{margin:.35rem 0;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.75rem;margin:1rem 0}
+.grid .card{margin:0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.08rem .55rem;margin-right:.35rem;color:var(--muted);background:var(--bg)}
+.sev-error{color:var(--err);font-weight:600}
+.sev-warn{color:var(--warn)}
+.sev-info{color:var(--muted)}
+.note{border-left:3px solid var(--accent);padding:.1rem 0 .1rem .85rem;margin:1rem 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);font-size:.88rem;color:var(--muted)}
+footer.site .wrap{padding-top:1.1rem;padding-bottom:1.4rem}
+footer.site p{margin:.4rem 0}
+.skip{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "试卷结构核对",
+      "alternateName": "dsh-paper-doc-adapter",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "科研教育",
+      "softwareVersion": "0.2.1",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "CNY"
+      },
+      "isAccessibleForFree": true,
+      "description": "试卷解析结构核对（按题型、答案、分值与 yotta 标识核对试卷结构自洽，仅提示差异，不作出定性结论）",
+      "url": "https://perrylink.github.io/checkers/dsh-paper-doc-adapter/",
+      "codeRepository": "https://github.com/PerryLink/dsh-paper-doc-adapter",
+      "programmingLanguage": "TypeScript",
+      "author": {
+        "@type": "Organization",
+        "name": "PerryLink",
+        "url": "https://github.com/PerryLink"
+      },
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://perrylink.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "核查插件",
+          "item": "https://perrylink.github.io/zh/checkers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "科研教育",
+          "item": "https://perrylink.github.io/zh/checkers/research/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "试卷结构核对"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../">PerryLink DSH 插件家族</a>
+    <nav aria-label="主导航"><a href="../../zh/">首页</a><a href="../../zh/checkers/">核查插件</a><a href="../../zh/checkers/choose/">该用哪个</a><a href="../../plugins/">其他插件</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+<nav class="crumbs" aria-label="面包屑"><a href="../../zh/">首页</a> &rsaquo; <a href="../../zh/checkers/">核查插件</a> &rsaquo; <a href="../../zh/checkers/research/">科研教育</a> &rsaquo; <span aria-current="page">试卷结构核对</span></nav>
+<h1>试卷结构核对</h1>
+<p class="lede">试卷解析结构核对（按题型、答案、分值与 yotta 标识核对试卷结构自洽，仅提示差异，不作出定性结论）</p>
+<dl class="meta">
+  <dt>npm 包</dt><dd><code>dsh-paper-doc-adapter</code></dd>
+  <dt>职业分组</dt><dd><a href="../../zh/checkers/research/">科研教育</a></dd>
+  <dt>版本</dt><dd>0.2.1（规则库 2026.1）</dd>
+  <dt>许可</dt><dd>Apache-2.0</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
+  <dt>规则条数</dt><dd>8 条，全部为「由原则推导」，2 条依据本机构配置，8 条的条文本次未取得逐字文本</dd>
+  <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-paper-doc-adapter">PerryLink/dsh-paper-doc-adapter</a></dd>
+</dl>
+
+<h2 id="what">这个插件核对什么</h2>
+<p>试卷结构核对（dsh-paper-doc-adapter）是一个面向科研教育场景的 DeepSeek Harness 核查插件。试卷解析结构核对（按题型、答案、分值与 yotta 标识核对试卷结构自洽，仅提示差异，不作出定性结论）</p>
+<p>8 条规则，是本族里最常见的一档规模，大体对应一次认真的人工通读能看住的范围。该规则库的规则依据构成为：由原则推导 6 条、本机构配置 2 条。</p>
+
+<h2 id="how">核对方式</h2>
+<p>从检查方式看，试卷结构核对用的是几类可以机械判定的手段：多字段至少填一（2 条）、求和结果一致（1 条）、取值须在允许清单内（1 条）、须为可解析数值（1 条）、编号或键不得重复（1 条）、必填项存在性（1 条）。此外还有 1 类出现频次较低的检查方式。</p>
+<p>插件不会替你查证。它只比较材料自身各处之间、以及材料与所引条款之间是否一致；材料里写错的事实，只要内部自洽，就查不出来。</p>
+
+<h2 id="boundary">它不作什么判断</h2>
+<p>这一族插件的立场一致：把材料内部能够逐条指认的差异列出来，合规与否、责任归属、以及能否通过审核，都不由插件给出。每条差异都附上它对照的规则、依据的文件与条款和差异位置，便于逐个复核。</p>
+<p>严重度上限为「提示」——插件不使用「错误」级，因此结果里不会出现任何定性判断。</p>
+<p>其中 2 条规则的阈值或清单来自使用机构自身配置，而不是国家标准。这类规则在更换机构后必须先改配置再使用，否则会拿别的机构的口径核对本机构的材料。</p>
+<p>结果里的空清单有明确含义，插件对此不作暗示：规则库覆盖不到的部分、以及因缺少必要字段而无法执行的检查，都会单独列出原因。</p>
+
+<h2 id="rules">规则清单</h2>
+<table>
+<caption>规则库 paper-doc-adapter.yaml 的全部 8 条规则（规则库版本 2026.1）</caption>
+<thead><tr><th>规则</th><th>检查内容</th><th>严重度</th><th>依据类型</th></tr></thead>
+<tbody>
+<tr><td><code>PD-001</code></td><td>每道题都应填写题号与题干</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>PD-002</code></td><td>每道题都应填写答案与解析</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>PD-003</code></td><td>各题分值合计应等于试卷总分</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>PD-004</code></td><td>题型应使用本机构口径的取值</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>PD-005</code></td><td>难度系数应落在配置的取值范围内</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>PD-006</code></td><td>题目标识应齐备且唯一</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>PD-007</code></td><td>每道题都应填写知识点</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>PD-008</code></td><td>题干栏不应残留未替换的占位符</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+</tbody></table>
+<p>严重度含义：<strong>提示</strong>（6 条）——差异成立，但条文未直接规定，或需人工判断后确认；<strong>参考</strong>（2 条）——只作提示，供人工复核，不构成任何结论。</p>
+<p>依据类型含义：<strong>由原则推导</strong>（6 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」；<strong>本机构配置</strong>（2 条）——阈值或清单来自使用机构自身配置而非国家标准，严重度上限为「参考」。</p>
+
+<h2 id="standards">依据的标准</h2>
+<table>
+<caption>依据的标准 —— 逐条取自插件自身声明的 normativeBasis（共 3 条）</caption>
+<thead><tr><th>依据</th><th>类型</th><th>引用该依据的规则数</th></tr></thead>
+<tbody>
+<tr><td>《试题元数据规范》</td><td>文件／标准</td><td>6 条</td></tr>
+<tr><td>本机构题库与命题口径（本机构配置）</td><td>文件／标准</td><td>2 条</td></tr>
+<tr><td>无统一标准</td><td>编号</td><td>—</td></tr>
+</tbody></table>
+<h3>编号、版本与效力说明</h3>
+<ul>
+<li>无统一标准（本条依据为本机构配置的题型口径）</li>
+<li>无统一标准（本条依据为本机构配置的难度口径）</li>
+</ul>
+<p>这是引用取证记录中的完整编号与效力说明，含发布日期、实施日期、代替关系与强制性说明。规则库核对时对照的是这里列出的版本；若本单位执行的是其他版本，结论不直接适用。</p>
+<p>上表来自插件声明的 normativeBasis；规则库内部还会把每条规则落到具体条款上。条款原文的取证情况见下一节。</p>
+
+<h2 id="evidence">引用取证状态</h2>
+<p>引用取证：8 条规则全部为「由原则推导」，没有一条声称依据了逐字条文。其中 8 条如实标注「本次未取得」。这意味着结果里的每一条差异都只能作为线索，不能作为「违反某条条文」的结论。</p>
+<p>规则引用的文件共 2 份，按引用规则数排列为：《试题元数据规范》（6 条）、本机构题库与命题口径（本机构配置）（2 条）。同一文件的不同条款会被多条规则分别引用，因此上面是文件层面的汇总。</p>
+
+<h2 id="reading">结果怎么读</h2>
+<p>本插件共 8 条规则，其中严重度最高的一档是「提示」，共 6 条：<code>PD-001</code>、<code>PD-002</code>、<code>PD-003</code>、<code>PD-006</code>、<code>PD-007</code>、<code>PD-008</code>。结果里先看这几条，再回头处理其他规则报出的差异。</p>
+<p>另有 8 条规则的条文本次未取得逐字文本（<code>PD-001</code>、<code>PD-002</code>、<code>PD-003</code>、<code>PD-004</code>、<code>PD-005</code>、<code>PD-006</code>、<code>PD-007</code>、<code>PD-008</code>）。这些规则报出的差异只能作为线索，不能当作「违反某条条文」来引用。</p>
+<p>还有 2 条规则属于「本机构配置」（<code>PD-004</code>、<code>PD-005</code>）。它们的判据来自配置项而不是国家标准，配置未填时这几条会进入跳过项。</p>
+
+<h2 id="usage">适用场景与同组插件</h2>
+<p>面向科研管理、基金管理与教研岗的申报与评审材料核对：基金申请书形式审查、试卷解析结构、作文量表评分、政策专报。</p>
+<p>同一职业分组「科研教育」下还有 4 个核查插件，分别是量表评分核对（dsh-essay-rubric-check）、能力差距核对（dsh-learning-gap-check）、基金申请书形式审查（dsh-nsfc-form-check）、政策专报核对（dsh-policy-brief-draft）。这几个插件的范围彼此不重叠，也不会互相替代；要覆盖这类材料的全貌，需要挑出对应的几个分别跑。</p>
+<p>npm 包名 dsh-paper-doc-adapter，仓库 PerryLink/dsh-paper-doc-adapter，Apache-2.0 许可。页面上的规则与依据由构建脚本从规则库（版本 2026.1）与包的 locale 资源读出，与仓库内容一致。</p>
+<ul><li><a href="../../checkers/dsh-essay-rubric-check/">量表评分核对</a> <code>dsh-essay-rubric-check</code> —— 作文量表评分核对</li><li><a href="../../checkers/dsh-learning-gap-check/">能力差距核对</a> <code>dsh-learning-gap-check</code> —— 能力差距与培养计划核对</li><li><a href="../../checkers/dsh-nsfc-form-check/">基金申请书形式审查</a> <code>dsh-nsfc-form-check</code> —— 国家自然科学基金申请书形式审查与匿名化提示</li><li><a href="../../checkers/dsh-policy-brief-draft/">政策专报核对</a> <code>dsh-policy-brief-draft</code> —— 政策专报要素核对</li></ul>
+
+<h2 id="install">安装</h2>
+<p>安装分两步——先 add，再确认它进了配置。两条命令都与平台无关，只有过滤输出的写法不同：</p>
+<h3>bash / sh</h3>
+<pre><code>dsh plugin --profile default add dsh-paper-doc-adapter
+dsh --profile default --dump-config | grep &#39;dsh-paper-doc-adapter&#39;</code></pre>
+<h3>PowerShell</h3>
+<pre><code>dsh plugin --profile default add dsh-paper-doc-adapter
+dsh --profile default --dump-config | Select-String &#39;dsh-paper-doc-adapter&#39;</code></pre>
+<p>把 <code>--profile default</code> 换成实际使用的 profile 名。装上之后重新启动会话，插件注册的工具才会出现。</p>
+
+<h2 id="docs">完整文档</h2>
+<p>这里只讲核对逻辑与取证状态。安装之后的实际操作细节（材料格式、规则开关、超时与跳过项的处理）不在本页，请看仓库文档。</p>
+<p><a href="https://github.com/PerryLink/dsh-paper-doc-adapter"><strong>完整文档 → GitHub</strong></a>（<code>PerryLink/dsh-paper-doc-adapter</code>）</p>
+<p>同类材料还有哪些插件可选，见科研教育分组；不确定选哪个，见对照表。
+<a href="../../zh/checkers/choose/">该用哪个核查插件</a> ·
+<a href="../../zh/checkers/research/">科研教育</a> ·
+<a href="../../zh/checkers/">全部核查插件</a></p>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>本站为静态 HTML：全部正文都在服务端返回的 HTML 中，无 JavaScript 渲染。内容由构建脚本从各插件的规则库与包元数据生成。</p>
+    <p><a href="https://github.com/PerryLink">github.com/PerryLink</a> · <a href="../../catalog.json">catalog.json</a> · <a href="../../sitemap.xml">sitemap.xml</a></p>
+  </div>
+</footer>
+</body>
+</html>
