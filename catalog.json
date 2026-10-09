@@ -5796,7 +5796,7 @@
         "integration"
       ],
       "locale": null,
-      "version": "0.4.7",
+      "version": "0.4.16",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6320,7 +6320,7 @@
         "integration"
       ],
       "locale": "en",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
