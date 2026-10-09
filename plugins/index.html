@@ -87,7 +87,7 @@ footer.site p{margin:.4rem 0}
           "position": 3,
           "name": "Background Agents",
           "url": "https://perrylink.github.io/plugins/dsh-background-agents/",
-          "description": "Background agents for DeepSeek Harness: run subagents as background jobs with a structured task board and approval controls."
+          "description": "RETIRED 2026-10-05 — the official DeepSeek Harness now ships native continuable subagents (subagent with backgroundMode: continuable, plus send_message). Use those instead; this entry stays listed only so the name resolves."
         },
         {
           "@type": "ListItem",
@@ -220,14 +220,14 @@ footer.site p{margin:.4rem 0}
           "position": 22,
           "name": "Mask",
           "url": "https://perrylink.github.io/plugins/dsh-mask/",
-          "description": "Mask sensitive values in DeepSeek Harness sessions: redaction rules for secrets, with an in-memory allowlist and a controlled reveal workflow."
+          "description": "PII masking middleware for DeepSeek Harness: phones, emails, ID cards, bank cards and keys become placeholders before they reach the model, and a host-side restore table keeps them reversible. The plaintext never enters the session log."
         },
         {
           "@type": "ListItem",
           "position": 23,
           "name": "MCP Panel",
           "url": "https://perrylink.github.io/plugins/dsh-mcp-panel/",
-          "description": "Web panel for managing MCP (Model Context Protocol) servers in DeepSeek Harness: inspect, start/stop, view logs, and configure servers, with automatic backups."
+          "description": "Read-only MCP console for DeepSeek Harness: a /mcp command with health diagnostics and pipeline trial calls, a Settings MCP tab with server CRUD (approval-gated writes, automatic backups) and a tool trial console over the official tool pipeline."
         },
         {
           "@type": "ListItem",
@@ -318,7 +318,7 @@ footer.site p{margin:.4rem 0}
           "position": 36,
           "name": "Session Pin",
           "url": "https://perrylink.github.io/plugins/dsh-session-pin/",
-          "description": "Pin important sessions in DeepSeek Harness so they stay visible, sorted first, and protected from cleanup."
+          "description": "RETIRED 2026-10-05 — the official DeepSeek Harness now ships session pinning natively (row menu and hover button in dsh-client-ui-workspace). Use the built-in session pin; this entry stays listed only so the name resolves."
         },
         {
           "@type": "ListItem",
@@ -346,7 +346,7 @@ footer.site p{margin:.4rem 0}
           "position": 40,
           "name": "Team Rooms",
           "url": "https://perrylink.github.io/plugins/dsh-team-rooms/",
-          "description": "Team rooms for DeepSeek Harness: persistent shared rooms across independent sessions — a message bus, a shared task board and a timeline. Extracted from dsh-background-agents, whose background-agent half is superseded by DSH's native continuable subagents."
+          "description": "RETIRED 2026-10-05 — the official DeepSeek Harness now ships the Agent Teams subsystem (dsh-experimental-agent-team). Use native Agent Teams, or a maintained alternative such as @nanmicoder/dsh-agent-teams."
         },
         {
           "@type": "ListItem",
@@ -415,7 +415,7 @@ footer.site p{margin:.4rem 0}
 <div class="grid">
 <div class="card">
 <h3><a href="../plugins/dsh-background-agents/">Background Agents</a></h3>
-<p>Background agents for DeepSeek Harness: run subagents as background jobs with a structured task board and approval controls.</p>
+<p>RETIRED 2026-10-05 — the official DeepSeek Harness now ships native continuable subagents (subagent with backgroundMode: continuable, plus send_message). Use those instead; this entry stays listed only so the name resolves.</p>
 <p><span class="tag">dsh-background-agents</span><span class="tag">v0.10.2</span><span class="tag">Apache-2.0</span></p>
 </div>
 <div class="card">
@@ -490,7 +490,7 @@ footer.site p{margin:.4rem 0}
 </div>
 <div class="card">
 <h3><a href="../plugins/dsh-mcp-panel/">MCP Panel</a></h3>
-<p>Web panel for managing MCP (Model Context Protocol) servers in DeepSeek Harness: inspect, start/stop, view logs, and configure servers, with automatic backups.</p>
+<p>Read-only MCP console for DeepSeek Harness: a /mcp command with health diagnostics and pipeline trial calls, a Settings MCP tab with server CRUD (approval-gated writes, automatic backups) and a tool trial console over the official tool pipeline.</p>
 <p><span class="tag">dsh-mcp-panel</span><span class="tag">v0.6.22</span><span class="tag">Apache-2.0</span></p>
 </div>
 <div class="card">
@@ -595,7 +595,7 @@ footer.site p{margin:.4rem 0}
 </div>
 <div class="card">
 <h3><a href="../plugins/dsh-session-pin/">Session Pin</a></h3>
-<p>Pin important sessions in DeepSeek Harness so they stay visible, sorted first, and protected from cleanup.</p>
+<p>RETIRED 2026-10-05 — the official DeepSeek Harness now ships session pinning natively (row menu and hover button in dsh-client-ui-workspace). Use the built-in session pin; this entry stays listed only so the name resolves.</p>
 <p><span class="tag">dsh-session-pin</span><span class="tag">v0.7.19</span><span class="tag">Apache-2.0</span></p>
 </div>
 <div class="card">
@@ -645,7 +645,7 @@ footer.site p{margin:.4rem 0}
 </div>
 <div class="card">
 <h3><a href="../plugins/dsh-mask/">Mask</a></h3>
-<p>Mask sensitive values in DeepSeek Harness sessions: redaction rules for secrets, with an in-memory allowlist and a controlled reveal workflow.</p>
+<p>PII masking middleware for DeepSeek Harness: phones, emails, ID cards, bank cards and keys become placeholders before they reach the model, and a host-side restore table keeps them reversible. The plaintext never enters the session log.</p>
 <p><span class="tag">dsh-mask</span><span class="tag">v0.2.19</span><span class="tag">Apache-2.0</span></p>
 </div>
 <div class="card">
