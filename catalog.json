@@ -166,7 +166,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-aqua-input-check/",
       "repo": "https://github.com/PerryLink/dsh-aqua-input-check",
       "npm": "dsh-aqua-input-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -265,7 +265,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-archive-check/",
       "repo": "https://github.com/PerryLink/dsh-archive-check",
       "npm": "dsh-archive-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -372,7 +372,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-bid-ca-precheck/",
       "repo": "https://github.com/PerryLink/dsh-bid-ca-precheck",
       "npm": "dsh-bid-ca-precheck",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -466,7 +466,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-bid-qual-check/",
       "repo": "https://github.com/PerryLink/dsh-bid-qual-check",
       "npm": "dsh-bid-qual-check",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -574,7 +574,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-contract-stance/",
       "repo": "https://github.com/PerryLink/dsh-contract-stance",
       "npm": "dsh-contract-stance",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -666,7 +666,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-customs-doc-check/",
       "repo": "https://github.com/PerryLink/dsh-customs-doc-check",
       "npm": "dsh-customs-doc-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -760,7 +760,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-demurrage-ledger/",
       "repo": "https://github.com/PerryLink/dsh-demurrage-ledger",
       "npm": "dsh-demurrage-ledger",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -859,7 +859,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-drill-script-check/",
       "repo": "https://github.com/PerryLink/dsh-drill-script-check",
       "npm": "dsh-drill-script-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -964,7 +964,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-eia-guide-check/",
       "repo": "https://github.com/PerryLink/dsh-eia-guide-check",
       "npm": "dsh-eia-guide-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -1067,7 +1067,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-emergency-plan/",
       "repo": "https://github.com/PerryLink/dsh-emergency-plan",
       "npm": "dsh-emergency-plan",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -1183,7 +1183,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-essay-rubric-check/",
       "repo": "https://github.com/PerryLink/dsh-essay-rubric-check",
       "npm": "dsh-essay-rubric-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -1267,7 +1267,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-evidence-check/",
       "repo": "https://github.com/PerryLink/dsh-evidence-check",
       "npm": "dsh-evidence-check",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -1363,7 +1363,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-export-ctl-check/",
       "repo": "https://github.com/PerryLink/dsh-export-ctl-check",
       "npm": "dsh-export-ctl-check",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -1466,7 +1466,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-fmea-table-check/",
       "repo": "https://github.com/PerryLink/dsh-fmea-table-check",
       "npm": "dsh-fmea-table-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -1566,7 +1566,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-forecast-penalty/",
       "repo": "https://github.com/PerryLink/dsh-forecast-penalty",
       "npm": "dsh-forecast-penalty",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -1668,7 +1668,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-gongwen-flow-check/",
       "repo": "https://github.com/PerryLink/dsh-gongwen-flow-check",
       "npm": "dsh-gongwen-flow-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -1755,7 +1755,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-gongwen-word-check/",
       "repo": "https://github.com/PerryLink/dsh-gongwen-word-check",
       "npm": "dsh-gongwen-word-check",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -1852,7 +1852,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-guard-plan-qc/",
       "repo": "https://github.com/PerryLink/dsh-guard-plan-qc",
       "npm": "dsh-guard-plan-qc",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -1936,7 +1936,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-hazchem-check/",
       "repo": "https://github.com/PerryLink/dsh-hazchem-check",
       "npm": "dsh-hazchem-check",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -2041,7 +2041,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-hazplan-check/",
       "repo": "https://github.com/PerryLink/dsh-hazplan-check",
       "npm": "dsh-hazplan-check",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -2139,7 +2139,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-hidden-risk-map/",
       "repo": "https://github.com/PerryLink/dsh-hidden-risk-map",
       "npm": "dsh-hidden-risk-map",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -2210,7 +2210,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-hs-classify/",
       "repo": "https://github.com/PerryLink/dsh-hs-classify",
       "npm": "dsh-hs-classify",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -2300,7 +2300,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-icd-rule-check/",
       "repo": "https://github.com/PerryLink/dsh-icd-rule-check",
       "npm": "dsh-icd-rule-check",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -2449,7 +2449,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-lawcite-adapter/",
       "repo": "https://github.com/PerryLink/dsh-lawcite-adapter",
       "npm": "dsh-lawcite-adapter",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -2555,7 +2555,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-lc-doc-check/",
       "repo": "https://github.com/PerryLink/dsh-lc-doc-check",
       "npm": "dsh-lc-doc-check",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -2656,7 +2656,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-learning-gap-check/",
       "repo": "https://github.com/PerryLink/dsh-learning-gap-check",
       "npm": "dsh-learning-gap-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -2754,7 +2754,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-medrec-qc/",
       "repo": "https://github.com/PerryLink/dsh-medrec-qc",
       "npm": "dsh-medrec-qc",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -2924,7 +2924,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-nsfc-form-check/",
       "repo": "https://github.com/PerryLink/dsh-nsfc-form-check",
       "npm": "dsh-nsfc-form-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -3087,7 +3087,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-nurse-record-check/",
       "repo": "https://github.com/PerryLink/dsh-nurse-record-check",
       "npm": "dsh-nurse-record-check",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -3241,7 +3241,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-origin-rvc-check/",
       "repo": "https://github.com/PerryLink/dsh-origin-rvc-check",
       "npm": "dsh-origin-rvc-check",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -3332,7 +3332,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-ota-review-check/",
       "repo": "https://github.com/PerryLink/dsh-ota-review-check",
       "npm": "dsh-ota-review-check",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -3434,7 +3434,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-paper-doc-adapter/",
       "repo": "https://github.com/PerryLink/dsh-paper-doc-adapter",
       "npm": "dsh-paper-doc-adapter",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -3540,7 +3540,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-permit-report-check/",
       "repo": "https://github.com/PerryLink/dsh-permit-report-check",
       "npm": "dsh-permit-report-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -3640,7 +3640,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-pipeline-check/",
       "repo": "https://github.com/PerryLink/dsh-pipeline-check",
       "npm": "dsh-pipeline-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -3749,7 +3749,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-pleading-draft/",
       "repo": "https://github.com/PerryLink/dsh-pleading-draft",
       "npm": "dsh-pleading-draft",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -3843,7 +3843,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-policy-brief-draft/",
       "repo": "https://github.com/PerryLink/dsh-policy-brief-draft",
       "npm": "dsh-policy-brief-draft",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -3942,7 +3942,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-power-loss-split/",
       "repo": "https://github.com/PerryLink/dsh-power-loss-split",
       "npm": "dsh-power-loss-split",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -4023,7 +4023,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-power-ticket-check/",
       "repo": "https://github.com/PerryLink/dsh-power-ticket-check",
       "npm": "dsh-power-ticket-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -4120,7 +4120,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-ppap-check/",
       "repo": "https://github.com/PerryLink/dsh-ppap-check",
       "npm": "dsh-ppap-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -4212,7 +4212,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-protest-deadline/",
       "repo": "https://github.com/PerryLink/dsh-protest-deadline",
       "npm": "dsh-protest-deadline",
-      "version": "0.2.1",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -4308,7 +4308,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-railway-window/",
       "repo": "https://github.com/PerryLink/dsh-railway-window",
       "npm": "dsh-railway-window",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -4406,7 +4406,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-repair-order-qc/",
       "repo": "https://github.com/PerryLink/dsh-repair-order-qc",
       "npm": "dsh-repair-order-qc",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -4500,7 +4500,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-review-reply-check/",
       "repo": "https://github.com/PerryLink/dsh-review-reply-check",
       "npm": "dsh-review-reply-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -4598,7 +4598,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-rulefile-check/",
       "repo": "https://github.com/PerryLink/dsh-rulefile-check",
       "npm": "dsh-rulefile-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -4695,7 +4695,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-safety-brief-check/",
       "repo": "https://github.com/PerryLink/dsh-safety-brief-check",
       "npm": "dsh-safety-brief-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -4800,7 +4800,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-site-log-check/",
       "repo": "https://github.com/PerryLink/dsh-site-log-check",
       "npm": "dsh-site-log-check",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -4959,7 +4959,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-soe-decision-check/",
       "repo": "https://github.com/PerryLink/dsh-soe-decision-check",
       "npm": "dsh-soe-decision-check",
-      "version": "0.2.2",
+      "version": "0.2.5",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -5061,7 +5061,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-soilwater-check/",
       "repo": "https://github.com/PerryLink/dsh-soilwater-check",
       "npm": "dsh-soilwater-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -5163,7 +5163,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-sop-sync-check/",
       "repo": "https://github.com/PerryLink/dsh-sop-sync-check",
       "npm": "dsh-sop-sync-check",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -5253,7 +5253,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-spc-gbt-adapter/",
       "repo": "https://github.com/PerryLink/dsh-spc-gbt-adapter",
       "npm": "dsh-spc-gbt-adapter",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -5345,7 +5345,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-tender-extract/",
       "repo": "https://github.com/PerryLink/dsh-tender-extract",
       "npm": "dsh-tender-extract",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -5441,7 +5441,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-tender-matrix/",
       "repo": "https://github.com/PerryLink/dsh-tender-matrix",
       "npm": "dsh-tender-matrix",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
@@ -5537,7 +5537,7 @@
       "url": "https://perrylink.github.io/checkers/dsh-warranty-calc/",
       "repo": "https://github.com/PerryLink/dsh-warranty-calc",
       "npm": "dsh-warranty-calc",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
