@@ -216,9 +216,9 @@ footer.site p{margin:.4rem 0}
 
 <h2 id="usage">适用场景与同组插件</h2>
 <p>面向病案室、质控科与临床科室的病历与编码核对：病案首页、护理记录、ICD 编码结构与星剑号配对。</p>
-<p>同一职业分组「医疗病案」下还有 2 个核查插件，分别是病案首页质控（dsh-medrec-qc）、护理记录时限、签名与评估表完整性校验（dsh-nurse-record-check）。实际使用中往往要跑不止一个：单个插件只负责它自己那份规则库声明过的范围，范围之间不重叠，合起来才接近一次完整复核。</p>
+<p>同一职业分组「医疗病案」下还有 2 个核查插件，分别是病案首页质控（dsh-medrec-qc）、护理记录核对（dsh-nurse-record-check）。实际使用中往往要跑不止一个：单个插件只负责它自己那份规则库声明过的范围，范围之间不重叠，合起来才接近一次完整复核。</p>
 <p>该插件以 npm 包 dsh-icd-rule-check 发布，仓库在 GitHub 的 PerryLink/dsh-icd-rule-check，采用 Apache-2.0 许可。本页内容由构建脚本从插件自身的规则库与 locale 资源生成，与仓库中的规则库版本 2026.1 对应。</p>
-<ul><li><a href="../../checkers/dsh-medrec-qc/">病案首页质控</a> <code>dsh-medrec-qc</code> —— 病案首页形式质控与逻辑矛盾提示</li><li><a href="../../checkers/dsh-nurse-record-check/">护理记录时限、签名与评估表完整性校验</a> <code>dsh-nurse-record-check</code> —— 护理记录时限、签名与评估表完整性校验</li></ul>
+<ul><li><a href="../../checkers/dsh-medrec-qc/">病案首页质控</a> <code>dsh-medrec-qc</code> —— 病案首页形式质控与逻辑矛盾提示</li><li><a href="../../checkers/dsh-nurse-record-check/">护理记录核对</a> <code>dsh-nurse-record-check</code> —— 护理记录时限、签名与评估表完整性校验</li></ul>
 
 <h2 id="install">安装</h2>
 <p>下面是安装命令。两个平台用的都是 <code>dsh</code>，第二行是确认安装结果的写法，按你所在的 shell 选一条：</p>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PerryLink DSH Plugin Family — 53 compliance checkers and 43 plugins for DeepSeek Harness</title>
-<meta name="description" content="Two plugin families for DeepSeek Harness: 53 Chinese-canonical compliance checkers that compare a document against the regulations and standards it cites, and 43 general-purpose plugins. Versions, licences, rule counts and install commands.">
+<title>PerryLink DSH Plugin Family — 53 compliance checkers and 55 plugins for DeepSeek Harness</title>
+<meta name="description" content="Two plugin families for DeepSeek Harness: 53 Chinese-canonical compliance checkers that compare a document against the regulations and standards it cites, and 55 general-purpose plugins. Versions, licences, rule counts and install commands.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/">
 <link rel="alternate" hreflang="en" href="https://perrylink.github.io/">
@@ -69,7 +69,7 @@ footer.site p{margin:.4rem 0}
       "@type": "WebSite",
       "name": "PerryLink DSH Plugin Family",
       "url": "https://perrylink.github.io/",
-      "description": "Two plugin families for DeepSeek Harness: 53 Chinese-canonical compliance checkers that compare a document against the regulations and standards it cites, and 43 general-purpose plugins. Versions, licences, rule counts and install commands.",
+      "description": "Two plugin families for DeepSeek Harness: 53 Chinese-canonical compliance checkers that compare a document against the regulations and standards it cites, and 55 general-purpose plugins. Versions, licences, rule counts and install commands.",
       "inLanguage": [
         "en",
         "zh-Hans"
@@ -283,7 +283,7 @@ footer.site p{margin:.4rem 0}
         {
           "@type": "ListItem",
           "position": 29,
-          "name": "护理记录时限、签名与评估表完整性校验",
+          "name": "护理记录核对",
           "url": "https://perrylink.github.io/checkers/dsh-nurse-record-check/",
           "description": "护理记录时限、签名与评估表完整性校验（依据《病历书写基本规范》等公开文件，仅提示差异，不作出定性结论）"
         },
@@ -473,13 +473,13 @@ footer.site p{margin:.4rem 0}
   <div class="wrap">
 
 <h1>PerryLink DSH Plugin Family</h1>
-<p class="lede">53 compliance checkers and 43 general-purpose plugins for DeepSeek Harness. This page is the orientation; the two indexes below are where the actual listings are.</p>
+<p class="lede">53 compliance checkers and 55 general-purpose plugins for DeepSeek Harness. This page is the orientation; the two indexes below are where the actual listings are.</p>
 
 <h2 id="what">What this family is</h2>
 <p>Two plugin families that share an author and a contract, published to npm and developed in the open on GitHub.</p>
 <p><strong>The compliance checkers</strong> (53 plugins) take a document — a hazardous-chemical register, a medical record front sheet, a bid response, a FMEA worksheet, a letter of credit — and compare it, item by item, against the regulations, national standards and ministry documents the plugin declares as its basis. Each plugin ships a versioned rule pack as data, not code, so the rule set can be replaced without touching the plugin. The output is a list of differences with positions and the clause each difference was checked against. The family's standing rule is that the plugins <em>list differences; they do not adjudicate</em> — no compliance verdicts, no liability findings, no substitutes for a reviewer.</p>
 <p>Those 53 plugins are Chinese-canonical and documented in Chinese, because the documents they check against are Chinese. They are indexed under <a href="./zh/checkers/">核查插件总览</a>, grouped by profession, with a decision table at <a href="./zh/checkers/choose/">该用哪个核查插件</a> that maps “what document do I have?” to “which plugin do I run?”.</p>
-<p><strong>The general-purpose plugins</strong> (43 plugins) extend DeepSeek Harness itself: tools, model routing, session management, memory, observability, integrations and development quality gates. They are grouped by category at <a href="./plugins/">/plugins/</a>.</p>
+<p><strong>The general-purpose plugins</strong> (55 plugins) extend DeepSeek Harness itself: tools, model routing, session management, memory, observability, integrations and development quality gates. They are grouped by category at <a href="./plugins/">/plugins/</a>.</p>
 
 <h2 id="checkers">The 53 compliance checkers, by profession</h2>
 <ul>
@@ -499,7 +499,7 @@ footer.site p{margin:.4rem 0}
 <h2 id="numbers">Numbers, as of this build</h2>
 <dl class="meta">
   <dt>Compliance checkers</dt><dd>53</dd>
-  <dt>General-purpose plugins</dt><dd>43</dd>
+  <dt>General-purpose plugins</dt><dd>55</dd>
   <dt>Profession groups</dt><dd>10</dd>
   <dt>Rules across all checkers</dt><dd>408</dd>
   <dt>Rules that are direct clause comparisons</dt><dd>86</dd>
@@ -508,7 +508,7 @@ footer.site p{margin:.4rem 0}
   <dt>Rules marked “clause not obtained this time”</dt><dd>163</dd>
   <dt>Checkers with no direct-clause rule</dt><dd>32</dd>
   <dt>Checkers using the error severity</dt><dd>5</dd>
-  <dt>Licences</dt><dd>Apache-2.0 (96)</dd>
+  <dt>Licences</dt><dd>Apache-2.0 (108)</dd>
 </dl>
 <div class="note">
 <p>The citation count is the point of this family, so it is stated plainly: of 408 rules, 163 rest on a clause whose verbatim text could not be obtained. Those rules are labelled <em>derived from principle</em>, their severity is capped at <em>warn</em>, and the rule pack says so in the field where the quotation would go. Nothing is paraphrased and then presented as a quotation.</p>
@@ -518,7 +518,7 @@ footer.site p{margin:.4rem 0}
 <ul>
 <li><a href="./zh/checkers/choose/">该用哪个核查插件</a> — decision table: profession/scenario → plugin → standards → install command. Chinese.</li>
 <li><a href="./zh/checkers/">核查插件总览</a> — all 53 checkers grouped by profession. Chinese.</li>
-<li><a href="./plugins/">Plugins</a> — all 43 general-purpose plugins by category. English.</li>
+<li><a href="./plugins/">Plugins</a> — all 55 general-purpose plugins by category. English.</li>
 <li><a href="./zh/">中文首页</a> — the same orientation in Chinese.</li>
 <li><a href="./catalog.json">catalog.json</a> — the whole catalog as machine-readable JSON.</li>
 </ul>

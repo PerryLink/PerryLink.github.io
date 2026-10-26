@@ -214,9 +214,9 @@ footer.site p{margin:.4rem 0}
 
 <h2 id="usage">适用场景与同组插件</h2>
 <p>面向病案室、质控科与临床科室的病历与编码核对：病案首页、护理记录、ICD 编码结构与星剑号配对。</p>
-<p>同一职业分组「医疗病案」下还有 2 个核查插件，分别是ICD 编码规则校验（dsh-icd-rule-check）、护理记录时限、签名与评估表完整性校验（dsh-nurse-record-check）。这几个插件的范围彼此不重叠，也不会互相替代；要覆盖这类材料的全貌，需要挑出对应的几个分别跑。</p>
+<p>同一职业分组「医疗病案」下还有 2 个核查插件，分别是ICD 编码规则校验（dsh-icd-rule-check）、护理记录核对（dsh-nurse-record-check）。这几个插件的范围彼此不重叠，也不会互相替代；要覆盖这类材料的全貌，需要挑出对应的几个分别跑。</p>
 <p>npm 包名 dsh-medrec-qc，仓库 PerryLink/dsh-medrec-qc，Apache-2.0 许可。页面上的规则与依据由构建脚本从规则库（版本 2026.1）与包的 locale 资源读出，与仓库内容一致。</p>
-<ul><li><a href="../../checkers/dsh-icd-rule-check/">ICD 编码规则校验</a> <code>dsh-icd-rule-check</code> —— ICD 合并编码与星剑号配对提示</li><li><a href="../../checkers/dsh-nurse-record-check/">护理记录时限、签名与评估表完整性校验</a> <code>dsh-nurse-record-check</code> —— 护理记录时限、签名与评估表完整性校验</li></ul>
+<ul><li><a href="../../checkers/dsh-icd-rule-check/">ICD 编码规则校验</a> <code>dsh-icd-rule-check</code> —— ICD 合并编码与星剑号配对提示</li><li><a href="../../checkers/dsh-nurse-record-check/">护理记录核对</a> <code>dsh-nurse-record-check</code> —— 护理记录时限、签名与评估表完整性校验</li></ul>
 
 <h2 id="install">安装</h2>
 <p>先在 bash 或 PowerShell 里装上，再确认配置里出现了这个包名：</p>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>护理记录时限、签名与评估表完整性校验（dsh-nurse-record-check）——医疗病案核查插件 | PerryLink DSH 插件家族</title>
-<meta name="description" content="护理记录时限、签名与评估表完整性校验：护理记录时限、签名与评估表完整性校验。核对 12 条规则，依据 《电子病历应用管理规范（试行）》、《病历书写基本规范》、《护理分级标准》 等文件。npm 包 dsh-nurse-record-check，版本 0.2.3，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<title>护理记录核对（dsh-nurse-record-check）——医疗病案核查插件 | PerryLink DSH 插件家族</title>
+<meta name="description" content="护理记录核对：护理记录时限、签名与评估表完整性校验。核对 12 条规则，依据 《电子病历应用管理规范（试行）》、《病历书写基本规范》、《护理分级标准》 等文件。npm 包 dsh-nurse-record-check，版本 0.2.3，Apache-2.0 许可，仅提示差异、不作出定性结论。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/checkers/dsh-nurse-record-check/">
 <link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-nurse-record-check/">
@@ -66,7 +66,7 @@ footer.site p{margin:.4rem 0}
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "护理记录时限、签名与评估表完整性校验",
+      "name": "护理记录核对",
       "alternateName": "dsh-nurse-record-check",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "医疗病案",
@@ -114,7 +114,7 @@ footer.site p{margin:.4rem 0}
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "护理记录时限、签名与评估表完整性校验"
+          "name": "护理记录核对"
         }
       ]
     }
@@ -132,8 +132,8 @@ footer.site p{margin:.4rem 0}
 </header>
 <main id="main">
   <div class="wrap">
-<nav class="crumbs" aria-label="面包屑"><a href="../../zh/">首页</a> &rsaquo; <a href="../../zh/checkers/">核查插件</a> &rsaquo; <a href="../../zh/checkers/medical/">医疗病案</a> &rsaquo; <span aria-current="page">护理记录时限、签名与评估表完整性校验</span></nav>
-<h1>护理记录时限、签名与评估表完整性校验</h1>
+<nav class="crumbs" aria-label="面包屑"><a href="../../zh/">首页</a> &rsaquo; <a href="../../zh/checkers/">核查插件</a> &rsaquo; <a href="../../zh/checkers/medical/">医疗病案</a> &rsaquo; <span aria-current="page">护理记录核对</span></nav>
+<h1>护理记录核对</h1>
 <p class="lede">护理记录时限、签名与评估表完整性校验（依据《病历书写基本规范》等公开文件，仅提示差异，不作出定性结论）</p>
 <dl class="meta">
   <dt>npm 包</dt><dd><code>dsh-nurse-record-check</code></dd>
@@ -146,11 +146,11 @@ footer.site p{margin:.4rem 0}
 </dl>
 
 <h2 id="what">这个插件核对什么</h2>
-<p>护理记录时限、签名与评估表完整性校验（dsh-nurse-record-check）是一个面向医疗病案场景的 DeepSeek Harness 核查插件。护理记录时限、签名与评估表完整性校验（依据《病历书写基本规范》等公开文件，仅提示差异，不作出定性结论）</p>
+<p>护理记录核对（dsh-nurse-record-check）是一个面向医疗病案场景的 DeepSeek Harness 核查插件。护理记录时限、签名与评估表完整性校验（依据《病历书写基本规范》等公开文件，仅提示差异，不作出定性结论）</p>
 <p>12 条规则构成了本族里较完整的一套核对，落到的要素比多数插件更多。依据来源是混合的：「条文直接规定」8 条、「由原则推导」2 条、取自使用机构自身配置 2 条。两类规则的证据强度不同，结果里的严重度已经反映了这个差别。</p>
 
 <h2 id="how">核对方式</h2>
-<p>核对方式上，护理记录时限、签名与评估表完整性校验主要使用以下几类机械可判定的检查：。</p>
+<p>核对方式上，护理记录核对主要使用以下几类机械可判定的检查：。</p>
 <p>检查过程不引入任何外部信息：没有数据库查询、没有网络请求、没有模型参与，同样输入必然得到同样输出。</p>
 <p>需要说明的是，该规则库不做任何数值运算，核对的是要素是否齐备、取值是否在允许范围内、字段之间的关系是否自洽。</p>
 
@@ -234,7 +234,7 @@ dsh --profile default --dump-config | Select-String &#39;dsh-nurse-record-check&
 <p>若你用的不是 <code>default</code> profile，把名字替换掉即可。安装后需要重启会话，工具才会注册进来。</p>
 
 <h2 id="docs">完整文档</h2>
-<p>本页只覆盖 护理记录时限、签名与评估表完整性校验 核对什么、依据什么、边界在哪里。材料格式、配置项、每条规则的参数与返回结构，见仓库中的完整文档。</p>
+<p>本页只覆盖 护理记录核对 核对什么、依据什么、边界在哪里。材料格式、配置项、每条规则的参数与返回结构，见仓库中的完整文档。</p>
 <p><a href="https://github.com/PerryLink/dsh-nurse-record-check"><strong>完整文档 → GitHub</strong></a>（<code>PerryLink/dsh-nurse-record-check</code>）</p>
 <p>也可以先看该用哪个核查插件那一页，按材料类型定位到本插件；或回到医疗病案分组看同类插件。
 <a href="../../zh/checkers/choose/">该用哪个核查插件</a> ·
