@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Plugin Doctor — DeepSeek Harness plugin (@perrylink/dsh-plugin-doctor) | PerryLink DSH Plugin Family</title>
-<meta name="description" content="Plugin Doctor: Zero-dependency static + sandbox smoke detector for DeepSeek Harness plugins: package-structure gates (R), cordis contract scans (K), keyless-headless… npm @perrylink/dsh-plugin-doctor, version 0.6.3, Apache-2.0.">
+<meta name="description" content="Plugin Doctor: Zero-dependency static + sandbox smoke detector for DeepSeek Harness plugins: package-structure gates (R), cordis contract scans (K), keyless-headless… npm @perrylink/dsh-plugin-doctor, version 0.7.4, Apache-2.0.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/plugins/dsh-plugin-doctor/">
 <link rel="alternate" hreflang="en" href="https://perrylink.github.io/plugins/dsh-plugin-doctor/">
@@ -71,7 +71,7 @@ footer.site p{margin:.4rem 0}
       "alternateName": "@perrylink/dsh-plugin-doctor",
       "applicationCategory": "DeveloperApplication",
       "applicationSubCategory": "Development & quality",
-      "softwareVersion": "0.6.3",
+      "softwareVersion": "0.7.4",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
@@ -88,7 +88,8 @@ footer.site p{margin:.4rem 0}
         "@type": "Organization",
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
-      }
+      },
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-0 \u003c0.3.0"
     },
     {
       "@type": "BreadcrumbList",
@@ -132,16 +133,16 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm package</dt><dd><code>@perrylink/dsh-plugin-doctor</code></dd>
   <dt>Category</dt><dd>Development &amp; quality</dd>
-  <dt>Version</dt><dd>0.6.3 <span class="tag">from package.json</span></dd>
+  <dt>Version</dt><dd>0.7.4 <span class="tag">from package.json</span></dd>
   <dt>Licence</dt><dd>Apache-2.0 <span class="tag">from package.json</span></dd>
-  <dt>Runtime</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code></dd>
+  <dt>Runtime</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>, DeepSeek Harness <code>&gt;=0.2.1-0 &lt;0.3.0</code></dd>
   <dt>Repository</dt><dd><a href="https://github.com/PerryLink/dsh-plugin-doctor">PerryLink/dsh-plugin-doctor</a></dd>
   
 </dl>
 
 <h2 id="about">What it is</h2>
 <p>Plugin Doctor is a DeepSeek Harness plugin in the development &amp; quality group, published to npm as `@perrylink/dsh-plugin-doctor`. Zero-dependency static + sandbox smoke detector for DeepSeek Harness plugins: package-structure gates (R), cordis contract scans (K), keyless-headless sandbox smoke (D), and ecosystem-listing checks (CC).</p>
-<p>Version 0.6.3, licensed Apache-2.0, Node ^22.19.0 || &gt;=24.0.0.</p>
+<p>Version 0.7.4, licensed Apache-2.0, Node ^22.19.0 || &gt;=24.0.0, DSH &gt;=0.2.1-0 &lt;0.3.0.</p>
 <p>The repository is available as a local checkout, so the version and licence above are read from the package manifest that is actually published rather than from a registry copy.</p>
 <p>Other plugins in the same group: Defend, Observe, Plugin Kit, Plugin Upgrade, Score, Test Drive.</p>
 
@@ -164,7 +165,7 @@ dsh --profile default --dump-config | Select-String &#39;@perrylink/dsh-plugin-d
 <ul><li><a href="../../plugins/dsh-defend/">Defend</a> — Prompt-injection, jailbreak, and secret-leak defense for DeepSeek Harness: Aho-Corasick detection with allow/a…</li><li><a href="../../plugins/dsh-observe/">Observe</a> — Observability for DeepSeek Harness: request tracing, telemetry, log buffering, and retry visibility.</li><li><a href="../../plugins/dsh-plugin-kit/">Plugin Kit</a> — Shared zero-runtime-dependency toolkit for PerryLink DSH plugins: a pluggable Provider registry seam, fail-clo…</li><li><a href="../../plugins/dsh-plugin-upgrade/">Plugin Upgrade</a> — Plugin-author upgrade skill for DeepSeek Harness, new-generation single package: one corridor index reads the …</li><li><a href="../../plugins/dsh-score/">Score</a> — Plugin quality scoring for the DSH ecosystem: evaluate plugins against checks and produce evidence-backed comp…</li><li><a href="../../plugins/dsh-test-drive/">Test Drive</a> — Test Drive: run plugins in a disposable sandbox environment (temporary DSH_HOME) and score the results as JSON…</li></ul>
 <h2 id="more">More</h2>
 <ul>
-<li><a href="../../plugins/">All 55 non-checker plugins</a></li>
+<li><a href="../../plugins/">All 46 non-checker plugins</a></li>
 <li><a href="../../zh/checkers/">The 53 compliance checkers (Chinese)</a> — a separate family, grouped by profession.</li>
 <li><a href="../../">Home</a></li>
 </ul>

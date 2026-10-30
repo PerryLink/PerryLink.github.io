@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PerryLink DSH 插件家族 —— 53 个核查插件与 55 个通用插件</title>
-<meta name="description" content="DeepSeek Harness 的两个插件族：53 个中文核查插件，按材料对照它自己声明的法规与标准逐条列出差异；55 个通用插件。含版本、许可、规则条数与安装命令。">
+<title>PerryLink DSH 插件家族 —— 53 个核查插件与 46 个通用插件</title>
+<meta name="description" content="DeepSeek Harness 的两个插件族：53 个中文核查插件，按材料对照它自己声明的法规与标准逐条列出差异；46 个通用插件。含版本、许可、规则条数与安装命令。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/zh/">
 <link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/zh/">
@@ -69,7 +69,7 @@ footer.site p{margin:.4rem 0}
       "@type": "WebSite",
       "name": "PerryLink DSH 插件家族",
       "url": "https://perrylink.github.io/zh/",
-      "description": "DeepSeek Harness 的两个插件族：53 个中文核查插件，按材料对照它自己声明的法规与标准逐条列出差异；55 个通用插件。含版本、许可、规则条数与安装命令。",
+      "description": "DeepSeek Harness 的两个插件族：53 个中文核查插件，按材料对照它自己声明的法规与标准逐条列出差异；46 个通用插件。含版本、许可、规则条数与安装命令。",
       "inLanguage": [
         "zh-Hans",
         "en"
@@ -473,13 +473,13 @@ footer.site p{margin:.4rem 0}
   <div class="wrap">
 <nav class="crumbs" aria-label="面包屑"><span aria-current="page">首页</span></nav>
 <h1>PerryLink DSH 插件家族</h1>
-<p class="lede">53 个核查插件与 55 个通用插件。本页说明这一族是什么、共同约定是什么；具体清单在下面两个索引里。</p>
+<p class="lede">53 个核查插件与 46 个通用插件。本页说明这一族是什么、共同约定是什么；具体清单在下面两个索引里。</p>
 
 <h2 id="what">这一族是什么</h2>
 <p><strong>核查插件（53 个）。</strong>输入一份材料——危险化学品台账、病案首页、投标文件、FMEA 分析表、信用证单据——插件把它与自身声明的依据（行政法规、国家标准、部委文件或本机构口径）逐条对照，输出一份差异清单：每一处差异都带上它对照的规则、依据的文件与条款、以及差异在材料中的位置。规则库以数据形式随包发布，替换规则文件即可切换规则集，不需要改动插件代码。</p>
 <p>这一族的共同约定是：<strong>只列出差异，不作裁定。</strong>不判定合规、不认定责任、不替代审核人。所有插件都不修改传入的材料，也不联网核对。</p>
 <p>这 53 个插件以中文为准，因为它们对照的文件是中文的。按职业分成 10 组，见 <a href="../zh/checkers/">核查插件总览</a>；不确定该用哪个，直接看 <a href="../zh/checkers/choose/">该用哪个核查插件</a>。</p>
-<p><strong>通用插件（55 个）。</strong>扩展 DeepSeek Harness 本身：工具、模型路由、会话管理、记忆、可观测性、集成与开发质量闸门。按能力分类列在 <a href="../plugins/">/plugins/</a>（英文）。</p>
+<p><strong>通用插件（46 个）。</strong>扩展 DeepSeek Harness 本身：工具、模型路由、会话管理、记忆、可观测性、集成与开发质量闸门。按能力分类列在 <a href="../plugins/">/plugins/</a>（英文）。</p>
 
 <h2 id="checkers">按职业分组的 53 个核查插件</h2>
 <ul>
@@ -498,19 +498,19 @@ footer.site p{margin:.4rem 0}
 <h2 id="numbers">本次构建的数字</h2>
 <dl class="meta">
   <dt>核查插件</dt><dd>53 个</dd>
-  <dt>通用插件</dt><dd>55 个</dd>
+  <dt>通用插件</dt><dd>46 个</dd>
   <dt>职业分组</dt><dd>10 组</dd>
   <dt>规则总数</dt><dd>408 条</dd>
-  <dt>条文直接规定的规则</dt><dd>86 条</dd>
-  <dt>由原则推导的规则</dt><dd>322 条</dd>
+  <dt>条文直接规定的规则</dt><dd>90 条</dd>
+  <dt>由原则推导的规则</dt><dd>318 条</dd>
   <dt>依据为本机构配置的规则</dt><dd>66 条</dd>
-  <dt>标注「本次未取得」的规则</dt><dd>163 条</dd>
-  <dt>没有任何条文直接规定规则的插件</dt><dd>32 个</dd>
-  <dt>使用「错误」级严重度的插件</dt><dd>5 个</dd>
-  <dt>许可</dt><dd>Apache-2.0（108 个）</dd>
+  <dt>标注「本次未取得」的规则</dt><dd>148 条</dd>
+  <dt>没有任何条文直接规定规则的插件</dt><dd>31 个</dd>
+  <dt>使用「错误」级严重度的插件</dt><dd>6 个</dd>
+  <dt>许可</dt><dd>Apache-2.0（99 个）</dd>
 </dl>
 <div class="note">
-<p>引用取证的数字在这里说清楚：408 条规则中有 163 条的条文本次未能取得逐字文本。这些规则被标为「由原则推导」，严重度上限压在「提示」，规则库在应当写引文的位置如实写明「本次未取得」。没有用概括或改写冒充条文。</p>
+<p>引用取证的数字在这里说清楚：408 条规则中有 148 条的条文本次未能取得逐字文本。这些规则被标为「由原则推导」，严重度上限压在「提示」，规则库在应当写引文的位置如实写明「本次未取得」。没有用概括或改写冒充条文。</p>
 </div>
 
 <h2 id="reading">怎么读本站</h2>
@@ -518,7 +518,7 @@ footer.site p{margin:.4rem 0}
 <li><a href="../zh/checkers/choose/">该用哪个核查插件</a>——职业／场景 → 插件 → 依据的标准 → 安装命令的对照表。</li>
 <li><a href="../zh/checkers/">核查插件总览</a>——53 个插件按职业分组。</li>
 <li>每个插件的独立页面：核对什么、不作什么判断、全部规则、依据的标准、取证状态、安装命令。</li>
-<li><a href="../plugins/">通用插件</a>——55 个通用插件，英文。</li>
+<li><a href="../plugins/">通用插件</a>——46 个通用插件，英文。</li>
 <li><a href="../catalog.json">catalog.json</a>——整份名册的机器可读版本。</li>
 </ul>
 

@@ -4,12 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Phocinae — DeepSeek Harness plugin (dsh-phocinae) | PerryLink DSH Plugin Family</title>
-<meta name="description" content="Phocinae: Local non-generative decision layer for DeepSeek Harness: phocinae_ask / phocinae_gate tools plus a fail-closed approval gate npm dsh-phocinae, version 0.2.2, Apache-2.0.">
+<meta name="description" content="Phocinae: Local non-generative decision layer for DeepSeek Harness: phocinae_ask / phocinae_gate tools plus a fail-closed approval gate npm dsh-phocinae, version 0.2.5, Apache-2.0.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/plugins/dsh-phocinae/">
-<link rel="alternate" hreflang="en" href="https://perrylink.github.io/plugins/dsh-phocinae/">
-<link rel="alternate" hreflang="zh-Hans" href="https://github.com/Phocinae/dsh-phocinae/blob/HEAD/README-zh.md">
-<link rel="alternate" hreflang="x-default" href="https://perrylink.github.io/plugins/dsh-phocinae/">
+
 <link rel="alternate" type="application/json" href="../../catalog.json" title="Catalog (JSON)">
 <link rel="sitemap" type="application/xml" href="../../sitemap.xml">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b5fff'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
@@ -71,9 +69,8 @@ footer.site p{margin:.4rem 0}
       "alternateName": "dsh-phocinae",
       "applicationCategory": "DeveloperApplication",
       "applicationSubCategory": "Integrations",
-      "softwareVersion": "0.2.2",
+      "softwareVersion": "0.2.5",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
-      "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
         "@type": "Offer",
         "price": 0,
@@ -88,8 +85,7 @@ footer.site p{margin:.4rem 0}
         "@type": "Organization",
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
-      },
-      "softwareRequirements": "DeepSeek Harness >=0.1.6-0 \u003c0.2.0 || >=0.2.0-0 \u003c0.3.0"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -133,17 +129,17 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm package</dt><dd><code>dsh-phocinae</code></dd>
   <dt>Category</dt><dd>Integrations</dd>
-  <dt>Version</dt><dd>0.2.2 <span class="tag">from package.json</span></dd>
-  <dt>Licence</dt><dd>Apache-2.0 <span class="tag">from package.json</span></dd>
-  <dt>Runtime</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>, DeepSeek Harness <code>&gt;=0.1.6-0 &lt;0.2.0 || &gt;=0.2.0-0 &lt;0.3.0</code></dd>
+  <dt>Version</dt><dd>0.2.5 <span class="tag">from npm-snapshot</span></dd>
+  <dt>Licence</dt><dd>Apache-2.0 <span class="tag">from npm-snapshot</span></dd>
+  <dt>Runtime</dt><dd>Node <code>not declared</code></dd>
   <dt>Repository</dt><dd><a href="https://github.com/Phocinae/dsh-phocinae">Phocinae/dsh-phocinae</a></dd>
   
 </dl>
 
 <h2 id="about">What it is</h2>
 <p>Phocinae is a DeepSeek Harness plugin in the integrations group, published to npm as `dsh-phocinae`. Local non-generative decision layer for DeepSeek Harness: phocinae_ask / phocinae_gate tools plus a fail-closed approval gate</p>
-<p>Version 0.2.2, licensed Apache-2.0, Node ^22.19.0 || &gt;=24.0.0, DSH &gt;=0.1.6-0 &lt;0.2.0 || &gt;=0.2.0-0 &lt;0.3.0.</p>
-<p>The repository is available as a local checkout, so the version and licence above are read from the package manifest that is actually published rather than from a registry copy.</p>
+<p>Version 0.2.5, licensed Apache-2.0.</p>
+<p>The repository is not cloned in the build workspace, so the version and licence above come from the pinned npm snapshot in this site’s data directory. Verify against the package page before quoting them.</p>
 <p>Other plugins in the same group: Certification MCP, Claude Move, GitHub, MCP Panel, Reach, TickTick.</p>
 
 
@@ -160,12 +156,12 @@ dsh --profile default --dump-config | Select-String &#39;dsh-phocinae&#39;</code
 
 <h2 id="docs">Full documentation</h2>
 <p>This page covers what the plugin is, how to install it, and where it comes from. Configuration keys, tool schemas and the full manual live in the repository.</p>
-<p><a href="https://github.com/Phocinae/dsh-phocinae"><strong>Full documentation → GitHub</strong></a> · <a href="https://github.com/Phocinae/dsh-phocinae/blob/HEAD/README-zh.md">中文说明</a></p>
+<p><a href="https://github.com/Phocinae/dsh-phocinae"><strong>Full documentation → GitHub</strong></a></p>
 <h2 id="related">Related plugins</h2>
 <ul><li><a href="../../plugins/dsh-cert-mcp/">Certification MCP</a> — Read-only MCP server exposing the dsh-plugin-certification registry: certification grades, snapshots and five-…</li><li><a href="../../plugins/dsh-claude-move/">Claude Move</a> — Claude Code to DeepSeek Harness migration: import CLAUDE.md/AGENTS.md, slash commands, and session history — a…</li><li><a href="../../plugins/dsh-github/">GitHub</a> — GitHub for DeepSeek Harness: PR/issue/repo/file tools, reviews, and CI checks — every write gated by human app…</li><li><a href="../../plugins/dsh-mcp-panel/">MCP Panel</a> — Read-only MCP console for DeepSeek Harness: a /mcp command with health diagnostics and pipeline trial calls, a…</li><li><a href="../../plugins/dsh-reach/">Reach</a> — Multi-channel decision and remote-control bridge for DeepSeek Harness: approval/question cards from any worksp…</li><li><a href="../../plugins/dsh-ticktick/">TickTick</a> — TickTick (Dida365) task bridge for DeepSeek Harness: a session-header task panel (list filter, quick add, comp…</li></ul>
 <h2 id="more">More</h2>
 <ul>
-<li><a href="../../plugins/">All 55 non-checker plugins</a></li>
+<li><a href="../../plugins/">All 46 non-checker plugins</a></li>
 <li><a href="../../zh/checkers/">The 53 compliance checkers (Chinese)</a> — a separate family, grouped by profession.</li>
 <li><a href="../../">Home</a></li>
 </ul>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>病案首页质控（dsh-medrec-qc）——医疗病案核查插件 | PerryLink DSH 插件家族</title>
-<meta name="description" content="病案首页质控：病案首页形式质控与逻辑矛盾提示。核对 15 条规则，依据 《住院病案首页数据质量管理与控制指标（2016版）》、《住院病案首页数据填写质量规范（暂行）》、《卫生部关于修订住院病案首页的通知》 等文件。npm 包 dsh-medrec-qc，版本 0.2.3，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="description" content="病案首页质控：病案首页形式质控与逻辑矛盾提示。核对 15 条规则，依据 《住院病案首页数据质量管理与控制指标（2016版）》、《住院病案首页数据填写质量规范（暂行）》、《卫生部关于修订住院病案首页的通知》 等文件。npm 包 dsh-medrec-qc，版本 0.2.11，Apache-2.0 许可，仅提示差异、不作出定性结论。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/checkers/dsh-medrec-qc/">
 <link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-medrec-qc/">
@@ -70,7 +70,7 @@ footer.site p{margin:.4rem 0}
       "alternateName": "dsh-medrec-qc",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "医疗病案",
-      "softwareVersion": "0.2.3",
+      "softwareVersion": "0.2.11",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
@@ -88,7 +88,7 @@ footer.site p{margin:.4rem 0}
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
       },
-      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-0 \u003c0.3.0"
     },
     {
       "@type": "BreadcrumbList",
@@ -138,9 +138,9 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm 包</dt><dd><code>dsh-medrec-qc</code></dd>
   <dt>职业分组</dt><dd><a href="../../zh/checkers/medical/">医疗病案</a></dd>
-  <dt>版本</dt><dd>0.2.3（规则库 2026.1）</dd>
+  <dt>版本</dt><dd>0.2.11（规则库 2026.1）</dd>
   <dt>许可</dt><dd>Apache-2.0</dd>
-  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-0 &lt;0.3.0</code></dd>
   <dt>规则条数</dt><dd>15 条，其中 13 条为条文直接规定</dd>
   <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-medrec-qc">PerryLink/dsh-medrec-qc</a></dd>
 </dl>
@@ -156,7 +156,7 @@ footer.site p{margin:.4rem 0}
 
 <h2 id="boundary">它不作什么判断</h2>
 <p>共同约定只有一条——插件只做「指出不一致」，不做「下结论」。差异清单里每条都带规则编号、依据的文件与条款、以及差异落在材料里的位置。</p>
-<p>本插件使用「错误」级严重度，共 9 条规则属于该级。这些规则所依据的条文都已取得逐字文本，只有在材料与条文明确不符时才会命中，也因此可以作为返工依据。</p>
+<p>本插件使用「错误」级严重度，共 10 条规则属于该级。这些规则所依据的条文都已取得逐字文本，只有在材料与条文明确不符时才会命中，也因此可以作为返工依据。</p>
 <p>每个没能跑起来的检查都会出现在跳过项里并附上原因——缺字段、缺配置、或规则要求的前置项不存在。所以「没有差异」和「没有检查」在结果里是两件分开陈述的事。</p>
 
 <h2 id="rules">规则清单</h2>
@@ -164,7 +164,7 @@ footer.site p{margin:.4rem 0}
 <caption>规则库 medrec-qc.yaml 的全部 15 条规则（规则库版本 2026.1）</caption>
 <thead><tr><th>规则</th><th>检查内容</th><th>严重度</th><th>依据类型</th></tr></thead>
 <tbody>
-<tr><td><code>MR-001</code></td><td>必填项栏目宜不为空</td><td class="sev-warn">提示</td><td>条文直接规定</td></tr>
+<tr><td><code>MR-001</code></td><td>必填项栏目不得为空</td><td class="sev-error">错误</td><td>条文直接规定</td></tr>
 <tr><td><code>MR-002</code></td><td>入院时间与出院时间应填写且精确到分钟</td><td class="sev-error">错误</td><td>条文直接规定</td></tr>
 <tr><td><code>MR-003</code></td><td>出院时间不应早于入院时间</td><td class="sev-error">错误</td><td>条文直接规定</td></tr>
 <tr><td><code>MR-004</code></td><td>实际住院天数应与入出院日期一致</td><td class="sev-error">错误</td><td>条文直接规定</td></tr>
@@ -180,7 +180,7 @@ footer.site p{margin:.4rem 0}
 <tr><td><code>MR-014</code></td><td>诊断与患者性别不符的情形需人工核实</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
 <tr><td><code>MR-015</code></td><td>离院方式为死亡时出院时间应为死亡时间</td><td class="sev-info">参考</td><td>由原则推导</td></tr>
 </tbody></table>
-<p>严重度含义：<strong>错误</strong>（9 条）——规则所依据的条文已取得逐字文本，出现差异即为明确不符；<strong>提示</strong>（5 条）——差异成立，但条文未直接规定，或需人工判断后确认；<strong>参考</strong>（1 条）——只作提示，供人工复核，不构成任何结论。</p>
+<p>严重度含义：<strong>错误</strong>（10 条）——规则所依据的条文已取得逐字文本，出现差异即为明确不符；<strong>提示</strong>（4 条）——差异成立，但条文未直接规定，或需人工判断后确认；<strong>参考</strong>（1 条）——只作提示，供人工复核，不构成任何结论。</p>
 <p>依据类型含义：<strong>条文直接规定</strong>（13 条）——该规则的依据条文已取得逐字文本，规则直接对照条文规定；<strong>由原则推导</strong>（2 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」。</p>
 
 <h2 id="standards">依据的标准</h2>
@@ -210,7 +210,7 @@ footer.site p{margin:.4rem 0}
 <p>规则库落在 4 份文件上，分布如下：《住院病案首页数据填写质量规范（暂行）》（8 条）、《卫生部关于修订住院病案首页的通知》（5 条）、《住院病案首页数据质量管理与控制指标（2016版）》（1 条）、国家医疗保障局&quot;两库&quot;知识点（诊断与患者性别不符）（1 条）。同一文件的不同条款会被多条规则分别引用，因此上面是文件层面的汇总。</p>
 
 <h2 id="reading">结果怎么读</h2>
-<p>本插件共 15 条规则，其中严重度最高的一档是「错误」，共 9 条：<code>MR-002</code>、<code>MR-003</code>、<code>MR-004</code>、<code>MR-005</code>、<code>MR-006</code>、<code>MR-007</code>、<code>MR-008</code>、<code>MR-009</code>、<code>MR-010</code>。结果里先看这几条，再回头处理其他规则报出的差异。</p>
+<p>本插件共 15 条规则，其中严重度最高的一档是「错误」，共 10 条：<code>MR-001</code>、<code>MR-002</code>、<code>MR-003</code>、<code>MR-004</code>、<code>MR-005</code>、<code>MR-006</code>、<code>MR-007</code>、<code>MR-008</code>、<code>MR-009</code>、<code>MR-010</code>。结果里先看这几条，再回头处理其他规则报出的差异。</p>
 
 <h2 id="usage">适用场景与同组插件</h2>
 <p>面向病案室、质控科与临床科室的病历与编码核对：病案首页、护理记录、ICD 编码结构与星剑号配对。</p>

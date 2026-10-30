@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>资格条件核对（dsh-bid-qual-check）——招投标核查插件 | PerryLink DSH 插件家族</title>
-<meta name="description" content="资格条件核对：投标人资格条件核对。核对 8 条规则，依据 《中华人民共和国招标投标法》、《中华人民共和国招标投标法实施条例》、1999年8月30日通过，2017年12月27日修正 等文件。npm 包 dsh-bid-qual-check，版本 0.2.4，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="description" content="资格条件核对：投标人资格条件核对。核对 8 条规则，依据 《中华人民共和国招标投标法》、《中华人民共和国招标投标法实施条例》、1999年8月30日通过，2017年12月27日修正 等文件。npm 包 dsh-bid-qual-check，版本 0.2.10，Apache-2.0 许可，仅提示差异、不作出定性结论。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/checkers/dsh-bid-qual-check/">
 <link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-bid-qual-check/">
@@ -70,7 +70,7 @@ footer.site p{margin:.4rem 0}
       "alternateName": "dsh-bid-qual-check",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "招投标",
-      "softwareVersion": "0.2.4",
+      "softwareVersion": "0.2.10",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
@@ -88,7 +88,7 @@ footer.site p{margin:.4rem 0}
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
       },
-      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-0 \u003c0.3.0"
     },
     {
       "@type": "BreadcrumbList",
@@ -138,10 +138,10 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm 包</dt><dd><code>dsh-bid-qual-check</code></dd>
   <dt>职业分组</dt><dd><a href="../../zh/checkers/tender/">招投标</a></dd>
-  <dt>版本</dt><dd>0.2.4（规则库 2026.1）</dd>
+  <dt>版本</dt><dd>0.2.10（规则库 2026.1）</dd>
   <dt>许可</dt><dd>Apache-2.0</dd>
-  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
-  <dt>规则条数</dt><dd>8 条，其中 3 条为条文直接规定，1 条依据本机构配置，2 条的条文本次未取得逐字文本</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-0 &lt;0.3.0</code></dd>
+  <dt>规则条数</dt><dd>8 条，其中 3 条为条文直接规定，1 条依据本机构配置</dd>
   <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-bid-qual-check">PerryLink/dsh-bid-qual-check</a></dd>
 </dl>
 
@@ -196,12 +196,11 @@ footer.site p{margin:.4rem 0}
 <p>以上文件是插件自己声明的核对依据。规则库中每条规则还单独记录了它对照的具体条款；条款文本能否逐字取得，见下一节。</p>
 
 <h2 id="evidence">引用取证状态</h2>
-<p>这套规则库有 2 条规则的条文至今未取得逐字文本（共 8 条）。处理方式是写明而不是绕开：引文字段保留「本次未取得」，依据类型降为「由原则推导」，严重度相应封顶。另外 3 条的依据文本已经取到。</p>
+<p>引用取证：3 条规则为条文直接规定，且没有任何规则标注条文未取得。其余规则属于「由原则推导」或「本机构配置」，本就不引用条文原文。</p>
 <p>规则库落在 2 份文件上，分布如下：《中华人民共和国招标投标法》（7 条）、《中华人民共和国招标投标法实施条例》（1 条）。同一份文件在不同规则中可能被引用于不同条款。</p>
 
 <h2 id="reading">结果怎么读</h2>
 <p>本插件共 8 条规则，其中严重度最高的一档是「提示」，共 7 条：<code>BQ-001</code>、<code>BQ-002</code>、<code>BQ-003</code>、<code>BQ-005</code>、<code>BQ-006</code>、<code>BQ-007</code>、<code>BQ-008</code>。结果里先看这几条，再回头处理其他规则报出的差异。</p>
-<p>另有 2 条规则的条文本次未取得逐字文本（<code>BQ-004</code>、<code>BQ-006</code>）。这几条的结果适合作为自查提示，若要对外引用，需要先自行补齐条文原文。</p>
 <p>还有 1 条规则属于「本机构配置」（<code>BQ-004</code>）。使用前请确认这几条的配置与本机构口径一致，否则核对的是别人的标准。</p>
 
 <h2 id="usage">适用场景与同组插件</h2>

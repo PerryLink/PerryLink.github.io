@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Auto Review — DeepSeek Harness plugin (dsh-auto-review) | PerryLink DSH Plugin Family</title>
-<meta name="description" content="Auto Review: Second-model AI auto-review for DeepSeek Harness approval requests: a read-only reviewer subagent decides allow/deny on the approval answerer chain, w… npm dsh-auto-review, version 0.12.15, Apache-2.0.">
+<meta name="description" content="Auto Review: Second-model AI auto-review for DeepSeek Harness approval requests: a read-only reviewer subagent decides allow/deny on the approval answerer chain, w… npm dsh-auto-review, version 0.14.1, Apache-2.0.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/plugins/dsh-auto-review/">
 <link rel="alternate" hreflang="en" href="https://perrylink.github.io/plugins/dsh-auto-review/">
@@ -71,7 +71,7 @@ footer.site p{margin:.4rem 0}
       "alternateName": "dsh-auto-review",
       "applicationCategory": "DeveloperApplication",
       "applicationSubCategory": "Workflow & approvals",
-      "softwareVersion": "0.12.15",
+      "softwareVersion": "0.14.1",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
@@ -89,7 +89,7 @@ footer.site p{margin:.4rem 0}
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
       },
-      "softwareRequirements": "DeepSeek Harness >=0.1.2-rc.1 \u003c0.2.0 || >=0.1.5-alpha.1 \u003c0.2.0 || >=0.1.6-0 \u003c0.2.0 || >=0.1.7-0 \u003c0.2.0 || >=0.2.0-0 \u003c0.3.0 || >=0.2.1-0 \u003c0.3.0"
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-0 \u003c0.3.0"
     },
     {
       "@type": "BreadcrumbList",
@@ -133,18 +133,18 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm package</dt><dd><code>dsh-auto-review</code></dd>
   <dt>Category</dt><dd>Workflow &amp; approvals</dd>
-  <dt>Version</dt><dd>0.12.15 <span class="tag">from package.json</span></dd>
+  <dt>Version</dt><dd>0.14.1 <span class="tag">from package.json</span></dd>
   <dt>Licence</dt><dd>Apache-2.0 <span class="tag">from package.json</span></dd>
-  <dt>Runtime</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>, DeepSeek Harness <code>&gt;=0.1.2-rc.1 &lt;0.2.0 || &gt;=0.1.5-alpha.1 &lt;0.2.0 || &gt;=0.1.6-0 &lt;0.2.0 || &gt;=0.1.7-0 &lt;0.2.0 || &gt;=0.2.0-0 &lt;0.3.0 || &gt;=0.2.1-0 &lt;0.3.0</code></dd>
+  <dt>Runtime</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>, DeepSeek Harness <code>&gt;=0.2.1-0 &lt;0.3.0</code></dd>
   <dt>Repository</dt><dd><a href="https://github.com/PerryLink/dsh-auto-review">PerryLink/dsh-auto-review</a></dd>
   
 </dl>
 
 <h2 id="about">What it is</h2>
 <p>Auto Review is a DeepSeek Harness plugin in the workflow &amp; approvals group, published to npm as `dsh-auto-review`. Second-model AI auto-review for DeepSeek Harness approval requests: a read-only reviewer subagent decides allow/deny on the approval answerer chain, with fail-closed fallback and full session-log audit.</p>
-<p>Version 0.12.15, licensed Apache-2.0, Node ^22.19.0 || &gt;=24.0.0, DSH &gt;=0.1.2-rc.1 &lt;0.2.0 || &gt;=0.1.5-alpha.1 &lt;0.2.0 || &gt;=0.1.6-0 &lt;0.2.0 || &gt;=0.1.7-0 &lt;0.2.0 || &gt;=0.2.0-0 &lt;0.3.0 || &gt;=0.2.1-0 &lt;0.3.0.</p>
+<p>Version 0.14.1, licensed Apache-2.0, Node ^22.19.0 || &gt;=24.0.0, DSH &gt;=0.2.1-0 &lt;0.3.0.</p>
 <p>The repository is available as a local checkout, so the version and licence above are read from the package manifest that is actually published rather than from a registry copy.</p>
-<p>Other plugins in the same group: Permission Rules.</p>
+<p>Other plugins in the same group: Permission Rules, Personal Directive.</p>
 
 
 
@@ -162,10 +162,10 @@ dsh --profile default --dump-config | Select-String &#39;dsh-auto-review&#39;</c
 <p>This page covers what the plugin is, how to install it, and where it comes from. Configuration keys, tool schemas and the full manual live in the repository.</p>
 <p><a href="https://github.com/PerryLink/dsh-auto-review"><strong>Full documentation → GitHub</strong></a> · <a href="https://github.com/PerryLink/dsh-auto-review/blob/HEAD/README-zh.md">中文说明</a></p>
 <h2 id="related">Related plugins</h2>
-<ul><li><a href="../../plugins/dsh-permission-rules/">Permission Rules</a> — Declarative, ordered allow/deny/ask permission rules for DeepSeek Harness: match tool names, arguments (glob/r…</li></ul>
+<ul><li><a href="../../plugins/dsh-permission-rules/">Permission Rules</a> — Declarative, ordered allow/deny/ask permission rules for DeepSeek Harness: match tool names, arguments (glob/r…</li><li><a href="../../plugins/dsh-personal-directive/">Personal Directive</a> — Repository prompt plugin with a live top-bar enable/disable switch; the framework edition ships a neutral plac…</li></ul>
 <h2 id="more">More</h2>
 <ul>
-<li><a href="../../plugins/">All 55 non-checker plugins</a></li>
+<li><a href="../../plugins/">All 46 non-checker plugins</a></li>
 <li><a href="../../zh/checkers/">The 53 compliance checkers (Chinese)</a> — a separate family, grouped by profession.</li>
 <li><a href="../../">Home</a></li>
 </ul>

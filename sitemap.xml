@@ -281,27 +281,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://perrylink.github.io/plugins/dsh-bid-health-check/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://perrylink.github.io/plugins/dsh-budget/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://perrylink.github.io/plugins/dsh-canteen-retention-check/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://perrylink.github.io/plugins/dsh-cert-mcp/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://perrylink.github.io/plugins/dsh-checkers/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -331,11 +316,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://perrylink.github.io/plugins/dsh-construction-doc-check/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://perrylink.github.io/plugins/dsh-data-quality/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -356,11 +336,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://perrylink.github.io/plugins/dsh-excel-reconcile/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://perrylink.github.io/plugins/dsh-fast/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -377,11 +352,6 @@
   </url>
   <url>
     <loc>https://perrylink.github.io/plugins/dsh-industry-research/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://perrylink.github.io/plugins/dsh-invoice-ledger/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -431,12 +401,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://perrylink.github.io/plugins/dsh-payroll-audit/</loc>
+    <loc>https://perrylink.github.io/plugins/dsh-permission-rules/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://perrylink.github.io/plugins/dsh-permission-rules/</loc>
+    <loc>https://perrylink.github.io/plugins/dsh-personal-directive/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -481,11 +451,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://perrylink.github.io/plugins/dsh-safety-ledger-check/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://perrylink.github.io/plugins/dsh-score/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -506,22 +471,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://perrylink.github.io/plugins/dsh-table-ingest/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://perrylink.github.io/plugins/dsh-talk/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://perrylink.github.io/plugins/dsh-team-rooms/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://perrylink.github.io/plugins/dsh-tender-requirements/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>许可办理核对（dsh-permit-report-check）——工程建设核查插件 | PerryLink DSH 插件家族</title>
-<meta name="description" content="许可办理核对：行政许可办理核对。核对 7 条规则，依据 《中华人民共和国行政许可法》、各事项办事指南与承诺时限（本机构配置）、本机构许可办理管理口径（本机构配置） 等文件。npm 包 dsh-permit-report-check，版本 0.2.2，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="description" content="许可办理核对：行政许可办理核对。核对 7 条规则，依据 《中华人民共和国行政许可法》、各事项办事指南与承诺时限（本机构配置）、本机构许可办理管理口径（本机构配置） 等文件。npm 包 dsh-permit-report-check，版本 0.2.10，Apache-2.0 许可，仅提示差异、不作出定性结论。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/checkers/dsh-permit-report-check/">
 <link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-permit-report-check/">
@@ -70,7 +70,7 @@ footer.site p{margin:.4rem 0}
       "alternateName": "dsh-permit-report-check",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "工程建设",
-      "softwareVersion": "0.2.2",
+      "softwareVersion": "0.2.10",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
@@ -88,7 +88,7 @@ footer.site p{margin:.4rem 0}
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
       },
-      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-0 \u003c0.3.0"
     },
     {
       "@type": "BreadcrumbList",
@@ -138,10 +138,10 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm 包</dt><dd><code>dsh-permit-report-check</code></dd>
   <dt>职业分组</dt><dd><a href="../../zh/checkers/construction/">工程建设</a></dd>
-  <dt>版本</dt><dd>0.2.2（规则库 2026.1）</dd>
+  <dt>版本</dt><dd>0.2.10（规则库 2026.1）</dd>
   <dt>许可</dt><dd>Apache-2.0</dd>
-  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
-  <dt>规则条数</dt><dd>7 条，全部为「由原则推导」，2 条依据本机构配置，5 条的条文本次未取得逐字文本</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-0 &lt;0.3.0</code></dd>
+  <dt>规则条数</dt><dd>7 条，全部为「由原则推导」，2 条依据本机构配置，1 条的条文本次未取得逐字文本</dd>
   <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-permit-report-check">PerryLink/dsh-permit-report-check</a></dd>
 </dl>
 
@@ -195,12 +195,12 @@ footer.site p{margin:.4rem 0}
 <p>这是插件声明的依据清单。要注意它是文件层面的：每条规则实际对照的是文件中的某个具体条款，取证进度按条款记录。</p>
 
 <h2 id="evidence">引用取证状态</h2>
-<p>引用取证：7 条规则全部为「由原则推导」，没有一条声称依据了逐字条文。其中 5 条如实标注「本次未取得」。这意味着结果里的每一条差异都只能作为线索，不能作为「违反某条条文」的结论。</p>
+<p>引用取证：7 条规则全部为「由原则推导」，没有一条声称依据了逐字条文。其中 1 条如实标注「本次未取得」。这意味着结果里的每一条差异都只能作为线索，不能作为「违反某条条文」的结论。</p>
 <p>规则库落在 3 份文件上，分布如下：《中华人民共和国行政许可法》（5 条）、各事项办事指南与承诺时限（本机构配置）（1 条）、本机构许可办理管理口径（本机构配置）（1 条）。同一份文件在不同规则中可能被引用于不同条款。</p>
 
 <h2 id="reading">结果怎么读</h2>
 <p>本插件共 7 条规则，其中严重度最高的一档是「提示」，共 5 条：<code>PR-001</code>、<code>PR-002</code>、<code>PR-005</code>、<code>PR-006</code>、<code>PR-007</code>。这几条是清单里最需要先看的；其余条目按材料实际内容逐条判断即可。</p>
-<p>另有 5 条规则的条文本次未取得逐字文本（<code>PR-001</code>、<code>PR-002</code>、<code>PR-005</code>、<code>PR-006</code>、<code>PR-007</code>）。引用这部分结果时请注意措辞：它们是原则推导的产物，不是条文比对的结果。</p>
+<p>另有 1 条规则的条文本次未取得逐字文本（<code>PR-007</code>）。引用这部分结果时请注意措辞：它们是原则推导的产物，不是条文比对的结果。</p>
 <p>还有 2 条规则属于「本机构配置」（<code>PR-003</code>、<code>PR-004</code>）。它们的判据来自配置项而不是国家标准，配置未填时这几条会进入跳过项。</p>
 
 <h2 id="usage">适用场景与同组插件</h2>

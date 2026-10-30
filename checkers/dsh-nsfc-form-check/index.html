@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>基金申请书形式审查（dsh-nsfc-form-check）——科研教育核查插件 | PerryLink DSH 插件家族</title>
-<meta name="description" content="基金申请书形式审查：国家自然科学基金申请书形式审查与匿名化提示。核对 15 条规则，依据 《国家自然科学基金条例》、《2026 年度国家自然科学基金项目指南·申请规定》、国务院令第796号 等文件。npm 包 dsh-nsfc-form-check，版本 0.2.2，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="description" content="基金申请书形式审查：国家自然科学基金申请书形式审查与匿名化提示。核对 15 条规则，依据 《国家自然科学基金条例》、《2026 年度国家自然科学基金项目指南·申请规定》、国务院令第796号 等文件。npm 包 dsh-nsfc-form-check，版本 0.2.10，Apache-2.0 许可，仅提示差异、不作出定性结论。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/checkers/dsh-nsfc-form-check/">
 <link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-nsfc-form-check/">
@@ -70,7 +70,7 @@ footer.site p{margin:.4rem 0}
       "alternateName": "dsh-nsfc-form-check",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "科研教育",
-      "softwareVersion": "0.2.2",
+      "softwareVersion": "0.2.10",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
@@ -88,7 +88,7 @@ footer.site p{margin:.4rem 0}
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
       },
-      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-0 \u003c0.3.0"
     },
     {
       "@type": "BreadcrumbList",
@@ -138,16 +138,16 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm 包</dt><dd><code>dsh-nsfc-form-check</code></dd>
   <dt>职业分组</dt><dd><a href="../../zh/checkers/research/">科研教育</a></dd>
-  <dt>版本</dt><dd>0.2.2（规则库 2026.1）</dd>
+  <dt>版本</dt><dd>0.2.10（规则库 2026.1）</dd>
   <dt>许可</dt><dd>Apache-2.0</dd>
-  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
-  <dt>规则条数</dt><dd>15 条，全部为「由原则推导」，5 条依据本机构配置</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-0 &lt;0.3.0</code></dd>
+  <dt>规则条数</dt><dd>15 条，其中 1 条为条文直接规定，4 条依据本机构配置</dd>
   <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-nsfc-form-check">PerryLink/dsh-nsfc-form-check</a></dd>
 </dl>
 
 <h2 id="what">这个插件核对什么</h2>
 <p>基金申请书形式审查（dsh-nsfc-form-check）是一个面向科研教育场景的 DeepSeek Harness 核查插件。国家自然科学基金申请书形式审查与匿名化提示（依据《国家自然科学基金条例》与申请人导入的当年指南，仅提示差异，不作出定性结论）</p>
-<p>15 条规则构成了本族里较完整的一套核对，落到的要素比多数插件更多。规则库的依据类型分布是 由原则推导 10 条、本机构配置 5 条。</p>
+<p>15 条规则构成了本族里较完整的一套核对，落到的要素比多数插件更多。这 15 条规则里，1 条有逐字条文支撑，10 条只能由原则推导，4 条的依据是本机构配置。</p>
 
 <h2 id="how">核对方式</h2>
 <p>从检查方式看，基金申请书形式审查用的是几类可以机械判定的手段：。</p>
@@ -157,7 +157,7 @@ footer.site p{margin:.4rem 0}
 <h2 id="boundary">它不作什么判断</h2>
 <p>把它当成一次机械的交叉核对，而不是一次评审。核对结果里不会出现「合规」「不合格」这类字样，只有「此处与所引依据不一致」以及不一致的具体位置。</p>
 <p>结果里最高的严重度是「提示」。这不是保守，而是如实的：这些规则所对照的条文没有逐字文本，凭原则推导不足以支撑更强的结论。</p>
-<p>另有 5 条规则的判据来自使用机构自己的配置项，不是国家标准。换机构使用前必须先替换这份配置，否则核对的是别人的口径。</p>
+<p>另有 4 条规则的判据来自使用机构自己的配置项，不是国家标准。换机构使用前必须先替换这份配置，否则核对的是别人的口径。</p>
 <p>结果里的空清单有明确含义，插件对此不作暗示：规则库覆盖不到的部分、以及因缺少必要字段而无法执行的检查，都会单独列出原因。</p>
 
 <h2 id="rules">规则清单</h2>
@@ -179,10 +179,10 @@ footer.site p{margin:.4rem 0}
 <tr><td><code>NF-012</code></td><td>声明已获得其他资助或重复申请时应包含披露说明</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
 <tr><td><code>NF-013</code></td><td>指定行范围内出现身份线索词</td><td class="sev-info">参考</td><td>由原则推导</td></tr>
 <tr><td><code>NF-014</code></td><td>应如实填写研究生导师和博士后合作导师姓名</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
-<tr><td><code>NF-015</code></td><td>申请书不得含有涉密或敏感信息</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
+<tr><td><code>NF-015</code></td><td>申请书不得含有涉密或敏感信息</td><td class="sev-info">参考</td><td>条文直接规定</td></tr>
 </tbody></table>
 <p>严重度含义：<strong>提示</strong>（4 条）——差异成立，但条文未直接规定，或需人工判断后确认；<strong>参考</strong>（11 条）——只作提示，供人工复核，不构成任何结论。</p>
-<p>依据类型含义：<strong>由原则推导</strong>（10 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」；<strong>本机构配置</strong>（5 条）——阈值或清单来自使用机构自身配置而非国家标准，严重度上限为「参考」。</p>
+<p>依据类型含义：<strong>由原则推导</strong>（10 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」；<strong>本机构配置</strong>（4 条）——阈值或清单来自使用机构自身配置而非国家标准，严重度上限为「参考」；<strong>条文直接规定</strong>（1 条）——该规则的依据条文已取得逐字文本，规则直接对照条文规定。</p>
 
 <h2 id="standards">依据的标准</h2>
 <table>
@@ -203,12 +203,12 @@ footer.site p{margin:.4rem 0}
 <p>上表来自插件声明的 normativeBasis；规则库内部还会把每条规则落到具体条款上。条款原文的取证情况见下一节。</p>
 
 <h2 id="evidence">引用取证状态</h2>
-<p>引用取证：没有可直接对照的条文。15 条规则的依据类型为「由原则推导」或「本机构配置」，规则库不引用任何条文原文，也就没有取证欠账一说。这类规则的结论强度低于条文比对，使用时应按线索而非结论对待。</p>
+<p>引用取证：可以逐字对照条文的规则共 1 条，没有一条规则标注「本次未取得」。这意味着规则库对自身依据的声明是完整的：要么引用条文原文，要么明确说明依据并非条文。</p>
 <p>规则库合计引用 2 份文件，引用规则数依次为：《国家自然科学基金条例》（13 条）、《2026 年度国家自然科学基金项目指南·申请规定》（2 条）。引用数统计到文件一层；同一文件内的不同条款可能分别支撑不同规则。</p>
 
 <h2 id="reading">结果怎么读</h2>
 <p>本插件共 15 条规则，其中严重度最高的一档是「提示」，共 4 条：<code>NF-001</code>、<code>NF-002</code>、<code>NF-003</code>、<code>NF-004</code>。这几条是清单里最需要先看的；其余条目按材料实际内容逐条判断即可。</p>
-<p>还有 5 条规则属于「本机构配置」（<code>NF-010</code>、<code>NF-011</code>、<code>NF-012</code>、<code>NF-014</code>、<code>NF-015</code>）。使用前请确认这几条的配置与本机构口径一致，否则核对的是别人的标准。</p>
+<p>还有 4 条规则属于「本机构配置」（<code>NF-010</code>、<code>NF-011</code>、<code>NF-012</code>、<code>NF-014</code>）。使用前请确认这几条的配置与本机构口径一致，否则核对的是别人的标准。</p>
 
 <h2 id="usage">适用场景与同组插件</h2>
 <p>面向科研管理、基金管理与教研岗的申报与评审材料核对：基金申请书形式审查、试卷解析结构、作文量表评分、政策专报。</p>

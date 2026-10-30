@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>政策专报核对（dsh-policy-brief-draft）——科研教育核查插件 | PerryLink DSH 插件家族</title>
-<meta name="description" content="政策专报核对：政策专报要素核对。核对 8 条规则，依据 《党政机关公文处理工作条例》 等文件。npm 包 dsh-policy-brief-draft，版本 0.2.3，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="description" content="政策专报核对：政策专报要素核对。核对 8 条规则，依据 《党政机关公文处理工作条例》 等文件。npm 包 dsh-policy-brief-draft，版本 0.2.10，Apache-2.0 许可，仅提示差异、不作出定性结论。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/checkers/dsh-policy-brief-draft/">
 <link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-policy-brief-draft/">
@@ -70,7 +70,7 @@ footer.site p{margin:.4rem 0}
       "alternateName": "dsh-policy-brief-draft",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "科研教育",
-      "softwareVersion": "0.2.3",
+      "softwareVersion": "0.2.10",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
@@ -88,7 +88,7 @@ footer.site p{margin:.4rem 0}
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
       },
-      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-0 \u003c0.3.0"
     },
     {
       "@type": "BreadcrumbList",
@@ -138,16 +138,16 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm 包</dt><dd><code>dsh-policy-brief-draft</code></dd>
   <dt>职业分组</dt><dd><a href="../../zh/checkers/research/">科研教育</a></dd>
-  <dt>版本</dt><dd>0.2.3（规则库 2026.1）</dd>
+  <dt>版本</dt><dd>0.2.10（规则库 2026.1）</dd>
   <dt>许可</dt><dd>Apache-2.0</dd>
-  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
-  <dt>规则条数</dt><dd>8 条，全部为「由原则推导」，8 条的条文本次未取得逐字文本</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-0 &lt;0.3.0</code></dd>
+  <dt>规则条数</dt><dd>8 条，其中 4 条为条文直接规定，1 条依据本机构配置</dd>
   <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-policy-brief-draft">PerryLink/dsh-policy-brief-draft</a></dd>
 </dl>
 
 <h2 id="what">这个插件核对什么</h2>
 <p>政策专报核对（dsh-policy-brief-draft）是一个面向科研教育场景的 DeepSeek Harness 核查插件。政策专报要素核对（按观点、依据、出处与建议核对专报齐备，仅提示差异，不作出定性结论）</p>
-<p>规则库 8 条规则，数量居中：既能覆盖这类材料的主要要素，又不会把无关项也拉进来。规则库中没有任何一条声称自己依据了逐字条文：全部为「由原则推导」，最高严重度因此只到「提示」。</p>
+<p>规则库 8 条规则，数量居中：既能覆盖这类材料的主要要素，又不会把无关项也拉进来。这 8 条规则里，4 条有逐字条文支撑，3 条只能由原则推导，1 条的依据是本机构配置。</p>
 
 <h2 id="how">核对方式</h2>
 <p>核对方式上，政策专报核对主要使用以下几类机械可判定的检查：必填项存在性（3 条）、日期不得晚于给定基准（1 条）、数据时效（1 条）、条件必填（1 条）、表头要素存在性（1 条）、编号或键不得重复（1 条）。</p>
@@ -156,7 +156,8 @@ footer.site p{margin:.4rem 0}
 
 <h2 id="boundary">它不作什么判断</h2>
 <p>这个插件不提供结论，只提供线索：材料内部可以逐条指认的不一致会被列出来，每条都标明它对照的规则、依据的文件与条款、以及差异在材料中的位置。是否构成问题、是否需要整改，由看到这份清单的人判断。</p>
-<p>这个插件不会说某处「错了」。它最高只标到「提示」级，含义是「此处与所引依据对不上，请确认」。</p>
+<p>与其他插件不同，本插件会给出「错误」级结果：3 条规则属于该级。这一级只在规则所依据的条文已取得逐字文本时使用，命中即表示材料与条文明确不符。</p>
+<p>需要注意 1 条「本机构配置」类规则：它们的阈值与清单由使用机构自己填入，插件不自带。配置为空时这些规则不会执行，而是把自己列进跳过项。</p>
 <p>没被命中的规则不会被悄悄丢掉：凡是没能执行的检查都会连同原因一并列出。因此结果为空只说明规则库覆盖到的范围内没发现差异，不能读成「材料没问题」。</p>
 
 <h2 id="rules">规则清单</h2>
@@ -164,17 +165,17 @@ footer.site p{margin:.4rem 0}
 <caption>规则库 policy-brief-draft.yaml 的全部 8 条规则（规则库版本 2026.1）</caption>
 <thead><tr><th>规则</th><th>检查内容</th><th>严重度</th><th>依据类型</th></tr></thead>
 <tbody>
-<tr><td><code>PB-001</code></td><td>每节都应写明核心观点</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>PB-001</code></td><td>每节都应写明核心观点</td><td class="sev-error">错误</td><td>条文直接规定</td></tr>
 <tr><td><code>PB-002</code></td><td>每个观点都应有支撑依据</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
-<tr><td><code>PB-003</code></td><td>依据应注明出处</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
-<tr><td><code>PB-004</code></td><td>数据截止日期应可解析且不晚于核对日</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
-<tr><td><code>PB-005</code></td><td>数据新鲜度应符合本机构编辑口径</td><td class="sev-info">参考</td><td>由原则推导</td></tr>
+<tr><td><code>PB-003</code></td><td>依据应注明出处</td><td class="sev-error">错误</td><td>条文直接规定</td></tr>
+<tr><td><code>PB-004</code></td><td>数据截止日期应可解析且不晚于核对日</td><td class="sev-error">错误</td><td>条文直接规定</td></tr>
+<tr><td><code>PB-005</code></td><td>数据新鲜度应符合本机构编辑口径</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
 <tr><td><code>PB-006</code></td><td>建议事项应写明实施主体</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
-<tr><td><code>PB-007</code></td><td>专报应声明标题与报送对象</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>PB-007</code></td><td>专报应声明标题与报送对象</td><td class="sev-warn">提示</td><td>条文直接规定</td></tr>
 <tr><td><code>PB-008</code></td><td>要点序号不应在表内重复</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
 </tbody></table>
-<p>严重度含义：<strong>提示</strong>（7 条）——差异成立，但条文未直接规定，或需人工判断后确认；<strong>参考</strong>（1 条）——只作提示，供人工复核，不构成任何结论。</p>
-<p>依据类型含义：<strong>由原则推导</strong>（8 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」。</p>
+<p>严重度含义：<strong>错误</strong>（3 条）——规则所依据的条文已取得逐字文本，出现差异即为明确不符；<strong>提示</strong>（4 条）——差异成立，但条文未直接规定，或需人工判断后确认；<strong>参考</strong>（1 条）——只作提示，供人工复核，不构成任何结论。</p>
+<p>依据类型含义：<strong>条文直接规定</strong>（4 条）——该规则的依据条文已取得逐字文本，规则直接对照条文规定；<strong>由原则推导</strong>（3 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」；<strong>本机构配置</strong>（1 条）——阈值或清单来自使用机构自身配置而非国家标准，严重度上限为「参考」。</p>
 
 <h2 id="standards">依据的标准</h2>
 <table>
@@ -187,12 +188,12 @@ footer.site p{margin:.4rem 0}
 <p>以上文件是插件自己声明的核对依据。规则库中每条规则还单独记录了它对照的具体条款；条款文本能否逐字取得，见下一节。</p>
 
 <h2 id="evidence">引用取证状态</h2>
-<p>引用取证：8 条规则全部为「由原则推导」，没有一条声称依据了逐字条文。其中 8 条如实标注「本次未取得」。这意味着结果里的每一条差异都只能作为线索，不能作为「违反某条条文」的结论。</p>
+<p>引用取证：可以逐字对照条文的规则共 4 条，没有一条规则标注「本次未取得」。这意味着规则库对自身依据的声明是完整的：要么引用条文原文，要么明确说明依据并非条文。</p>
 <p>规则引用的文件共 1 份，按引用规则数排列为：《党政机关公文处理工作条例》（8 条）。同一份文件在不同规则中可能被引用于不同条款。</p>
 
 <h2 id="reading">结果怎么读</h2>
-<p>本插件共 8 条规则，其中严重度最高的一档是「提示」，共 7 条：<code>PB-001</code>、<code>PB-002</code>、<code>PB-003</code>、<code>PB-004</code>、<code>PB-006</code>、<code>PB-007</code>、<code>PB-008</code>。这些规则命中时应当优先处理，其余规则的结果可以在其后逐条确认。</p>
-<p>另有 8 条规则的条文本次未取得逐字文本（<code>PB-001</code>、<code>PB-002</code>、<code>PB-003</code>、<code>PB-004</code>、<code>PB-005</code>、<code>PB-006</code>、<code>PB-007</code>、<code>PB-008</code>）。这几条的结果适合作为自查提示，若要对外引用，需要先自行补齐条文原文。</p>
+<p>本插件共 8 条规则，其中严重度最高的一档是「错误」，共 3 条：<code>PB-001</code>、<code>PB-003</code>、<code>PB-004</code>。这些规则命中时应当优先处理，其余规则的结果可以在其后逐条确认。</p>
+<p>还有 1 条规则属于「本机构配置」（<code>PB-005</code>）。使用前请确认这几条的配置与本机构口径一致，否则核对的是别人的标准。</p>
 
 <h2 id="usage">适用场景与同组插件</h2>
 <p>面向科研管理、基金管理与教研岗的申报与评审材料核对：基金申请书形式审查、试卷解析结构、作文量表评分、政策专报。</p>

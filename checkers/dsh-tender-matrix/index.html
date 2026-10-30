@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>评分矩阵核对（dsh-tender-matrix）——招投标核查插件 | PerryLink DSH 插件家族</title>
-<meta name="description" content="评分矩阵核对：评标因素评分矩阵核对。核对 7 条规则，依据 《中华人民共和国招标投标法》、1999年8月30日通过，2017年12月27日修正 等文件。npm 包 dsh-tender-matrix，版本 0.2.4，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="description" content="评分矩阵核对：评标因素评分矩阵核对。核对 7 条规则，依据 《中华人民共和国招标投标法》、1999年8月30日通过，2017年12月27日修正 等文件。npm 包 dsh-tender-matrix，版本 0.2.14，Apache-2.0 许可，仅提示差异、不作出定性结论。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/checkers/dsh-tender-matrix/">
 <link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-tender-matrix/">
@@ -70,7 +70,7 @@ footer.site p{margin:.4rem 0}
       "alternateName": "dsh-tender-matrix",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "招投标",
-      "softwareVersion": "0.2.4",
+      "softwareVersion": "0.2.14",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
@@ -88,7 +88,7 @@ footer.site p{margin:.4rem 0}
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
       },
-      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-0 \u003c0.3.0"
     },
     {
       "@type": "BreadcrumbList",
@@ -138,16 +138,16 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm 包</dt><dd><code>dsh-tender-matrix</code></dd>
   <dt>职业分组</dt><dd><a href="../../zh/checkers/tender/">招投标</a></dd>
-  <dt>版本</dt><dd>0.2.4（规则库 2026.1）</dd>
+  <dt>版本</dt><dd>0.2.14（规则库 2026.1）</dd>
   <dt>许可</dt><dd>Apache-2.0</dd>
-  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
-  <dt>规则条数</dt><dd>7 条，其中 1 条为条文直接规定，1 条依据本机构配置</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-0 &lt;0.3.0</code></dd>
+  <dt>规则条数</dt><dd>7 条，全部为「由原则推导」，1 条依据本机构配置</dd>
   <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-tender-matrix">PerryLink/dsh-tender-matrix</a></dd>
 </dl>
 
 <h2 id="what">这个插件核对什么</h2>
 <p>评分矩阵核对（dsh-tender-matrix）是一个面向招投标场景的 DeepSeek Harness 核查插件。评标因素评分矩阵核对（按分值上限与合计核对矩阵自洽，仅提示差异，不作出定性结论）</p>
-<p>7 条规则，是本族里最常见的一档规模，大体对应一次认真的人工通读能看住的范围。这 7 条规则里，1 条有逐字条文支撑，5 条只能由原则推导，1 条的依据是本机构配置。</p>
+<p>7 条规则，是本族里最常见的一档规模，大体对应一次认真的人工通读能看住的范围。规则库的依据类型分布是 由原则推导 6 条、本机构配置 1 条。</p>
 
 <h2 id="how">核对方式</h2>
 <p>从检查方式看，评分矩阵核对用的是几类可以机械判定的手段：。</p>
@@ -166,7 +166,7 @@ footer.site p{margin:.4rem 0}
 <thead><tr><th>规则</th><th>检查内容</th><th>严重度</th><th>依据类型</th></tr></thead>
 <tbody>
 <tr><td><code>TM-001</code></td><td>评分矩阵应写明项目与评标办法</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
-<tr><td><code>TM-002</code></td><td>单项得分不应超过该项分值上限</td><td class="sev-warn">提示</td><td>条文直接规定</td></tr>
+<tr><td><code>TM-002</code></td><td>单项得分不应超过该项分值上限</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
 <tr><td><code>TM-003</code></td><td>各项分值合计应与本机构配置的总分上限一致</td><td class="sev-info">参考</td><td>本机构配置</td></tr>
 <tr><td><code>TM-004</code></td><td>各项得分合计应等于汇总栏</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
 <tr><td><code>TM-005</code></td><td>评分依据应填写</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
@@ -174,7 +174,7 @@ footer.site p{margin:.4rem 0}
 <tr><td><code>TM-007</code></td><td>评分依据与备注不应残留未替换的占位符</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
 </tbody></table>
 <p>严重度含义：<strong>提示</strong>（6 条）——差异成立，但条文未直接规定，或需人工判断后确认；<strong>参考</strong>（1 条）——只作提示，供人工复核，不构成任何结论。</p>
-<p>依据类型含义：<strong>由原则推导</strong>（5 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」；<strong>条文直接规定</strong>（1 条）——该规则的依据条文已取得逐字文本，规则直接对照条文规定；<strong>本机构配置</strong>（1 条）——阈值或清单来自使用机构自身配置而非国家标准，严重度上限为「参考」。</p>
+<p>依据类型含义：<strong>由原则推导</strong>（6 条）——未能取得逐字条文，依原则性条款推导，严重度上限为「提示」；<strong>本机构配置</strong>（1 条）——阈值或清单来自使用机构自身配置而非国家标准，严重度上限为「参考」。</p>
 
 <h2 id="standards">依据的标准</h2>
 <table>
@@ -192,7 +192,7 @@ footer.site p{margin:.4rem 0}
 <p>上表来自插件声明的 normativeBasis；规则库内部还会把每条规则落到具体条款上。条款原文的取证情况见下一节。</p>
 
 <h2 id="evidence">引用取证状态</h2>
-<p>引用取证：规则库没有遗留待取证条目。1 条规则直接对照条文；剩下的规则依据原则或本机构配置，不涉及条文原文，因此不存在取证进度问题。</p>
+<p>引用取证：没有可直接对照的条文。7 条规则的依据类型为「由原则推导」或「本机构配置」，规则库不引用任何条文原文，也就没有取证欠账一说。这类规则的结论强度低于条文比对，使用时应按线索而非结论对待。</p>
 <p>规则库合计引用 1 份文件，引用规则数依次为：《中华人民共和国招标投标法》（7 条）。同一文件的不同条款会被多条规则分别引用，因此上面是文件层面的汇总。</p>
 
 <h2 id="reading">结果怎么读</h2>

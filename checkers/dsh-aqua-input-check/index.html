@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>养殖投入品核对（dsh-aqua-input-check）——安全生产核查插件 | PerryLink DSH 插件家族</title>
-<meta name="description" content="养殖投入品核对：水产养殖投入品记录核对。核对 7 条规则，依据 《水产养殖质量安全管理规定》、《绿色食品 渔药使用准则》、本机构养殖生产管理口径（本机构配置） 等文件。npm 包 dsh-aqua-input-check，版本 0.2.2，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="description" content="养殖投入品核对：水产养殖投入品记录核对。核对 7 条规则，依据 《水产养殖质量安全管理规定》、《绿色食品 渔药使用准则》、本机构养殖生产管理口径（本机构配置） 等文件。npm 包 dsh-aqua-input-check，版本 0.2.11，Apache-2.0 许可，仅提示差异、不作出定性结论。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/checkers/dsh-aqua-input-check/">
 <link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-aqua-input-check/">
@@ -70,7 +70,7 @@ footer.site p{margin:.4rem 0}
       "alternateName": "dsh-aqua-input-check",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "安全生产",
-      "softwareVersion": "0.2.2",
+      "softwareVersion": "0.2.11",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
@@ -88,7 +88,7 @@ footer.site p{margin:.4rem 0}
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
       },
-      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-0 \u003c0.3.0"
     },
     {
       "@type": "BreadcrumbList",
@@ -138,9 +138,9 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm 包</dt><dd><code>dsh-aqua-input-check</code></dd>
   <dt>职业分组</dt><dd><a href="../../zh/checkers/safety/">安全生产</a></dd>
-  <dt>版本</dt><dd>0.2.2（规则库 2026.1）</dd>
+  <dt>版本</dt><dd>0.2.11（规则库 2026.1）</dd>
   <dt>许可</dt><dd>Apache-2.0</dd>
-  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-0 &lt;0.3.0</code></dd>
   <dt>规则条数</dt><dd>7 条，全部为「由原则推导」，1 条依据本机构配置，7 条的条文本次未取得逐字文本</dd>
   <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-aqua-input-check">PerryLink/dsh-aqua-input-check</a></dd>
 </dl>
@@ -167,7 +167,7 @@ footer.site p{margin:.4rem 0}
 <tbody>
 <tr><td><code>AQ-001</code></td><td>每条记录都应填写塘口与养殖品种</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
 <tr><td><code>AQ-002</code></td><td>投入品名称与用量都应填写</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
-<tr><td><code>AQ-003</code></td><td>使用日期应可解析且休药期应可解析</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
+<tr><td><code>AQ-003</code></td><td>使用日期应可解析且不得晚于核对日</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
 <tr><td><code>AQ-004</code></td><td>起捕日期应满足休药期要求</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
 <tr><td><code>AQ-005</code></td><td>苗种应记录来源与检疫证号</td><td class="sev-warn">提示</td><td>由原则推导</td></tr>
 <tr><td><code>AQ-006</code></td><td>投入品类型应使用本机构口径的取值</td><td class="sev-info">参考</td><td>本机构配置</td></tr>

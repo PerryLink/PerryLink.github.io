@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>危化品临界量核对（dsh-hazchem-check）——安全生产核查插件 | PerryLink DSH 插件家族</title>
-<meta name="description" content="危化品临界量核对：危险化学品临界量与重大危险源辨识核对。核对 8 条规则，依据 《危险化学品安全管理条例》、《危险化学品重大危险源辨识》、国务院令第591号 等文件。npm 包 dsh-hazchem-check，版本 0.2.3，Apache-2.0 许可，仅提示差异、不作出定性结论。">
+<meta name="description" content="危化品临界量核对：危险化学品临界量与重大危险源辨识核对。核对 8 条规则，依据 《危险化学品安全管理条例》、《危险化学品重大危险源辨识》、国务院令第591号 等文件。npm 包 dsh-hazchem-check，版本 0.2.11，Apache-2.0 许可，仅提示差异、不作出定性结论。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/checkers/dsh-hazchem-check/">
 <link rel="alternate" hreflang="zh-Hans" href="https://perrylink.github.io/checkers/dsh-hazchem-check/">
@@ -70,7 +70,7 @@ footer.site p{margin:.4rem 0}
       "alternateName": "dsh-hazchem-check",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "安全生产",
-      "softwareVersion": "0.2.3",
+      "softwareVersion": "0.2.11",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "operatingSystem": "Node.js ^22.19.0 || >=24.0.0",
       "offers": {
@@ -88,7 +88,7 @@ footer.site p{margin:.4rem 0}
         "name": "PerryLink",
         "url": "https://github.com/PerryLink"
       },
-      "softwareRequirements": "DeepSeek Harness >=0.2.1-alpha.1"
+      "softwareRequirements": "DeepSeek Harness >=0.2.1-0 \u003c0.3.0"
     },
     {
       "@type": "BreadcrumbList",
@@ -138,10 +138,10 @@ footer.site p{margin:.4rem 0}
 <dl class="meta">
   <dt>npm 包</dt><dd><code>dsh-hazchem-check</code></dd>
   <dt>职业分组</dt><dd><a href="../../zh/checkers/safety/">安全生产</a></dd>
-  <dt>版本</dt><dd>0.2.3（规则库 2026.1）</dd>
+  <dt>版本</dt><dd>0.2.11（规则库 2026.1）</dd>
   <dt>许可</dt><dd>Apache-2.0</dd>
-  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-alpha.1</code></dd>
-  <dt>规则条数</dt><dd>8 条，全部为「由原则推导」，2 条的条文本次未取得逐字文本</dd>
+  <dt>运行环境</dt><dd>Node <code>^22.19.0 || &gt;=24.0.0</code>，DeepSeek Harness <code>&gt;=0.2.1-0 &lt;0.3.0</code></dd>
+  <dt>规则条数</dt><dd>8 条，全部为「由原则推导」，1 条的条文本次未取得逐字文本</dd>
   <dt>仓库</dt><dd><a href="https://github.com/PerryLink/dsh-hazchem-check">PerryLink/dsh-hazchem-check</a></dd>
 </dl>
 
@@ -194,12 +194,12 @@ footer.site p{margin:.4rem 0}
 <p>这是插件声明的依据清单。要注意它是文件层面的：每条规则实际对照的是文件中的某个具体条款，取证进度按条款记录。</p>
 
 <h2 id="evidence">引用取证状态</h2>
-<p>引用取证：8 条规则全部为「由原则推导」，没有一条声称依据了逐字条文。其中 2 条如实标注「本次未取得」。这意味着结果里的每一条差异都只能作为线索，不能作为「违反某条条文」的结论。</p>
+<p>引用取证：8 条规则全部为「由原则推导」，没有一条声称依据了逐字条文。其中 1 条如实标注「本次未取得」。这意味着结果里的每一条差异都只能作为线索，不能作为「违反某条条文」的结论。</p>
 <p>规则库合计引用 2 份文件，引用规则数依次为：《危险化学品安全管理条例》（7 条）、《危险化学品重大危险源辨识》（1 条）。引用数统计到文件一层；同一文件内的不同条款可能分别支撑不同规则。</p>
 
 <h2 id="reading">结果怎么读</h2>
 <p>本插件共 8 条规则，其中严重度最高的一档是「提示」，共 8 条：<code>HZ-001</code>、<code>HZ-002</code>、<code>HZ-003</code>、<code>HZ-004</code>、<code>HZ-005</code>、<code>HZ-006</code>、<code>HZ-007</code>、<code>HZ-008</code>。这几条是清单里最需要先看的；其余条目按材料实际内容逐条判断即可。</p>
-<p>另有 2 条规则的条文本次未取得逐字文本（<code>HZ-005</code>、<code>HZ-007</code>）。引用这部分结果时请注意措辞：它们是原则推导的产物，不是条文比对的结果。</p>
+<p>另有 1 条规则的条文本次未取得逐字文本（<code>HZ-007</code>）。引用这部分结果时请注意措辞：它们是原则推导的产物，不是条文比对的结果。</p>
 
 <h2 id="usage">适用场景与同组插件</h2>
 <p>面向生产经营单位安全管理岗的台账与预案核对：危化品临界量、应急预案要素、演练脚本、隐患判定、两票与线损。</p>

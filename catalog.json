@@ -3,13 +3,13 @@
     "note": "Deterministic snapshot. No timestamp is recorded so repeated builds are byte-identical.",
     "site": "https://perrylink.github.io/",
     "counts": {
-      "catalogEntries": 108,
+      "catalogEntries": 99,
       "checkers": 53,
-      "pluginEntries": 55,
-      "plugins": 55,
+      "pluginEntries": 46,
+      "plugins": 46,
       "duplicateRepositoryEntries": 0,
       "rules": 408,
-      "rulesWithUnobtainedClause": 163
+      "rulesWithUnobtainedClause": 148
     }
   },
   "professions": [
@@ -166,11 +166,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-aqua-input-check/",
       "repo": "https://github.com/PerryLink/dsh-aqua-input-check",
       "npm": "dsh-aqua-input-check",
-      "version": "0.2.2",
+      "version": "0.2.11",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -217,7 +217,7 @@
         },
         {
           "id": "AQ-003",
-          "title": "使用日期应可解析且休药期应可解析",
+          "title": "使用日期应可解析且不得晚于核对日",
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《绿色食品 渔药使用准则》",
@@ -265,11 +265,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-archive-check/",
       "repo": "https://github.com/PerryLink/dsh-archive-check",
       "npm": "dsh-archive-check",
-      "version": "0.2.2",
+      "version": "0.2.9",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -372,11 +372,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-bid-ca-precheck/",
       "repo": "https://github.com/PerryLink/dsh-bid-ca-precheck",
       "npm": "dsh-bid-ca-precheck",
-      "version": "0.2.4",
+      "version": "0.2.11",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 6,
@@ -466,15 +466,15 @@
       "url": "https://perrylink.github.io/checkers/dsh-bid-qual-check/",
       "repo": "https://github.com/PerryLink/dsh-bid-qual-check",
       "npm": "dsh-bid-qual-check",
-      "version": "0.2.4",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
-      "rulesWithUnobtainedClause": 2,
+      "rulesWithUnobtainedClause": 0,
       "severityCounts": {
         "warn": 7,
         "info": 1
@@ -530,7 +530,7 @@
           "severity": "info",
           "basisKind": "institutional-configuration",
           "document": "《中华人民共和国招标投标法》",
-          "clause": "关于资格审查结论的条款（本次未取得条号）"
+          "clause": "第十八条——招标人可以对潜在投标人进行资格审查"
         },
         {
           "id": "BQ-005",
@@ -546,7 +546,7 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《中华人民共和国招标投标法》",
-          "clause": "关于资格预审与资格审查记录的条款（本次未取得条号）"
+          "clause": "第十八条——招标人可以对潜在投标人进行资格审查"
         },
         {
           "id": "BQ-007",
@@ -574,11 +574,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-contract-stance/",
       "repo": "https://github.com/PerryLink/dsh-contract-stance",
       "npm": "dsh-contract-stance",
-      "version": "0.2.3",
+      "version": "0.2.9",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -666,11 +666,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-customs-doc-check/",
       "repo": "https://github.com/PerryLink/dsh-customs-doc-check",
       "npm": "dsh-customs-doc-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -760,11 +760,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-demurrage-ledger/",
       "repo": "https://github.com/PerryLink/dsh-demurrage-ledger",
       "npm": "dsh-demurrage-ledger",
-      "version": "0.2.2",
+      "version": "0.2.9",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -859,11 +859,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-drill-script-check/",
       "repo": "https://github.com/PerryLink/dsh-drill-script-check",
       "npm": "dsh-drill-script-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
@@ -964,11 +964,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-eia-guide-check/",
       "repo": "https://github.com/PerryLink/dsh-eia-guide-check",
       "npm": "dsh-eia-guide-check",
-      "version": "0.2.2",
+      "version": "0.2.9",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -1067,11 +1067,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-emergency-plan/",
       "repo": "https://github.com/PerryLink/dsh-emergency-plan",
       "npm": "dsh-emergency-plan",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 9,
@@ -1183,11 +1183,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-essay-rubric-check/",
       "repo": "https://github.com/PerryLink/dsh-essay-rubric-check",
       "npm": "dsh-essay-rubric-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 6,
@@ -1267,11 +1267,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-evidence-check/",
       "repo": "https://github.com/PerryLink/dsh-evidence-check",
       "npm": "dsh-evidence-check",
-      "version": "0.2.4",
+      "version": "0.2.11",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -1343,7 +1343,7 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《最高人民法院关于民事诉讼证据的若干规定》",
-          "clause": "第五十条（举证通知书）、第五十六条（证据交换之日举证期限届满）、第五十七条（证据交换的主持与记录）"
+          "clause": "第五十条（举证通知书）、第五十二条第一款（举证期限的客观障碍）、第五十六条（证据交换之日举证期限届满）、第五十七条（证据交换的主持与记录）"
         },
         {
           "id": "EV-007",
@@ -1363,11 +1363,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-export-ctl-check/",
       "repo": "https://github.com/PerryLink/dsh-export-ctl-check",
       "npm": "dsh-export-ctl-check",
-      "version": "0.2.3",
+      "version": "0.2.11",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
@@ -1466,11 +1466,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-fmea-table-check/",
       "repo": "https://github.com/PerryLink/dsh-fmea-table-check",
       "npm": "dsh-fmea-table-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
@@ -1566,11 +1566,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-forecast-penalty/",
       "repo": "https://github.com/PerryLink/dsh-forecast-penalty",
       "npm": "dsh-forecast-penalty",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -1668,11 +1668,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-gongwen-flow-check/",
       "repo": "https://github.com/PerryLink/dsh-gongwen-flow-check",
       "npm": "dsh-gongwen-flow-check",
-      "version": "0.2.2",
+      "version": "0.2.9",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 6,
@@ -1755,11 +1755,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-gongwen-word-check/",
       "repo": "https://github.com/PerryLink/dsh-gongwen-word-check",
       "npm": "dsh-gongwen-word-check",
-      "version": "0.2.3",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -1852,11 +1852,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-guard-plan-qc/",
       "repo": "https://github.com/PerryLink/dsh-guard-plan-qc",
       "npm": "dsh-guard-plan-qc",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 6,
@@ -1936,15 +1936,15 @@
       "url": "https://perrylink.github.io/checkers/dsh-hazchem-check/",
       "repo": "https://github.com/PerryLink/dsh-hazchem-check",
       "npm": "dsh-hazchem-check",
-      "version": "0.2.3",
+      "version": "0.2.11",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
-      "rulesWithUnobtainedClause": 2,
+      "rulesWithUnobtainedClause": 1,
       "severityCounts": {
         "warn": 8
       },
@@ -2005,7 +2005,7 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《危险化学品重大危险源辨识》",
-          "clause": "关于辨识依据的条款（本次未取得条号）"
+          "clause": "4.2.1"
         },
         {
           "id": "HZ-006",
@@ -2041,11 +2041,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-hazplan-check/",
       "repo": "https://github.com/PerryLink/dsh-hazplan-check",
       "npm": "dsh-hazplan-check",
-      "version": "0.2.3",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.2",
       "ruleCount": 7,
@@ -2139,11 +2139,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-hidden-risk-map/",
       "repo": "https://github.com/PerryLink/dsh-hidden-risk-map",
       "npm": "dsh-hidden-risk-map",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 4,
@@ -2210,11 +2210,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-hs-classify/",
       "repo": "https://github.com/PerryLink/dsh-hs-classify",
       "npm": "dsh-hs-classify",
-      "version": "0.2.3",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 6,
@@ -2300,11 +2300,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-icd-rule-check/",
       "repo": "https://github.com/PerryLink/dsh-icd-rule-check",
       "npm": "dsh-icd-rule-check",
-      "version": "0.2.3",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 12,
@@ -2449,11 +2449,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-lawcite-adapter/",
       "repo": "https://github.com/PerryLink/dsh-lawcite-adapter",
       "npm": "dsh-lawcite-adapter",
-      "version": "0.2.3",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
@@ -2555,11 +2555,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-lc-doc-check/",
       "repo": "https://github.com/PerryLink/dsh-lc-doc-check",
       "npm": "dsh-lc-doc-check",
-      "version": "0.2.3",
+      "version": "0.2.9",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
@@ -2656,11 +2656,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-learning-gap-check/",
       "repo": "https://github.com/PerryLink/dsh-learning-gap-check",
       "npm": "dsh-learning-gap-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -2754,18 +2754,18 @@
       "url": "https://perrylink.github.io/checkers/dsh-medrec-qc/",
       "repo": "https://github.com/PerryLink/dsh-medrec-qc",
       "npm": "dsh-medrec-qc",
-      "version": "0.2.3",
+      "version": "0.2.11",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 15,
       "rulesWithUnobtainedClause": 0,
       "severityCounts": {
-        "warn": 5,
-        "error": 9,
+        "error": 10,
+        "warn": 4,
         "info": 1
       },
       "basisKindCounts": {
@@ -2796,8 +2796,8 @@
       "rules": [
         {
           "id": "MR-001",
-          "title": "必填项栏目宜不为空",
-          "severity": "warn",
+          "title": "必填项栏目不得为空",
+          "severity": "error",
           "basisKind": "direct",
           "document": "《住院病案首页数据质量管理与控制指标（2016版）》",
           "clause": "附件1 注"
@@ -2924,11 +2924,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-nsfc-form-check/",
       "repo": "https://github.com/PerryLink/dsh-nsfc-form-check",
       "npm": "dsh-nsfc-form-check",
-      "version": "0.2.2",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 15,
@@ -2939,7 +2939,8 @@
       },
       "basisKindCounts": {
         "derived-from-principle": 10,
-        "institutional-configuration": 5
+        "institutional-configuration": 4,
+        "direct": 1
       },
       "normativeBasis": [
         "《国家自然科学基金条例》",
@@ -3073,7 +3074,7 @@
           "id": "NF-015",
           "title": "申请书不得含有涉密或敏感信息",
           "severity": "info",
-          "basisKind": "institutional-configuration",
+          "basisKind": "direct",
           "document": "《2026 年度国家自然科学基金项目指南·申请规定》",
           "clause": "一（二）1"
         }
@@ -3087,11 +3088,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-nurse-record-check/",
       "repo": "https://github.com/PerryLink/dsh-nurse-record-check",
       "npm": "dsh-nurse-record-check",
-      "version": "0.2.3",
+      "version": "0.2.11",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 12,
@@ -3241,11 +3242,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-origin-rvc-check/",
       "repo": "https://github.com/PerryLink/dsh-origin-rvc-check",
       "npm": "dsh-origin-rvc-check",
-      "version": "0.2.3",
+      "version": "0.2.9",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -3332,11 +3333,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-ota-review-check/",
       "repo": "https://github.com/PerryLink/dsh-ota-review-check",
       "npm": "dsh-ota-review-check",
-      "version": "0.2.3",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -3386,7 +3387,7 @@
         },
         {
           "id": "OT-003",
-          "title": "未回复的点评应在配置的时限内",
+          "title": "台账的回复期限与点评日期不一致",
           "severity": "info",
           "basisKind": "institutional-configuration",
           "document": "各在线旅游平台服务规则（本机构配置）",
@@ -3434,11 +3435,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-paper-doc-adapter/",
       "repo": "https://github.com/PerryLink/dsh-paper-doc-adapter",
       "npm": "dsh-paper-doc-adapter",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
@@ -3540,15 +3541,15 @@
       "url": "https://perrylink.github.io/checkers/dsh-permit-report-check/",
       "repo": "https://github.com/PerryLink/dsh-permit-report-check",
       "npm": "dsh-permit-report-check",
-      "version": "0.2.2",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
-      "rulesWithUnobtainedClause": 5,
+      "rulesWithUnobtainedClause": 1,
       "severityCounts": {
         "warn": 5,
         "info": 2
@@ -3580,7 +3581,7 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《中华人民共和国行政许可法》",
-          "clause": "关于申请材料与受理的条款（本次未取得条号）"
+          "clause": "第三十一条"
         },
         {
           "id": "PR-002",
@@ -3588,7 +3589,7 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《中华人民共和国行政许可法》",
-          "clause": "关于受理与决定的条款（本次未取得条号）"
+          "clause": "第三十七条"
         },
         {
           "id": "PR-003",
@@ -3612,7 +3613,7 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《中华人民共和国行政许可法》",
-          "clause": "关于颁发行政许可证件的条款（本次未取得条号）"
+          "clause": "第三十九条"
         },
         {
           "id": "PR-006",
@@ -3620,7 +3621,7 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《中华人民共和国行政许可法》",
-          "clause": "关于申请与受理的条款（本次未取得条号）"
+          "clause": "第三十条"
         },
         {
           "id": "PR-007",
@@ -3640,11 +3641,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-pipeline-check/",
       "repo": "https://github.com/PerryLink/dsh-pipeline-check",
       "npm": "dsh-pipeline-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
@@ -3749,11 +3750,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-pleading-draft/",
       "repo": "https://github.com/PerryLink/dsh-pleading-draft",
       "npm": "dsh-pleading-draft",
-      "version": "0.2.3",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -3843,21 +3844,24 @@
       "url": "https://perrylink.github.io/checkers/dsh-policy-brief-draft/",
       "repo": "https://github.com/PerryLink/dsh-policy-brief-draft",
       "npm": "dsh-policy-brief-draft",
-      "version": "0.2.3",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
-      "rulesWithUnobtainedClause": 8,
+      "rulesWithUnobtainedClause": 0,
       "severityCounts": {
-        "warn": 7,
+        "error": 3,
+        "warn": 4,
         "info": 1
       },
       "basisKindCounts": {
-        "derived-from-principle": 8
+        "direct": 4,
+        "derived-from-principle": 3,
+        "institutional-configuration": 1
       },
       "normativeBasis": [
         "《党政机关公文处理工作条例》"
@@ -3871,10 +3875,10 @@
         {
           "id": "PB-001",
           "title": "每节都应写明核心观点",
-          "severity": "warn",
-          "basisKind": "derived-from-principle",
+          "severity": "error",
+          "basisKind": "direct",
           "document": "《党政机关公文处理工作条例》",
-          "clause": "关于报告类文种内容的条款（本次未取得条号）"
+          "clause": "第十九条（三）"
         },
         {
           "id": "PB-002",
@@ -3882,31 +3886,31 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《党政机关公文处理工作条例》",
-          "clause": "关于报告类文种内容的条款（本次未取得条号）"
+          "clause": "第十九条（二）"
         },
         {
           "id": "PB-003",
           "title": "依据应注明出处",
-          "severity": "warn",
-          "basisKind": "derived-from-principle",
+          "severity": "error",
+          "basisKind": "direct",
           "document": "《党政机关公文处理工作条例》",
-          "clause": "关于引用与数据来源的条款（本次未取得条号）"
+          "clause": "第二十条（四）"
         },
         {
           "id": "PB-004",
           "title": "数据截止日期应可解析且不晚于核对日",
-          "severity": "warn",
-          "basisKind": "derived-from-principle",
+          "severity": "error",
+          "basisKind": "direct",
           "document": "《党政机关公文处理工作条例》",
-          "clause": "关于报告类文种内容的条款（本次未取得条号）"
+          "clause": "第十九条（二）"
         },
         {
           "id": "PB-005",
           "title": "数据新鲜度应符合本机构编辑口径",
           "severity": "info",
-          "basisKind": "derived-from-principle",
+          "basisKind": "institutional-configuration",
           "document": "《党政机关公文处理工作条例》",
-          "clause": "关于报告类文种内容的条款（本次未取得条号）"
+          "clause": "第十九条（二）（本条的天数阈值取自本机构编辑口径，不由条例规定）"
         },
         {
           "id": "PB-006",
@@ -3914,15 +3918,15 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《党政机关公文处理工作条例》",
-          "clause": "关于报告类文种内容的条款（本次未取得条号）"
+          "clause": "第十九条（二）"
         },
         {
           "id": "PB-007",
           "title": "专报应声明标题与报送对象",
           "severity": "warn",
-          "basisKind": "derived-from-principle",
+          "basisKind": "direct",
           "document": "《党政机关公文处理工作条例》",
-          "clause": "关于公文格式要素的条款（本次未取得条号）"
+          "clause": "第九条（含（七）标题、（八）主送机关）"
         },
         {
           "id": "PB-008",
@@ -3930,7 +3934,7 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《党政机关公文处理工作条例》",
-          "clause": "关于报告类文种结构的条款（本次未取得条号）"
+          "clause": "第十九条（三）（四）（序号唯一性由\"结构严谨\"推论，非明文）"
         }
       ]
     },
@@ -3942,11 +3946,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-power-loss-split/",
       "repo": "https://github.com/PerryLink/dsh-power-loss-split",
       "npm": "dsh-power-loss-split",
-      "version": "0.2.2",
+      "version": "0.2.9",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 5,
@@ -4023,11 +4027,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-power-ticket-check/",
       "repo": "https://github.com/PerryLink/dsh-power-ticket-check",
       "npm": "dsh-power-ticket-check",
-      "version": "0.2.2",
+      "version": "0.2.9",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -4120,11 +4124,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-ppap-check/",
       "repo": "https://github.com/PerryLink/dsh-ppap-check",
       "npm": "dsh-ppap-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -4212,11 +4216,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-protest-deadline/",
       "repo": "https://github.com/PerryLink/dsh-protest-deadline",
       "npm": "dsh-protest-deadline",
-      "version": "0.2.3",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -4308,11 +4312,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-railway-window/",
       "repo": "https://github.com/PerryLink/dsh-railway-window",
       "npm": "dsh-railway-window",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -4406,11 +4410,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-repair-order-qc/",
       "repo": "https://github.com/PerryLink/dsh-repair-order-qc",
       "npm": "dsh-repair-order-qc",
-      "version": "0.2.4",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -4500,11 +4504,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-review-reply-check/",
       "repo": "https://github.com/PerryLink/dsh-review-reply-check",
       "npm": "dsh-review-reply-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -4598,11 +4602,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-rulefile-check/",
       "repo": "https://github.com/PerryLink/dsh-rulefile-check",
       "npm": "dsh-rulefile-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -4695,11 +4699,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-safety-brief-check/",
       "repo": "https://github.com/PerryLink/dsh-safety-brief-check",
       "npm": "dsh-safety-brief-check",
-      "version": "0.2.2",
+      "version": "0.2.9",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.2",
       "ruleCount": 7,
@@ -4759,7 +4763,7 @@
           "clause": "第二十七条"
         },
         {
-          "id": "SB-005",
+          "id": "SB-004",
           "title": "实际参建工种应出现在交底记录的工种列表中",
           "severity": "warn",
           "basisKind": "derived-from-principle",
@@ -4767,7 +4771,7 @@
           "clause": "第3.1.3条第3款第2）项"
         },
         {
-          "id": "SB-004",
+          "id": "SB-005",
           "title": "交底记录应能识别工程部位与交底人",
           "severity": "warn",
           "basisKind": "derived-from-principle",
@@ -4800,11 +4804,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-site-log-check/",
       "repo": "https://github.com/PerryLink/dsh-site-log-check",
       "npm": "dsh-site-log-check",
-      "version": "0.2.3",
+      "version": "0.3.0",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 14,
@@ -4959,11 +4963,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-soe-decision-check/",
       "repo": "https://github.com/PerryLink/dsh-soe-decision-check",
       "npm": "dsh-soe-decision-check",
-      "version": "0.2.5",
+      "version": "0.2.14",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
@@ -5061,11 +5065,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-soilwater-check/",
       "repo": "https://github.com/PerryLink/dsh-soilwater-check",
       "npm": "dsh-soilwater-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 8,
@@ -5163,11 +5167,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-sop-sync-check/",
       "repo": "https://github.com/PerryLink/dsh-sop-sync-check",
       "npm": "dsh-sop-sync-check",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -5253,11 +5257,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-spc-gbt-adapter/",
       "repo": "https://github.com/PerryLink/dsh-spc-gbt-adapter",
       "npm": "dsh-spc-gbt-adapter",
-      "version": "0.2.2",
+      "version": "0.2.8",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -5345,11 +5349,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-tender-extract/",
       "repo": "https://github.com/PerryLink/dsh-tender-extract",
       "npm": "dsh-tender-extract",
-      "version": "0.2.4",
+      "version": "0.2.11",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -5441,11 +5445,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-tender-matrix/",
       "repo": "https://github.com/PerryLink/dsh-tender-matrix",
       "npm": "dsh-tender-matrix",
-      "version": "0.2.4",
+      "version": "0.2.14",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -5455,8 +5459,7 @@
         "info": 1
       },
       "basisKindCounts": {
-        "derived-from-principle": 5,
-        "direct": 1,
+        "derived-from-principle": 6,
         "institutional-configuration": 1
       },
       "normativeBasis": [
@@ -5483,7 +5486,7 @@
           "id": "TM-002",
           "title": "单项得分不应超过该项分值上限",
           "severity": "warn",
-          "basisKind": "direct",
+          "basisKind": "derived-from-principle",
           "document": "《中华人民共和国招标投标法》",
           "clause": "第四十条第一款——评标委员会应当按照招标文件确定的评标标准和方法对投标文件进行评审和比较"
         },
@@ -5525,7 +5528,7 @@
           "severity": "warn",
           "basisKind": "derived-from-principle",
           "document": "《中华人民共和国招标投标法》",
-          "clause": "第四十二条——评标委员会经评审认为所有投标都不符合招标文件要求的，可以否决所有投标"
+          "clause": "第四十条第一款——评标委员会应当按照招标文件确定的评标标准和方法，对投标文件进行评审和比较"
         }
       ]
     },
@@ -5537,11 +5540,11 @@
       "url": "https://perrylink.github.io/checkers/dsh-warranty-calc/",
       "repo": "https://github.com/PerryLink/dsh-warranty-calc",
       "npm": "dsh-warranty-calc",
-      "version": "0.2.4",
+      "version": "0.2.10",
       "license": "Apache-2.0",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.2.1-alpha.1"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "rulePackVersion": "2026.1",
       "ruleCount": 7,
@@ -5638,23 +5641,23 @@
       "slug": "dsh-auto-review",
       "npm": "dsh-auto-review",
       "displayName": "Auto Review",
-      "displayNameZh": null,
+      "displayNameZh": "自动复核",
       "url": "https://perrylink.github.io/plugins/dsh-auto-review/",
       "repo": "https://github.com/PerryLink/dsh-auto-review",
       "categories": [
         "workflow"
       ],
       "locale": null,
-      "version": "0.12.15",
+      "version": "0.14.1",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Second-model AI auto-review for DeepSeek Harness approval requests: a read-only reviewer subagent decides allow/deny on the approval answerer chain, with fail-closed fallback and full session-log audit.",
-      "summaryZh": null,
+      "summaryZh": "审批链上的第二模型自动复核：只读复核子代理在审批应答链上给出允许/拒绝，失败即拒，全过程留痕在会话日志里。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -5663,7 +5666,7 @@
       "slug": "dsh-autotier",
       "npm": "dsh-autotier",
       "displayName": "Autotier",
-      "displayNameZh": null,
+      "displayNameZh": "模型分层路由",
       "url": "https://perrylink.github.io/plugins/dsh-autotier/",
       "repo": "https://github.com/PerryLink/dsh-autotier",
       "categories": [
@@ -5671,7 +5674,7 @@
         "agent"
       ],
       "locale": null,
-      "version": "0.2.15",
+      "version": "0.2.19",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -5680,7 +5683,7 @@
         "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Automatic strong/cheap model-tier routing for DeepSeek Harness: intent-gated tier landing on the agent/request waterfall, plan-mode handoff (strong plans, cheap implements), deterministic high-risk guards on tools/pre-execute, and failure escalation with TTL fallback.",
-      "summaryZh": null,
+      "summaryZh": "强/廉价模型档位的自动路由：在 agent/request 瀑布上按意图落档，plan 模式交棒（强模型规划、廉价模型实现），在 tools/pre-execute 上做确定性高风险守卫，失败升级并带 TTL 回退。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -5689,7 +5692,7 @@
       "slug": "dsh-background-agents",
       "npm": "dsh-background-agents",
       "displayName": "Background Agents",
-      "displayNameZh": null,
+      "displayNameZh": "后台代理",
       "url": "https://perrylink.github.io/plugins/dsh-background-agents/",
       "repo": "https://github.com/PerryLink/dsh-background-agents",
       "categories": [
@@ -5705,33 +5708,8 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "RETIRED 2026-10-05 — the official DeepSeek Harness now ships native continuable subagents (subagent with backgroundMode: continuable, plus send_message). Use those instead; this entry stays listed only so the name resolves.",
-      "summaryZh": null,
+      "summaryZh": "已于 2026-10-05 退役 —— 官方 DeepSeek Harness 已原生提供可续接子代理（backgroundMode: continuable 的 subagent 加 send_message）。请改用原生能力；本条目仅为让包名可解析而保留。",
       "hasTranslationPair": true,
-      "catalogAliases": [],
-      "npmNameConflict": null
-    },
-    {
-      "slug": "dsh-bid-health-check",
-      "npm": "dsh-bid-health-check",
-      "displayName": "Bid Health Check",
-      "displayNameZh": "投标响应健检",
-      "url": "https://perrylink.github.io/plugins/dsh-bid-health-check/",
-      "repo": "https://github.com/PerryLink/dsh-bid-health-check",
-      "categories": [
-        "tender"
-      ],
-      "locale": "zh",
-      "version": "0.1.0",
-      "versionSource": "npm",
-      "license": "Apache-2.0",
-      "licenseSource": "npm",
-      "engines": {
-        "dsh": ">=0.2.1-0 <0.3.0",
-        "node": "^22.19.0 || >=24.0.0"
-      },
-      "summary": "Locate, requirement by requirement, where a bid appears to answer a tender pack, and where it does not; weak matches and non-located items are reported without judging substantive compliance.",
-      "summaryZh": "按招标要求逐条定位投标文件的响应位置，标出应答、弱匹配与未定位项；只报差异，不判断是否实质满足。",
-      "hasTranslationPair": false,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -5739,14 +5717,14 @@
       "slug": "dsh-budget",
       "npm": "dsh-budget",
       "displayName": "Budget",
-      "displayNameZh": null,
+      "displayNameZh": "成本治理",
       "url": "https://perrylink.github.io/plugins/dsh-budget/",
       "repo": "https://github.com/PerryLink/dsh-budget",
       "categories": [
         "tools"
       ],
       "locale": null,
-      "version": "0.4.16",
+      "version": "0.4.20",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -5755,33 +5733,8 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Cost governance for DeepSeek Harness: aggregated token/cost metering per model, session and day, budget caps with threshold alerts and over-limit policies, carbon footprint estimation, per-model latency benchmarks, and the /budget command.",
-      "summaryZh": null,
+      "summaryZh": "成本治理：按模型/会话/天汇总 token 与费用，预算上限配阈值告警与超限策略，估算碳足迹，做按模型的延迟基准，并提供 /budget 命令。",
       "hasTranslationPair": true,
-      "catalogAliases": [],
-      "npmNameConflict": null
-    },
-    {
-      "slug": "dsh-canteen-retention-check",
-      "npm": "dsh-canteen-retention-check",
-      "displayName": "Canteen Retention Check",
-      "displayNameZh": "食堂留样核对",
-      "url": "https://perrylink.github.io/plugins/dsh-canteen-retention-check/",
-      "repo": "https://github.com/PerryLink/dsh-canteen-retention-check",
-      "categories": [
-        "safety"
-      ],
-      "locale": "zh",
-      "version": "0.2.0",
-      "versionSource": "npm",
-      "license": "Apache-2.0",
-      "licenseSource": "npm",
-      "engines": {
-        "dsh": ">=0.2.1-0 <0.3.0",
-        "node": "^22.19.0 || >=24.0.0"
-      },
-      "summary": "Canteen food-retention ledger: the four required record elements, the 125 g minimum, the 48-hour cold-storage window and template placeholders left in a cell.",
-      "summaryZh": "食堂留样台账核对：四个记录要素、125g 下限、48 小时冷藏窗口与模板占位符。",
-      "hasTranslationPair": false,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -5789,46 +5742,24 @@
       "slug": "dsh-cert-mcp",
       "npm": "dsh-cert-mcp",
       "displayName": "Certification MCP",
-      "displayNameZh": null,
+      "displayNameZh": "认证 MCP",
       "url": "https://perrylink.github.io/plugins/dsh-cert-mcp/",
       "repo": "https://github.com/PerryLink/dsh-cert-mcp",
       "categories": [
         "integration"
       ],
       "locale": null,
-      "version": "0.2.4",
+      "version": "0.2.10",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Read-only MCP server exposing the dsh-plugin-certification registry: certification grades, snapshots and five-dimension evidence for DeepSeek Harness plugins.",
-      "summaryZh": null,
+      "summaryZh": "只读 MCP 服务器，对外提供 dsh-plugin-certification 注册表：DSH 插件的认证等级、快照与五维证据。",
       "hasTranslationPair": true,
-      "catalogAliases": [],
-      "npmNameConflict": null
-    },
-    {
-      "slug": "dsh-checkers",
-      "npm": "@perrylink/dsh-checkers-suite",
-      "displayName": "Compliance Suite",
-      "displayNameZh": "合规核查套件",
-      "url": "https://perrylink.github.io/plugins/dsh-checkers/",
-      "repo": "https://github.com/PerryLink/dsh-checkers",
-      "categories": [
-        "tools",
-        "quality"
-      ],
-      "locale": "zh",
-      "version": "0.1.0",
-      "versionSource": "npm",
-      "license": "Apache-2.0",
-      "licenseSource": "npm",
-      "summary": "One-command installer for the 53-plugin PerryLink compliance suite: installs every checker and inserts all 53 Cordis rows through one bundle layer.",
-      "summaryZh": "53 个合规核查插件的一键安装入口：一次插入全部 53 条 Cordis 行，每个 checker 仍保留自己的 npm 包、规则包与版本。",
-      "hasTranslationPair": false,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -5836,23 +5767,23 @@
       "slug": "dsh-checkpoint-rewind",
       "npm": "dsh-checkpoint-rewind",
       "displayName": "Checkpoint Rewind",
-      "displayNameZh": null,
+      "displayNameZh": "检查点回滚",
       "url": "https://perrylink.github.io/plugins/dsh-checkpoint-rewind/",
       "repo": "https://github.com/PerryLink/dsh-checkpoint-rewind",
       "categories": [
         "session"
       ],
       "locale": null,
-      "version": "0.6.23",
+      "version": "0.6.34",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Unified DSH checkpoints: session, workspace, and config three-state snapshots with one-shot /checkpoint and /rewind rollback, a checkpoint tool, automatic interval snapshots, a Settings-page timeline with pairwise diffs, and seed-replay session recovery.",
-      "summaryZh": null,
+      "summaryZh": "统一的 DSH 检查点：会话/工作区/配置三态快照，一条命令 /checkpoint 与 /rewind 回滚，附 checkpoint 工具、定时自动快照、带两两差异的设置页时间线与种子重放式会话恢复。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -5861,23 +5792,23 @@
       "slug": "dsh-claude-move",
       "npm": "dsh-claude-move",
       "displayName": "Claude Move",
-      "displayNameZh": null,
+      "displayNameZh": "配置迁移",
       "url": "https://perrylink.github.io/plugins/dsh-claude-move/",
       "repo": "https://github.com/PerryLink/dsh-claude-move",
       "categories": [
         "integration"
       ],
       "locale": null,
-      "version": "0.4.7",
+      "version": "0.4.18",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0"
+        "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0"
       },
       "summary": "Claude Code to DeepSeek Harness migration: import CLAUDE.md/AGENTS.md, slash commands, and session history — approval-gated and idempotent.",
-      "summaryZh": null,
+      "summaryZh": "从 Claude Code 迁到 DeepSeek Harness：导入 CLAUDE.md/AGENTS.md、斜杠命令与会话历史，全程审批门控且可重复执行。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -5886,23 +5817,23 @@
       "slug": "dsh-click",
       "npm": "dsh-click",
       "displayName": "Click",
-      "displayNameZh": null,
+      "displayNameZh": "桌面控制",
       "url": "https://perrylink.github.io/plugins/dsh-click/",
       "repo": "https://github.com/PerryLink/dsh-click",
       "categories": [
         "tools"
       ],
       "locale": null,
-      "version": "0.3.18",
+      "version": "0.3.24",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Cross-platform native desktop control for DeepSeek Harness (Windows first): screen_shot, screen_read, click/type/scroll/key, and app_list/app_launch — approval-gated, never stealing foreground focus.",
-      "summaryZh": null,
+      "summaryZh": "跨平台原生桌面控制（Windows 优先）：screen_shot、screen_read、点击/输入/滚动/按键与 app_list/app_launch，审批门控且不抢占前台焦点。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -5920,9 +5851,10 @@
       ],
       "locale": "en",
       "version": "0.2.5",
-      "versionSource": "npm",
+      "versionSource": "npm-snapshot",
       "license": "Apache-2.0",
-      "licenseSource": "npm",
+      "licenseSource": "npm-snapshot",
+      "engines": null,
       "summary": "In-app Community Bench tab for DeepSeek Harness: reads the public, task-conditioned registry and shows the same score everyone sees; no local scoring.",
       "summaryZh": "DSH 应用内社区基准标签页：读取公开的、按任务条件计算的 registry，展示所有人看到的同一分数；不在本地算分。",
       "hasTranslationPair": false,
@@ -5933,49 +5865,24 @@
       "slug": "dsh-composer-history",
       "npm": "dsh-composer-history",
       "displayName": "Composer History",
-      "displayNameZh": null,
+      "displayNameZh": "输入历史",
       "url": "https://perrylink.github.io/plugins/dsh-composer-history/",
       "repo": "https://github.com/PerryLink/dsh-composer-history",
       "categories": [
         "session"
       ],
       "locale": null,
-      "version": "0.8.10",
+      "version": "0.8.15",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Terminal-style input history for the DeepSeek Harness web composer: edge-first arrows with exact draft/caret restore, browser-local persisted history, Ctrl+R reverse search, workspace recall, and sliding-context awareness.",
-      "summaryZh": null,
+      "summaryZh": "Web 输入框的终端式历史：边缘优先的方向键与草稿/光标精确还原、浏览器本地持久化、Ctrl+R 反向搜索、工作区召回与滑动上下文感知。",
       "hasTranslationPair": true,
-      "catalogAliases": [],
-      "npmNameConflict": null
-    },
-    {
-      "slug": "dsh-construction-doc-check",
-      "npm": "dsh-construction-doc-check",
-      "displayName": "Construction Document Check",
-      "displayNameZh": "工程资料完整性核对",
-      "url": "https://perrylink.github.io/plugins/dsh-construction-doc-check/",
-      "repo": "https://github.com/PerryLink/dsh-construction-doc-check",
-      "categories": [
-        "construction"
-      ],
-      "locale": "zh",
-      "version": "0.1.1",
-      "versionSource": "npm",
-      "license": "Apache-2.0",
-      "licenseSource": "npm",
-      "engines": {
-        "dsh": ">=0.2.1-0 <0.3.0",
-        "node": "^22.19.0 || >=24.0.0"
-      },
-      "summary": "Project document archive: missing required document types, stale revisions and empty files, read from names rather than contents.",
-      "summaryZh": "项目资料归档核对：缺失的必需资料类型、过期版本与空文件；只读文件名，不读内容。",
-      "hasTranslationPair": false,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -5983,22 +5890,23 @@
       "slug": "dsh-data-quality",
       "npm": "dsh-data-quality",
       "displayName": "Data Quality",
-      "displayNameZh": null,
+      "displayNameZh": "数据质量",
       "url": "https://perrylink.github.io/plugins/dsh-data-quality/",
       "repo": "https://github.com/PerryLink/dsh-data-quality",
       "categories": [
         "tools"
       ],
       "locale": null,
-      "version": "0.3.18",
+      "version": "0.3.24",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
-        "node": "^22.19.0 || >=24.0.0"
+        "node": "^22.19.0 || >=24.0.0",
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Deterministic data profiling, cleaning, and verification for DeepSeek Harness: DAMA scorecard, content-hash dedupe, metric expectations, and drift checks.",
-      "summaryZh": null,
+      "summaryZh": "确定性的数据画像、清洗与校验：DAMA 记分卡、内容哈希去重、指标期望与漂移检查。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6007,14 +5915,14 @@
       "slug": "dsh-defend",
       "npm": "dsh-defend",
       "displayName": "Defend",
-      "displayNameZh": null,
+      "displayNameZh": "注入防御",
       "url": "https://perrylink.github.io/plugins/dsh-defend/",
       "repo": "https://github.com/PerryLink/dsh-defend",
       "categories": [
         "dev"
       ],
       "locale": null,
-      "version": "0.3.20",
+      "version": "0.3.25",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6023,7 +5931,7 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Prompt-injection, jailbreak, and secret-leak defense for DeepSeek Harness: Aho-Corasick detection with allow/ask/block interception, sanitized audit events, and a recursive-delete pre-execution gate.",
-      "summaryZh": null,
+      "summaryZh": "面向 DeepSeek Harness 的提示注入、越狱与密钥泄漏防御：Aho-Corasick 检测配允许/询问/阻断拦截、脱敏审计事件，以及递归删除的执行前闸门。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6032,14 +5940,14 @@
       "slug": "dsh-doublecheck",
       "npm": "dsh-doublecheck",
       "displayName": "DoubleCheck",
-      "displayNameZh": null,
+      "displayNameZh": "交付质检",
       "url": "https://perrylink.github.io/plugins/dsh-doublecheck/",
       "repo": "https://github.com/PerryLink/dsh-doublecheck",
       "categories": [
         "tools"
       ],
       "locale": null,
-      "version": "0.9.23",
+      "version": "0.9.29",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6048,7 +5956,7 @@
         "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Delivery quality gate for DeepSeek Harness: grill the requirements, test the implementation, prove the delivery, and gate the handoff with a deliverable/rework decision.",
-      "summaryZh": null,
+      "summaryZh": "交付质量闸门：先盘问需求，再测实现，再举证交付，最后按可交付/返工给出交接裁决。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6057,14 +5965,14 @@
       "slug": "dsh-draw",
       "npm": "dsh-draw",
       "displayName": "Draw",
-      "displayNameZh": null,
+      "displayNameZh": "图像生成路由",
       "url": "https://perrylink.github.io/plugins/dsh-draw/",
       "repo": "https://github.com/PerryLink/dsh-draw",
       "categories": [
         "tools"
       ],
       "locale": null,
-      "version": "0.2.21",
+      "version": "0.2.24",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6073,34 +5981,8 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Unified static-image generation router for DeepSeek Harness: one image_generate tool with standard parameters, config-driven engine routing (OpenAI Images, Zhipu CogView, and any compatible endpoint), health-aware fallback, durable workspace attachments, and per-session quota accounting.",
-      "summaryZh": null,
+      "summaryZh": "统一的静态图像生成路由：一个 image_generate 工具配标准参数，按配置路由引擎（OpenAI Images、智谱 CogView 及任何兼容端点），带健康感知回退、工作区持久附件与按会话配额记账。",
       "hasTranslationPair": true,
-      "catalogAliases": [],
-      "npmNameConflict": null
-    },
-    {
-      "slug": "dsh-excel-reconcile",
-      "npm": "dsh-excel-reconcile",
-      "displayName": "Excel Reconcile",
-      "displayNameZh": "Excel 双表核对",
-      "url": "https://perrylink.github.io/plugins/dsh-excel-reconcile/",
-      "repo": "https://github.com/PerryLink/dsh-excel-reconcile",
-      "categories": [
-        "tools",
-        "quality"
-      ],
-      "locale": "zh",
-      "version": "0.1.1",
-      "versionSource": "npm",
-      "license": "Apache-2.0",
-      "licenseSource": "npm",
-      "engines": {
-        "dsh": ">=0.2.1-0 <0.3.0",
-        "node": "^22.19.0 || >=24.0.0"
-      },
-      "summary": "Join two spreadsheets on a declared key and compare declared fields within declared tolerances; it reconciles and reports differences rather than adjudicating them.",
-      "summaryZh": "两张表按声明主键连接，按声明字段与容差比对，输出 Markdown、JSON 与差异工作簿；只报差异，不裁决。",
-      "hasTranslationPair": false,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -6108,23 +5990,23 @@
       "slug": "dsh-fast",
       "npm": "dsh-fast",
       "displayName": "Fast",
-      "displayNameZh": null,
+      "displayNameZh": "性能诊断",
       "url": "https://perrylink.github.io/plugins/dsh-fast/",
       "repo": "https://github.com/PerryLink/dsh-fast",
       "categories": [
         "tools"
       ],
       "locale": null,
-      "version": "0.2.20",
+      "version": "0.2.27",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-rc.1 <0.3.0-0"
+        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Read-only performance diagnostics for DeepSeek Harness: session load/restore timing, spill-hit counts, compaction count and trigger, context-injection volume (AGENTS.md/skills/tool-schema token share), and LLM cache hit rate — surfaced via /fast.",
-      "summaryZh": null,
+      "summaryZh": "只读性能诊断：会话加载/恢复耗时、落盘命中次数、压缩次数与触发原因、上下文注入量（AGENTS.md/技能/工具 schema 的 token 占比）与 LLM 缓存命中率，经 /fast 呈现。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6133,23 +6015,23 @@
       "slug": "dsh-fund-research",
       "npm": "dsh-fund-research",
       "displayName": "Fund Research",
-      "displayNameZh": null,
+      "displayNameZh": "基金研究",
       "url": "https://perrylink.github.io/plugins/dsh-fund-research/",
       "repo": "https://github.com/PerryLink/dsh-fund-research",
       "categories": [
         "knowledge"
       ],
       "locale": null,
-      "version": "0.4.19",
+      "version": "0.5.1",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Fund research: analyze funds with returns, holdings, and performance decomposition.",
-      "summaryZh": null,
+      "summaryZh": "基金研究：分析基金的收益、持仓与业绩归因。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6158,23 +6040,23 @@
       "slug": "dsh-github",
       "npm": "@perrylink/dsh-github",
       "displayName": "GitHub",
-      "displayNameZh": null,
+      "displayNameZh": "GitHub 集成",
       "url": "https://perrylink.github.io/plugins/dsh-github/",
       "repo": "https://github.com/PerryLink/dsh-github",
       "categories": [
         "integration"
       ],
       "locale": null,
-      "version": "0.7.19",
+      "version": "0.7.27",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "GitHub for DeepSeek Harness: PR/issue/repo/file tools, reviews, and CI checks — every write gated by human approval, token never logged.",
-      "summaryZh": null,
+      "summaryZh": "GitHub 集成：PR/issue/仓库/文件工具、评审与 CI 检查，每次写入都需人工审批，token 从不进日志。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6183,49 +6065,24 @@
       "slug": "dsh-industry-research",
       "npm": "dsh-industry-research",
       "displayName": "Industry Research",
-      "displayNameZh": null,
+      "displayNameZh": "行业研究",
       "url": "https://perrylink.github.io/plugins/dsh-industry-research/",
       "repo": "https://github.com/PerryLink/dsh-industry-research",
       "categories": [
         "knowledge"
       ],
       "locale": null,
-      "version": "0.3.18",
+      "version": "0.3.23",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Industry research toolkit: structured company/industry dives with source capture and auditable research trails.",
-      "summaryZh": null,
+      "summaryZh": "行业研究工具箱：结构化的公司与行业专题，附来源留档与可审计的研究轨迹。",
       "hasTranslationPair": true,
-      "catalogAliases": [],
-      "npmNameConflict": null
-    },
-    {
-      "slug": "dsh-invoice-ledger",
-      "npm": "dsh-invoice-ledger",
-      "displayName": "Invoice Ledger",
-      "displayNameZh": "发票台账核对",
-      "url": "https://perrylink.github.io/plugins/dsh-invoice-ledger/",
-      "repo": "https://github.com/PerryLink/dsh-invoice-ledger",
-      "categories": [
-        "quality"
-      ],
-      "locale": "zh",
-      "version": "0.1.0",
-      "versionSource": "npm",
-      "license": "Apache-2.0",
-      "licenseSource": "npm",
-      "engines": {
-        "dsh": ">=0.2.1-0 <0.3.0",
-        "node": "^22.19.0 || >=24.0.0"
-      },
-      "summary": "Invoice ledger: duplicates keyed on code + number, arithmetic, payer mismatch, date anomalies and template placeholders left in a cell.",
-      "summaryZh": "发票台账核对：按代码+号码识别重复、算式、付款方不一致、日期异常与模板占位符，输出差异清单与工作簿。",
-      "hasTranslationPair": false,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -6258,23 +6115,23 @@
       "slug": "dsh-library",
       "npm": "dsh-library",
       "displayName": "Library",
-      "displayNameZh": null,
+      "displayNameZh": "本地知识库",
       "url": "https://perrylink.github.io/plugins/dsh-library/",
       "repo": "https://github.com/PerryLink/dsh-library",
       "categories": [
         "knowledge"
       ],
       "locale": null,
-      "version": "0.2.19",
+      "version": "0.2.25",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Local document knowledge base for DeepSeek Harness: library_add/remove/list, hybrid semantic+keyword library_search with diversity re-ranking and lost-in-the-middle avoidance, citation-aware injection, library_cite_check and library_diagnose — SQLite-backed index, local embedding, zero model downloads.",
-      "summaryZh": null,
+      "summaryZh": "本地文档知识库：library_add/remove/list，语义加关键词的混合检索 library_search（带多样性重排与防\"中间遗忘\"）、引用感知注入、library_cite_check 与 library_diagnose，SQLite 索引与本地嵌入，不下载模型。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6283,23 +6140,23 @@
       "slug": "dsh-local-ai",
       "npm": "dsh-local-ai",
       "displayName": "Local AI",
-      "displayNameZh": null,
+      "displayNameZh": "本地模型",
       "url": "https://perrylink.github.io/plugins/dsh-local-ai/",
       "repo": "https://github.com/PerryLink/dsh-local-ai",
       "categories": [
         "model"
       ],
       "locale": null,
-      "version": "0.2.18",
+      "version": "0.2.23",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-rc.1 <0.3.0-0"
+        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Run local AI models inside DeepSeek Harness: Ollama/LM Studio/local endpoints as drop-in model routes.",
-      "summaryZh": null,
+      "summaryZh": "在 DeepSeek Harness 内运行本地模型：把 Ollama / LM Studio / 本地端点接成可直接替换的模型路由。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6308,23 +6165,23 @@
       "slug": "dsh-lsp-actions",
       "npm": "dsh-lsp-actions",
       "displayName": "LSP Actions",
-      "displayNameZh": null,
+      "displayNameZh": "LSP 动作",
       "url": "https://perrylink.github.io/plugins/dsh-lsp-actions/",
       "repo": "https://github.com/PerryLink/dsh-lsp-actions",
       "categories": [
         "tools"
       ],
       "locale": null,
-      "version": "0.5.11",
+      "version": "0.5.17",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0-0 || >=0.2.1-0 <0.3.0-0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "LSP actions for DeepSeek Harness: the IDE-integration plugin that exposes language-server diagnostics, definitions, references, and fixes to the agent.",
-      "summaryZh": null,
+      "summaryZh": "把语言服务器的诊断、定义跳转、引用查找与修复暴露给 agent 的 IDE 集成插件。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6333,14 +6190,14 @@
       "slug": "dsh-mask",
       "npm": "dsh-mask",
       "displayName": "Mask",
-      "displayNameZh": null,
+      "displayNameZh": "隐私脱敏",
       "url": "https://perrylink.github.io/plugins/dsh-mask/",
       "repo": "https://github.com/PerryLink/dsh-mask",
       "categories": [
         "tools"
       ],
       "locale": null,
-      "version": "0.2.19",
+      "version": "0.2.23",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6349,7 +6206,7 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "PII masking middleware for DeepSeek Harness: phones, emails, ID cards, bank cards and keys become placeholders before they reach the model, and a host-side restore table keeps them reversible. The plaintext never enters the session log.",
-      "summaryZh": null,
+      "summaryZh": "PII 脱敏中间件：手机号、邮箱、身份证、银行卡与密钥在到达模型前变成占位符，宿主侧还原表保证可逆，明文不进会话日志。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6358,14 +6215,14 @@
       "slug": "dsh-mcp-panel",
       "npm": "dsh-mcp-panel",
       "displayName": "MCP Panel",
-      "displayNameZh": null,
+      "displayNameZh": "MCP 面板",
       "url": "https://perrylink.github.io/plugins/dsh-mcp-panel/",
       "repo": "https://github.com/PerryLink/dsh-mcp-panel",
       "categories": [
         "integration"
       ],
       "locale": null,
-      "version": "0.6.22",
+      "version": "0.6.29",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6374,7 +6231,7 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Read-only MCP console for DeepSeek Harness: a /mcp command with health diagnostics and pipeline trial calls, a Settings MCP tab with server CRUD (approval-gated writes, automatic backups) and a tool trial console over the official tool pipeline.",
-      "summaryZh": null,
+      "summaryZh": "只读 MCP 控制台：/mcp 命令带健康诊断与管道试调，设置页 MCP 标签管理服务器（写入需审批、自动备份），并可在官方工具管道上试调工具。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6383,14 +6240,14 @@
       "slug": "dsh-memento",
       "npm": "dsh-memento",
       "displayName": "Memento",
-      "displayNameZh": null,
+      "displayNameZh": "跨会话记忆",
       "url": "https://perrylink.github.io/plugins/dsh-memento/",
       "repo": "https://github.com/PerryLink/dsh-memento",
       "categories": [
         "memory"
       ],
       "locale": null,
-      "version": "0.5.22",
+      "version": "0.5.28",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6399,7 +6256,7 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Bounded, layered, approval-gated, auditable cross-session memory for DeepSeek Harness — a capability seam (ctx.memory service + local SQLite provider + memory tool + frozen snapshot injection), not another memory warehouse.",
-      "summaryZh": null,
+      "summaryZh": "有界、分层、审批门控、可审计的跨会话记忆：一条能力接缝（ctx.memory 服务 + 本地 SQLite provider + memory 工具 + 冻结快照注入），不是又一个记忆仓库。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6408,23 +6265,23 @@
       "slug": "dsh-observe",
       "npm": "dsh-observe",
       "displayName": "Observe",
-      "displayNameZh": null,
+      "displayNameZh": "可观测性",
       "url": "https://perrylink.github.io/plugins/dsh-observe/",
       "repo": "https://github.com/PerryLink/dsh-observe",
       "categories": [
         "dev"
       ],
       "locale": null,
-      "version": "0.2.21",
+      "version": "0.2.26",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Observability for DeepSeek Harness: request tracing, telemetry, log buffering, and retry visibility.",
-      "summaryZh": null,
+      "summaryZh": "可观测性：请求追踪、遥测上报、日志缓冲与重试可见性。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6433,50 +6290,24 @@
       "slug": "dsh-output-styles",
       "npm": "dsh-output-styles",
       "displayName": "Output Styles",
-      "displayNameZh": null,
+      "displayNameZh": "输出风格",
       "url": "https://perrylink.github.io/plugins/dsh-output-styles/",
       "repo": "https://github.com/PerryLink/dsh-output-styles",
       "categories": [
         "interface"
       ],
       "locale": null,
-      "version": "0.6.25",
+      "version": "0.8.2",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Runtime-switchable model output styles for DeepSeek Harness: a Markdown style library (six built-ins, Claude Code-parity proactive/learning), /style command, session-scoped persistence, system-prompt injection, a plugin renderer registry, per-session/per-tool rules, and /export rendering.",
-      "summaryZh": null,
+      "summaryZh": "运行时可切换的模型输出风格：Markdown 风格库（六个内置，含 Claude Code 对等的 proactive/learning）、/style 命令、按会话持久化、系统提示注入、插件渲染器注册表、按会话与按工具的规则，以及 /export 渲染。",
       "hasTranslationPair": true,
-      "catalogAliases": [],
-      "npmNameConflict": null
-    },
-    {
-      "slug": "dsh-payroll-audit",
-      "npm": "dsh-payroll-audit",
-      "displayName": "Payroll Audit",
-      "displayNameZh": "工资表核对",
-      "url": "https://perrylink.github.io/plugins/dsh-payroll-audit/",
-      "repo": "https://github.com/PerryLink/dsh-payroll-audit",
-      "categories": [
-        "quality",
-        "governance"
-      ],
-      "locale": "zh",
-      "version": "0.1.0",
-      "versionSource": "npm",
-      "license": "Apache-2.0",
-      "licenseSource": "npm",
-      "engines": {
-        "dsh": ">=0.2.1-0 <0.3.0",
-        "node": "^22.19.0 || >=24.0.0"
-      },
-      "summary": "Payroll against published social-insurance, housing-fund and individual-income-tax parameters, with four-valued outcomes and parameters that carry their own review date.",
-      "summaryZh": "工资表核对：按社保、公积金、个税参数逐项比对，四值结果（pass/pass_with_gaps/review/fail），参数过期降级为复核。",
-      "hasTranslationPair": false,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -6484,14 +6315,14 @@
       "slug": "dsh-permission-rules",
       "npm": "dsh-permission-rules",
       "displayName": "Permission Rules",
-      "displayNameZh": null,
+      "displayNameZh": "权限规则",
       "url": "https://perrylink.github.io/plugins/dsh-permission-rules/",
       "repo": "https://github.com/PerryLink/dsh-permission-rules",
       "categories": [
         "workflow"
       ],
       "locale": null,
-      "version": "0.7.14",
+      "version": "0.7.20",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6500,7 +6331,32 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Declarative, ordered allow/deny/ask permission rules for DeepSeek Harness: match tool names, arguments (glob/regex), workspace paths, and network targets (domain/IP/port/scheme), plus a Codex-style process-level network policy.",
-      "summaryZh": null,
+      "summaryZh": "声明式、有序的允许/拒绝/询问权限规则：匹配工具名、参数（glob/正则）、工作区路径与网络目标（域名/IP/端口/协议），并带进程级网络策略。",
+      "hasTranslationPair": true,
+      "catalogAliases": [],
+      "npmNameConflict": null
+    },
+    {
+      "slug": "dsh-personal-directive",
+      "npm": "dsh-personal-directive",
+      "displayName": "Personal Directive",
+      "displayNameZh": "个人指令",
+      "url": "https://perrylink.github.io/plugins/dsh-personal-directive/",
+      "repo": "https://github.com/PerryLink/dsh-personal-directive",
+      "categories": [
+        "workflow"
+      ],
+      "locale": "en",
+      "version": "0.2.11",
+      "versionSource": "package.json",
+      "license": "Apache-2.0",
+      "licenseSource": "package.json",
+      "engines": {
+        "node": "^22.19.0 || >=24.0.0",
+        "dsh": ">=0.2.1-0 <0.3.0"
+      },
+      "summary": "Repository prompt plugin with a live top-bar enable/disable switch; the framework edition ships a neutral placeholder directive.",
+      "summaryZh": "仓库提示词插件，带顶栏实时开关；框架版附带中性占位指令。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6509,24 +6365,21 @@
       "slug": "dsh-phocinae",
       "npm": "dsh-phocinae",
       "displayName": "Phocinae",
-      "displayNameZh": null,
+      "displayNameZh": "Phocinae 决策层",
       "url": "https://perrylink.github.io/plugins/dsh-phocinae/",
       "repo": "https://github.com/Phocinae/dsh-phocinae",
       "categories": [
         "integration"
       ],
       "locale": "en",
-      "version": "0.2.2",
-      "versionSource": "package.json",
+      "version": "0.2.5",
+      "versionSource": "npm-snapshot",
       "license": "Apache-2.0",
-      "licenseSource": "package.json",
-      "engines": {
-        "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0"
-      },
+      "licenseSource": "npm-snapshot",
+      "engines": null,
       "summary": "Local non-generative decision layer for DeepSeek Harness: phocinae_ask / phocinae_gate tools plus a fail-closed approval gate",
-      "summaryZh": null,
-      "hasTranslationPair": true,
+      "summaryZh": "本地的非生成式决策层：phocinae_ask / phocinae_gate 两个工具，外加一个失效即拒的审批闸门。",
+      "hasTranslationPair": false,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -6543,16 +6396,16 @@
       ],
       "locale": "en",
       "version": "0.1.3",
-      "versionSource": "npm",
+      "versionSource": "package.json",
       "license": "Apache-2.0",
-      "licenseSource": "npm",
+      "licenseSource": "package.json",
       "engines": {
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
-        "node": "^22.19.0 || >=24.0.0"
+        "node": "^22.19.0 || >=24.0.0",
+        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "The session's inbound phone (WeChat bridge) attachment inbox: list the attachments this conversation actually received and adopt one into the workspace on demand.",
       "summaryZh": "会话的手机（微信桥）入站附件收件箱：列出本会话实际收到的附件，并按需采纳到工作区。",
-      "hasTranslationPair": false,
+      "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -6567,12 +6420,13 @@
         "dev"
       ],
       "locale": null,
-      "version": "0.6.3",
+      "version": "0.7.4",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
-        "node": "^22.19.0 || >=24.0.0"
+        "node": "^22.19.0 || >=24.0.0",
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Zero-dependency static + sandbox smoke detector for DeepSeek Harness plugins: package-structure gates (R), cordis contract scans (K), keyless-headless sandbox smoke (D), and ecosystem-listing checks (CC).",
       "summaryZh": "DeepSeek Harness 插件零依赖检测器：包结构静态检查（R）、cordis 契约扫描（K）、无键无头沙箱冒烟（D）与生态清单校验（CC）四层。",
@@ -6584,22 +6438,23 @@
       "slug": "dsh-plugin-guide",
       "npm": "dsh-plugin-guide",
       "displayName": "Plugin Guide",
-      "displayNameZh": null,
+      "displayNameZh": "插件开发指南",
       "url": "https://perrylink.github.io/plugins/dsh-plugin-guide/",
       "repo": "https://github.com/PerryLink/dsh-plugin-guide",
       "categories": [
         "knowledge"
       ],
       "locale": null,
-      "version": "0.3.26",
+      "version": "0.3.39",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
-        "node": "^22.19.0 || >=24.0.0"
+        "node": "^22.19.0 || >=24.0.0",
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "The DSH plugin development guide as an installable skill: packaging, contracts, checks, and a pack verifier for builds.",
-      "summaryZh": null,
+      "summaryZh": "把 DSH 插件开发指南做成可安装技能：打包、契约、检查，以及构建用的包校验器。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6615,12 +6470,13 @@
         "dev"
       ],
       "locale": null,
-      "version": "0.1.16",
+      "version": "0.1.20",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
-        "node": "^22.19.0 || >=24.0.0"
+        "node": "^22.19.0 || >=24.0.0",
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Shared zero-runtime-dependency toolkit for PerryLink DSH plugins: a pluggable Provider registry seam, fail-closed approval and adaptive session-event gates, mechanical verify scripts, shared sanitize/pricing/judge modules, and a new-plugin skeleton.",
       "summaryZh": "PerryLink DSH 插件共享零运行时依赖工具包：可插拔 Provider 注册表接缝、失效即拒的审批门与自适应会话事件门、机械校验脚本、共享的脱敏/计价/裁决模块，以及新插件骨架。",
@@ -6632,7 +6488,7 @@
       "slug": "dsh-plugin-upgrade",
       "npm": "dsh-plugin-upgrade",
       "displayName": "Plugin Upgrade",
-      "displayNameZh": null,
+      "displayNameZh": "插件升级技能",
       "url": "https://perrylink.github.io/plugins/dsh-plugin-upgrade/",
       "repo": "https://github.com/PerryLink/dsh-plugin-upgrade",
       "categories": [
@@ -6640,12 +6496,13 @@
         "knowledge"
       ],
       "locale": null,
-      "version": "2.0.7",
+      "version": "2.1.1",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
-        "node": "^22.19.0 || >=24.0.0"
+        "node": "^22.19.0 || >=24.0.0",
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Plugin-author upgrade skill for DeepSeek Harness, new-generation single package: one corridor index reads the caller peer band and routes it to the matching closed corridor card (dsh 0.1.3-alpha.1 -> 0.1.5-rc.1 and 0.1.5-rc.2 -> 0.1.6-alpha.2), with a zero-dependency seam scanner shipped as a bundle skill and an npx CLI.",
       "summaryZh": "面向 DeepSeek Harness 插件作者的新一代单包升级技能：一份走廊索引读取调用方 peer 区间并路由到对应已封版升级卡片（dsh 0.1.3-alpha.1 → 0.1.5-rc.1 与 0.1.5-rc.2 → 0.1.6-alpha.2），零依赖接缝扫描器以 bundle 技能与 npx CLI 两种形态提供。",
@@ -6657,14 +6514,14 @@
       "slug": "dsh-reach",
       "npm": "dsh-reach",
       "displayName": "Reach",
-      "displayNameZh": null,
+      "displayNameZh": "多渠道审批桥",
       "url": "https://perrylink.github.io/plugins/dsh-reach/",
       "repo": "https://github.com/PerryLink/dsh-reach",
       "categories": [
         "integration"
       ],
       "locale": null,
-      "version": "0.1.17",
+      "version": "0.1.23",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6673,7 +6530,7 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Multi-channel decision and remote-control bridge for DeepSeek Harness: approval/question cards from any workspace mirrored to IM chat (WeChat iLink, Telegram, Feishu) with stable #token ids and P{n} numbering, answered from chat through the native pending waterfall — fail-closed sender ownership, session console, and proactive reach_send.",
-      "summaryZh": null,
+      "summaryZh": "多渠道决策与远程控制桥：任何工作区的审批卡与提问卡镜像到 IM（微信 iLink、Telegram、飞书），用稳定的 #token 标识与 P{n} 编号，在聊天里经原生 pending 瀑布作答；发送者归属失败即拒，另带会话控制台与主动 reach_send。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6682,14 +6539,14 @@
       "slug": "dsh-research-report",
       "npm": "dsh-research-report",
       "displayName": "Research Report",
-      "displayNameZh": null,
+      "displayNameZh": "研究报告",
       "url": "https://perrylink.github.io/plugins/dsh-research-report/",
       "repo": "https://github.com/PerryLink/dsh-research-report",
       "categories": [
         "knowledge"
       ],
       "locale": null,
-      "version": "0.3.21",
+      "version": "0.3.30",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6698,34 +6555,8 @@
         "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Research reports with integrity: evidence-linked reports whose content hash seals the directory of sources.",
-      "summaryZh": null,
+      "summaryZh": "带完整性的研究报告：报告与证据一一关联，内容哈希封住来源目录。",
       "hasTranslationPair": true,
-      "catalogAliases": [],
-      "npmNameConflict": null
-    },
-    {
-      "slug": "dsh-safety-ledger-check",
-      "npm": "dsh-safety-ledger-check",
-      "displayName": "Safety Ledger Check",
-      "displayNameZh": "施工安全资格台账核对",
-      "url": "https://perrylink.github.io/plugins/dsh-safety-ledger-check/",
-      "repo": "https://github.com/PerryLink/dsh-safety-ledger-check",
-      "categories": [
-        "construction",
-        "safety"
-      ],
-      "locale": "zh",
-      "version": "0.1.0",
-      "versionSource": "npm",
-      "license": "Apache-2.0",
-      "licenseSource": "npm",
-      "engines": {
-        "dsh": ">=0.2.1-0 <0.3.0",
-        "node": "^22.19.0 || >=24.0.0"
-      },
-      "summary": "Site safety-qualification ledger: training hours, the four record elements, and special-operation certificate validity against the dates the person worked.",
-      "summaryZh": "施工安全资格台账核对：培训学时、四个记录要素、特种作业证有效期与作业时间匹配。",
-      "hasTranslationPair": false,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -6733,23 +6564,23 @@
       "slug": "dsh-score",
       "npm": "dsh-score",
       "displayName": "Score",
-      "displayNameZh": null,
+      "displayNameZh": "插件评分",
       "url": "https://perrylink.github.io/plugins/dsh-score/",
       "repo": "https://github.com/PerryLink/dsh-score",
       "categories": [
         "dev"
       ],
       "locale": null,
-      "version": "0.2.19",
+      "version": "0.2.26",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Plugin quality scoring for the DSH ecosystem: evaluate plugins against checks and produce evidence-backed compliance reports.",
-      "summaryZh": null,
+      "summaryZh": "DSH 生态的插件质量评分：按检查项评估插件并产出有证据支撑的合规报告。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6758,7 +6589,7 @@
       "slug": "dsh-session-pin",
       "npm": "dsh-session-pin",
       "displayName": "Session Pin",
-      "displayNameZh": null,
+      "displayNameZh": "会话置顶",
       "url": "https://perrylink.github.io/plugins/dsh-session-pin/",
       "repo": "https://github.com/PerryLink/dsh-session-pin",
       "categories": [
@@ -6774,7 +6605,7 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "RETIRED 2026-10-05 — the official DeepSeek Harness now ships session pinning natively (row menu and hover button in dsh-client-ui-workspace). Use the built-in session pin; this entry stays listed only so the name resolves.",
-      "summaryZh": null,
+      "summaryZh": "已于 2026-10-05 退役 —— 官方 DeepSeek Harness 已原生支持会话置顶（dsh-client-ui-workspace 的行菜单与悬停按钮）。请用内置置顶；本条目仅为让包名可解析而保留。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6783,14 +6614,14 @@
       "slug": "dsh-session-sync",
       "npm": "dsh-session-sync",
       "displayName": "Session Sync",
-      "displayNameZh": null,
+      "displayNameZh": "会话同步",
       "url": "https://perrylink.github.io/plugins/dsh-session-sync/",
       "repo": "https://github.com/PerryLink/dsh-session-sync",
       "categories": [
         "session"
       ],
       "locale": null,
-      "version": "0.2.23",
+      "version": "0.2.31",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6799,7 +6630,7 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Session synchronization for DeepSeek Harness: push/pull session logs to remote storage with configurable auto push/pull.",
-      "summaryZh": null,
+      "summaryZh": "会话日志同步：把会话记录推/拉到远端存储，自动推拉可配置。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6808,14 +6639,14 @@
       "slug": "dsh-skill-pack-security",
       "npm": "@perrylink/dsh-skill-pack-security-provider",
       "displayName": "Skill Pack Security Provider",
-      "displayNameZh": null,
+      "displayNameZh": "安全技能包",
       "url": "https://perrylink.github.io/plugins/dsh-skill-pack-security/",
       "repo": "https://github.com/PerryLink/dsh-skill-pack-security",
       "categories": [
         "agent"
       ],
       "locale": null,
-      "version": "2.2.22",
+      "version": "2.2.26",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
@@ -6824,34 +6655,8 @@
         "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
       },
       "summary": "Security skill-pack provider: pre-packaged security review skills with a risk card; ships both host and client faces.",
-      "summaryZh": null,
+      "summaryZh": "安全技能包 provider：预置带风险卡的安全评审技能，同时提供宿主侧与客户端侧两个面。",
       "hasTranslationPair": true,
-      "catalogAliases": [],
-      "npmNameConflict": null
-    },
-    {
-      "slug": "dsh-table-ingest",
-      "npm": "dsh-table-ingest",
-      "displayName": "Table Ingest",
-      "displayNameZh": "表格摄取",
-      "url": "https://perrylink.github.io/plugins/dsh-table-ingest/",
-      "repo": "https://github.com/PerryLink/dsh-table-ingest",
-      "categories": [
-        "tools",
-        "dev"
-      ],
-      "locale": "zh",
-      "version": "0.2.0",
-      "versionSource": "npm",
-      "license": "Apache-2.0",
-      "licenseSource": "npm",
-      "engines": {
-        "dsh": ">=0.2.1-0 <0.3.0",
-        "node": "^22.19.0 || >=24.0.0"
-      },
-      "summary": "Convert .docx/.xlsx/.xlsm/.csv/.tsv tables into the table JSON the rule checkers consume, and say when it could not rather than guessing.",
-      "summaryZh": "把 .docx/.xlsx/.xlsm/.csv/.tsv 中的表格转成规则核查器可读的 table JSON；识别不了时明确报错，不猜。",
-      "hasTranslationPair": false,
       "catalogAliases": [],
       "npmNameConflict": null
     },
@@ -6859,23 +6664,23 @@
       "slug": "dsh-talk",
       "npm": "dsh-talk",
       "displayName": "Talk",
-      "displayNameZh": null,
+      "displayNameZh": "语音对话",
       "url": "https://perrylink.github.io/plugins/dsh-talk/",
       "repo": "https://github.com/PerryLink/dsh-talk",
       "categories": [
         "tools"
       ],
       "locale": null,
-      "version": "0.3.19",
+      "version": "0.3.26",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Voice for DeepSeek Harness: text-to-speech and speech-to-text with mute and speak-to-chat controls.",
-      "summaryZh": null,
+      "summaryZh": "给 DeepSeek Harness 加语音：文字转语音与语音转文字，含静音与\"说完即发\"开关。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6906,50 +6711,26 @@
       "npmNameConflict": null
     },
     {
-      "slug": "dsh-tender-requirements",
-      "npm": "dsh-tender-requirements",
-      "displayName": "Tender Requirements",
-      "displayNameZh": "招标要求提取",
-      "url": "https://perrylink.github.io/plugins/dsh-tender-requirements/",
-      "repo": "https://github.com/PerryLink/dsh-tender-requirements",
-      "categories": [
-        "tender"
-      ],
-      "locale": "zh",
-      "version": "0.2.0",
-      "versionSource": "npm",
-      "license": "Apache-2.0",
-      "licenseSource": "npm",
-      "engines": {
-        "dsh": ">=0.2.1-0 <0.3.0",
-        "node": "^22.19.0 || >=24.0.0"
-      },
-      "summary": "Extract deadlines, deposit, validity, ceiling, bid composition and copy counts from a tender document; items that were not found are printed too, rather than silently omitted.",
-      "summaryZh": "从招标文件提取截止时间、保证金、有效期、最高限价、投标文件组成与正副本份数；未找到的项也逐条列出。",
-      "hasTranslationPair": false,
-      "catalogAliases": [],
-      "npmNameConflict": null
-    },
-    {
       "slug": "dsh-test-drive",
       "npm": "dsh-test-drive",
       "displayName": "Test Drive",
-      "displayNameZh": null,
+      "displayNameZh": "装机试驾",
       "url": "https://perrylink.github.io/plugins/dsh-test-drive/",
       "repo": "https://github.com/PerryLink/dsh-test-drive",
       "categories": [
         "dev"
       ],
       "locale": null,
-      "version": "0.3.14",
+      "version": "0.3.24",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
-        "node": "^22.19.0 || >=24.0.0"
+        "node": "^22.19.0 || >=24.0.0",
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Test Drive: run plugins in a disposable sandbox environment (temporary DSH_HOME) and score the results as JSON/Markdown.",
-      "summaryZh": null,
+      "summaryZh": "在一次性沙箱环境（临时 DSH_HOME）里跑插件，并以 JSON/Markdown 给出结果。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6958,23 +6739,23 @@
       "slug": "dsh-ticktick",
       "npm": "@perrylink/dsh-ticktick",
       "displayName": "TickTick",
-      "displayNameZh": null,
+      "displayNameZh": "滴答清单桥",
       "url": "https://perrylink.github.io/plugins/dsh-ticktick/",
       "repo": "https://github.com/PerryLink/dsh-ticktick",
       "categories": [
         "integration"
       ],
       "locale": null,
-      "version": "0.1.15",
+      "version": "0.1.22",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.7-alpha.1 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "TickTick (Dida365) task bridge for DeepSeek Harness: a session-header task panel (list filter, quick add, complete, delete, due dates, drag reorder), eleven curated ticktick_* tools, and a plugin settings card over the official TickTick MCP endpoint.",
-      "summaryZh": null,
+      "summaryZh": "TickTick（滴答清单）任务桥：会话顶部任务面板（列表筛选、快速添加、完成、删除、截止日期、拖动排序）、十一个 ticktick_* 工具，以及基于官方 TickTick MCP 端点的插件设置卡。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
@@ -6983,23 +6764,23 @@
       "slug": "dsh-translate",
       "npm": "dsh-translate",
       "displayName": "Translate",
-      "displayNameZh": null,
+      "displayNameZh": "翻译与 JSON 修复",
       "url": "https://perrylink.github.io/plugins/dsh-translate/",
       "repo": "https://github.com/PerryLink/dsh-translate",
       "categories": [
         "tools"
       ],
       "locale": null,
-      "version": "0.2.20",
+      "version": "0.2.24",
       "versionSource": "package.json",
       "license": "Apache-2.0",
       "licenseSource": "package.json",
       "engines": {
         "node": "^22.19.0 || >=24.0.0",
-        "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+        "dsh": ">=0.2.1-0 <0.3.0"
       },
       "summary": "Translate text and files inside DeepSeek Harness with quality checks; also fixes broken JSON output from models.",
-      "summaryZh": null,
+      "summaryZh": "在 DeepSeek Harness 内翻译文本与文件并做质量检查；同时修复模型输出的破损 JSON。",
       "hasTranslationPair": true,
       "catalogAliases": [],
       "npmNameConflict": null
