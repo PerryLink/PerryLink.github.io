@@ -268,6 +268,20 @@ footer.site p{margin:.4rem 0}
 <tr><td>作业规程与 FMEA／控制计划一致性核对</td><td><a href="../../../checkers/dsh-sop-sync-check/">规程同步核对</a><br><code>dsh-sop-sync-check</code></td><td>IATF 16949／汽车行业核心工具手册</td><td><code>dsh plugin --profile default add dsh-sop-sync-check</code></td></tr>
 </tbody></table>
 
+<h2 id="tools">另有 9 个工具与适配器</h2>
+<p>这 9 个不以「一份规则包 = 一份材料」的形态工作：有的把文件转成可核对的表格，有的从招标文件里抽取要点，有的按本机构参数核算工资。它们不按上面的职业分组，也不计入 53 个核查插件。</p>
+<ul>
+<li><a href="https://github.com/PerryLink/dsh-excel-reconcile">dsh-excel-reconcile</a> —— 两份 Excel/CSV 按主键逐字段对账，输出差异工作簿。</li>
+<li><a href="https://github.com/PerryLink/dsh-table-ingest">dsh-table-ingest</a> —— 把 docx / xlsx / csv 转成核对器能读的表格，并报告识别出的表头。</li>
+<li><a href="https://github.com/PerryLink/dsh-invoice-ledger">dsh-invoice-ledger</a> —— 发票台账：重复报销、价税勾稽、抬头、日期、模板占位符。</li>
+<li><a href="https://github.com/PerryLink/dsh-payroll-audit">dsh-payroll-audit</a> —— 按已核实的社保、公积金、个税参数核对工资表，逐条给出差异。</li>
+<li><a href="https://github.com/PerryLink/dsh-bid-health-check">dsh-bid-health-check</a> —— 投标响应健康度：哪些要求看起来有响应、哪些没有、哪些定位不到。</li>
+<li><a href="https://github.com/PerryLink/dsh-tender-requirements">dsh-tender-requirements</a> —— 从招标文件抽取时间、保证金、投标文件组成与份数。</li>
+<li><a href="https://github.com/PerryLink/dsh-construction-doc-check">dsh-construction-doc-check</a> —— 扫施工项目资料目录，报告缺哪些规定资料、哪些像过期版本。</li>
+<li><a href="https://github.com/PerryLink/dsh-canteen-retention-check">dsh-canteen-retention-check</a> —— 食堂留样台账：四要素、留样量、冷藏时长、模板占位符。</li>
+<li><a href="https://github.com/PerryLink/dsh-safety-ledger-check">dsh-safety-ledger-check</a> —— 施工安全资格台账：三级教育、培训档案、特种作业证书、有效期。</li>
+</ul>
+
 <h2 id="faq">常见问题</h2>
 <h3>一份材料同时落进两个插件怎么办？</h3>
 <p>两个都跑。每个插件的规则库只覆盖它自己声明的范围，范围之间既不重叠也不互相替代。把两份结果合起来看，才是对这一份材料的一次完整复核。</p>
