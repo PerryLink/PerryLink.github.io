@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PerryLink DSH 插件家族 —— 53 个核查插件与 46 个通用插件</title>
+<title>PerryLink DSH 插件家族 —— 53 个核查插件、29 个领域工具与 5 个场景包</title>
 <meta name="description" content="DeepSeek Harness 的两个插件族：53 个中文核查插件，按材料对照它自己声明的法规与标准逐条列出差异；46 个通用插件。含版本、许可、规则条数与安装命令。">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/zh/">
@@ -475,6 +475,16 @@ footer.site p{margin:.4rem 0}
 <h1>PerryLink DSH 插件家族</h1>
 <p class="lede">53 个核查插件与 46 个通用插件。本页说明这一族是什么、共同约定是什么；具体清单在下面两个索引里。</p>
 
+<section id="update-2026-11-03">
+<h2>2026-11-03 更新</h2>
+<ul>
+<li><strong>6 个包转为正式版（GA）</strong>：<code>dsh-einvoice 0.2.0</code>、<code>dsh-bankrec 0.1.0</code>、<code>dsh-docx-redline 0.1.0</code>，以及 <code>dsh-legal-clause</code>、<code>dsh-ap-three-way</code>、<code>dsh-qms-capa</code> 的 <code>0.1.0</code>。工具名与命令行表面进入兼容承诺。<a href="../dsh-plugins/GA-READINESS.md">GA 清单</a></li>
+<li><strong>29 个领域工具全部达到首跑标准</strong>（样例随包、一句话话术、权限四行、人话错误、真实截图），PS1 均分 10/10。<a href="../dsh-plugins/PACKAGE-STANDARD.md">标准</a> · <a href="../dsh-plugins/market.html">按任务浏览</a></li>
+<li><strong>5 个场景包端到端可跑</strong>：财务（收票→查重→三单→对账→归档）、合同、采购、HR、建筑。<a href="../dsh-plugins/packs/finance.html">财务</a> · <a href="../dsh-plugins/packs/contract.html">合同</a> · <a href="../dsh-plugins/packs/procurement.html">采购</a> · <a href="../dsh-plugins/packs/hr.html">HR</a> · <a href="../dsh-plugins/packs/construction.html">建筑</a></li>
+<li><strong>任务式市场索引</strong>：134 条、全部有中文名，format&nbsp;1 <a href="../dsh-plugins/market/index.json">index.json</a>；检索实验 16 条日常提问命中 14 条。<a href="../dsh-plugins/EXPERIMENT-F1-F2.md">实验记录</a></li>
+</ul>
+<p>家族合计：137 行 / 126 active —— 53 个核查插件、29 个领域工具、2 个套件、39 个主线插件、10 个仅收录、3 个基础设施、3 个已退役。</p>
+</section>
 <h2 id="what">这一族是什么</h2>
 <p><strong>核查插件（53 个）。</strong>输入一份材料——危险化学品台账、病案首页、投标文件、FMEA 分析表、信用证单据——插件把它与自身声明的依据（行政法规、国家标准、部委文件或本机构口径）逐条对照，输出一份差异清单：每一处差异都带上它对照的规则、依据的文件与条款、以及差异在材料中的位置。规则库以数据形式随包发布，替换规则文件即可切换规则集，不需要改动插件代码。</p>
 <p>这一族的共同约定是：<strong>只列出差异，不作裁定。</strong>不判定合规、不认定责任、不替代审核人。所有插件都不修改传入的材料，也不联网核对。</p>

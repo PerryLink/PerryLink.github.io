@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PerryLink DSH Plugin Family — 53 compliance checkers and 46 plugins for DeepSeek Harness</title>
-<meta name="description" content="Two plugin families for DeepSeek Harness: 53 Chinese-canonical compliance checkers that compare a document against the regulations and standards it cites, and 46 general-purpose plugins. Versions, licences, rule counts and install commands.">
+<title>PerryLink DSH Plugin Family — 53 compliance checkers, 29 domain tools and 5 scenario packs for DeepSeek Harness</title>
+<meta name="description" content="Three layers for DeepSeek Harness: 53 Chinese-canonical compliance checkers, 29 domain tools with runnable quickstarts (6 now GA), and 5 end-to-end scenario packs. A task-first plugin index and 134 Chinese-titled entries are served alongside.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/">
 <link rel="alternate" hreflang="en" href="https://perrylink.github.io/">
@@ -475,6 +475,17 @@ footer.site p{margin:.4rem 0}
 <h1>PerryLink DSH Plugin Family</h1>
 <p class="lede">53 compliance checkers and 46 general-purpose plugins for DeepSeek Harness. This page is the orientation; the two indexes below are where the actual listings are.</p>
 
+<section id="update-2026-11-03" class="update">
+<h2>What changed on 2026-11-03</h2>
+<ul>
+<li><strong>Six packages reached GA.</strong> <code>dsh-einvoice 0.2.0</code>, <code>dsh-bankrec 0.1.0</code> and <code>dsh-docx-redline 0.1.0</code> shipped first, followed by <code>dsh-legal-clause</code>, <code>dsh-ap-three-way</code> and <code>dsh-qms-capa</code> at <code>0.1.0</code>. Their tool names and CLI surface are now covered by a compatibility promise. <a href="./dsh-plugins/GA-READINESS.md">GA checklist</a></li>
+<li><strong>29 domain tools, all with a runnable first run.</strong> Every one scores 10/10 on the non-developer packaging standard: a sample inside the tarball, a one-line prompt, a four-line permission block, human-readable errors and a real capture. <a href="./dsh-plugins/PACKAGE-STANDARD.md">Standard</a> · <a href="./dsh-plugins/market.html">Browse by task</a></li>
+<li><strong>Five scenario packs</strong> run end to end on synthetic data: finance (invoice → dedupe → three-way match → bank rec → archive), contract, procurement, HR and construction. <a href="./dsh-plugins/packs/finance.html">Finance</a> · <a href="./dsh-plugins/packs/contract.html">Contract</a> · <a href="./dsh-plugins/packs/procurement.html">Procurement</a> · <a href="./dsh-plugins/packs/hr.html">HR</a> · <a href="./dsh-plugins/packs/construction.html">Construction</a></li>
+<li><strong>A task-first market index.</strong> 134 entries, all with Chinese titles, served as format&nbsp;1 <a href="./dsh-plugins/market/index.json">index.json</a> for the DSH plugin market. A retrieval experiment answers 14 of 16 everyday questions in the top three. <a href="./dsh-plugins/EXPERIMENT-F1-F2.md">Experiment notes</a></li>
+<li><strong>Two experiments, both scripted.</strong> <code>f1-retrieval</code> measures whether an everyday question finds the right plugin; <code>first-run-smoke</code> packs a tarball, unpacks it and runs the bundled sample the way a new user would.</li>
+</ul>
+<p class="lede">Family totals: 137 rows, 126 active — 53 compliance checkers, 29 domain tools, 2 suites, 39 mainline plugins, 10 catalog-only entries, 3 infrastructure rows and 3 retired rows.</p>
+</section>
 <h2 id="what">What this family is</h2>
 <p>Two plugin families that share an author and a contract, published to npm and developed in the open on GitHub.</p>
 <p><strong>The compliance checkers</strong> (53 plugins) take a document — a hazardous-chemical register, a medical record front sheet, a bid response, a FMEA worksheet, a letter of credit — and compare it, item by item, against the regulations, national standards and ministry documents the plugin declares as its basis. Each plugin ships a versioned rule pack as data, not code, so the rule set can be replaced without touching the plugin. The output is a list of differences with positions and the clause each difference was checked against. The family's standing rule is that the plugins <em>list differences; they do not adjudicate</em> — no compliance verdicts, no liability findings, no substitutes for a reviewer.</p>
