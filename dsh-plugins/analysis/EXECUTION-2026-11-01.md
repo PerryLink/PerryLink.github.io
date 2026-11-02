@@ -1,3 +1,5 @@
+> **Superseded 2026-11-02.** Historical record: its 107/15/3, catalog 99, kit 92 and “0 screenshots” figures are stale; see [ROSTER.md](../../ROSTER.md) for the verified current numbers.
+
 # P0–P2 execution record — 2026-11-01
 
 This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-2026-11-01.md](DSH-PLUGIN-PORTFOLIO-ANALYSIS-2026-11-01.md). It records what shipped, not a new proposal.
@@ -73,7 +75,8 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 
 ### Roster closure
 
-- [ROSTER.md](../../ROSTER.md) defines the exact three surfaces: 125 family rows (107/15/3), 92 `dsh-kit` install specs (39 default + 53 opt-in), and 126 catalog records (122 shared + 3 family-only infrastructure + 4 catalog-only).
+- [ROSTER.md](../../ROSTER.md) defines the exact three surfaces: 125 family rows (107/15/3), 96 `dsh-kit` install specs (43 default + 53 opt-in), and 126 catalog records (122 shared + 3 family-only infrastructure + 4 catalog-only).
+- `dsh-kit/family.txt` adds a separate 117-package family installer (39 + 53 + 10 + 15); it excludes the two domain suites, 3 retired packages and 3 support repositories.
 - `family.json` now carries `installScope`; the generated taxonomy page has an install-scope filter and 125 per-package pages.
 
 ### Mirrors
@@ -98,3 +101,16 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 - The project Pages site hit a stale `b412d6b` deployment lock and was removed. The same URL is now served from the user Pages repository (`PerryLink/perrylink.github.io/dsh-plugins/`), so no URL change is needed.
 - `https://perrylink.github.io/dsh-plugins/`, `taxonomy.html`, `packages/dsh-bankrec.html` and `family/dsh-einvoice.html` all return 200.
 - The 125 family pages, 17 domain package pages and the taxonomy filter are live.
+
+### Legacy mainline documentation sweep
+
+- 50 remote repositories received a documentation commit: 44 publishable packages + 5 support repositories + the third-party `dsh-wechat` fork.
+- 4 local-only support directories (`dsh-handbook`, `dsh-plan-tracker`, `dsh-ticktick-handoff`, `dsh-wechat-handoff`) also received local docs; they have no standalone remote repository.
+- `dsh-wechat` is a third-party bridge and was deliberately excluded.
+- Result on local disk: **54/54** have five READMEs, `PRIVACY`, `icon`, `SECURITY`, `CONTRIBUTING`, `CHANGELOG`, `screenshots.json`, flow SVG and GIF.
+- `dsh-wechat` is a third-party fork; its docs explicitly say so and do not claim PerryLink ownership or a separate npm release.
+- The six legacy packages that previously had generated cards/GIFs were replaced with real command output on 2026-11-01; each `screenshots.json` names the command, pass count and whether it was a full or selected suite. Generated support/local-only cards remain for non-package directories. The four support dirs use short localized landing pages, not full translations.
+
+### External directory (1024Store)
+
+- Submitted `dsh-ghg` as one catalog entry to `imsai-sh/awesome-deepseek-harness-plugins`; static review passed and PR #781 merged. This is an additional domain entry beyond the earlier checker submissions.
