@@ -28,20 +28,30 @@ h2 small{color:var(--muted);font-weight:400;font-size:13px}
 .tags span{display:inline-block;background:#1f2937;color:#c9d1d9;border-radius:6px;padding:1px 8px;font-size:12px;margin:2px 4px 0 0}
 .pill{font-size:11px;border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle}
 .pill.frozen{background:#3d2b1f;color:#f0b72f}
+.pill.pack{background:#1a7f37;color:#fff;margin-left:8px}
+.card.pack{border-color:#2ea043;background:linear-gradient(135deg,#12261a,#161b22 60%)}
+.card.pack:hover{border-color:#3fb950}
+.card.pack .meta{color:#9fd6a8}
 footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
 <header>
   <h1>DSH 插件市场</h1>
-  <p class="sub">123 个插件，按<strong>你要做的事</strong>分组。搜索支持中文、英文包名与同义词。</p>
+  <p class="sub">123 个插件 + 1 个场景包，按<strong>你要做的事</strong>分组。搜索支持中文、英文包名与同义词。</p>
   <input id="q" type="search" placeholder="试试：发票、对账、报关、合同、考勤…">
 </header>
 <nav><a href="#财务报销">财务报销 7</a><a href="#人力资源">人力资源 2</a><a href="#采购供应链">采购供应链 11</a><a href="#法务合同">法务合同 6</a><a href="#质量生产">质量生产 27</a><a href="#关务物流">关务物流 8</a><a href="#行政办公">行政办公 13</a><a href="#教育培训">教育培训 5</a><a href="#医疗健康">医疗健康 3</a><a href="#零售电商">零售电商 2</a><a href="#开发者工具">开发者工具 39</a></nav>
 <main>
 <section id="财务报销">
-  <h2>财务报销 <small>发票、对账、报销、成本 · 7</small></h2>
-  <div class="grid"><a class="card" href="packages/dsh-einvoice.html" data-search="发票查重 china e-invoice (file-level) 电子发票 发票查重 ofd 发票归档 去重 会计 财务共享专员">
+  <h2>财务报销 <small>发票、对账、报销、成本 · 7 + 1 个场景包</small></h2>
+  <div class="grid"><a class="card pack" href="packs/finance.html" data-search="财务包：发票到归档 finance pack — invoice to archive 收票 → 查重 → 三单匹配 → 银行对账 → 归档 端到端场景 4 个插件 合成样例可跑 会计 · 应付 · 出纳">
+  <h3>财务包：发票到归档<span class="pill pack">场景包</span></h3>
+  <p class="en">Finance pack — invoice to archive</p>
+  <p class="meta">收票 → 查重 → 三单匹配 → 银行对账 → 归档 <span class="roles">会计 · 应付 · 出纳</span></p>
+  <p class="tags"><span>端到端场景</span><span>4 个插件</span><span>合成样例可跑</span></p>
+</a>
+<a class="card" href="packages/dsh-einvoice.html" data-search="发票查重 china e-invoice (file-level) 电子发票 发票查重 ofd 发票归档 去重 会计 财务共享专员">
   <h3>发票查重</h3>
   <p class="en">China e-invoice (file-level)</p>
   <p class="meta"><code>0.2.0-alpha.12</code> <span class="roles">会计 · 财务共享专员</span></p>
