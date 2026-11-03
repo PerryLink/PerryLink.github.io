@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PerryLink DSH Plugin Family — 53 compliance checkers, 29 domain tools and 5 scenario packs for DeepSeek Harness</title>
-<meta name="description" content="Three layers for DeepSeek Harness: 53 Chinese-canonical compliance checkers, 29 domain tools with runnable quickstarts (9 now GA), and 5 end-to-end scenario packs. A task-first plugin index and 134 Chinese-titled entries are served alongside.">
+<meta name="description" content="Three layers for DeepSeek Harness: 53 Chinese-canonical compliance checkers, 29 domain tools with runnable quickstarts, all now GA, and 5 end-to-end scenario packs. A task-first plugin index and 134 Chinese-titled entries are served alongside.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://perrylink.github.io/">
 <link rel="alternate" hreflang="en" href="https://perrylink.github.io/">
@@ -478,12 +478,14 @@ footer.site p{margin:.4rem 0}
 <section id="update-2026-11-03" class="update">
 <h2>What changed on 2026-11-03</h2>
 <ul>
-<li><strong>Nine packages have reached GA.</strong> <code>dsh-einvoice 0.2.0</code>, <code>dsh-bankrec 0.1.0</code> and <code>dsh-docx-redline 0.1.0</code> shipped first, followed by <code>dsh-legal-clause</code>, <code>dsh-ap-three-way</code>, <code>dsh-qms-capa</code>, <code>dsh-freight-audit</code>, <code>dsh-travel-recon</code> and <code>dsh-ghg</code> at <code>0.1.0</code>. Their tool names and CLI surface are now covered by a compatibility promise. <a href="./dsh-plugins/GA-READINESS.md">GA checklist</a></li>
+<li><strong>All 29 domain tools are GA.</strong> <code>dsh-einvoice 0.2.0</code>, <code>dsh-bankrec 0.1.0</code> and <code>dsh-docx-redline 0.1.0</code> shipped first, followed by <code>dsh-legal-clause</code>, <code>dsh-ap-three-way</code>, <code>dsh-qms-capa</code>, <code>dsh-freight-audit</code>, <code>dsh-travel-recon</code> and <code>dsh-ghg</code> at <code>0.1.0</code>. Their tool names and CLI surface are now covered by a compatibility promise. <a href="./dsh-plugins/GA-READINESS.md">GA checklist</a></li>
 <li><strong>29 domain tools, all with a runnable first run.</strong> Every one scores 10/10 on the non-developer packaging standard: a sample inside the tarball, a one-line prompt, a four-line permission block, human-readable errors and a real capture. <a href="./dsh-plugins/PACKAGE-STANDARD.md">Standard</a> · <a href="./dsh-plugins/market.html">Browse by task</a></li>
 <li><strong>Five scenario packs</strong> run end to end on synthetic data: finance (invoice → dedupe → three-way match → bank rec → archive), contract, procurement, HR and construction. <a href="./dsh-plugins/packs/finance.html">Finance</a> · <a href="./dsh-plugins/packs/contract.html">Contract</a> · <a href="./dsh-plugins/packs/procurement.html">Procurement</a> · <a href="./dsh-plugins/packs/hr.html">HR</a> · <a href="./dsh-plugins/packs/construction.html">Construction</a></li>
 <li><strong>A task-first market index.</strong> 136 entries, all with Chinese titles, served as format&nbsp;1 <a href="./dsh-plugins/market/index.json">index.json</a> for the DSH plugin market. A retrieval experiment answers 14 of 16 everyday questions in the top three. <a href="./dsh-plugins/EXPERIMENT-F1-F2.md">Experiment notes</a></li>
 <li><strong>Printer-ready session sheet.</strong> <a href="./dsh-plugins/f2-session-sheet.html">F2 observation form</a> for the five-person first-run test, and every one of the 62 compliance checkers now ships a runnable first-run sample.</li>
+<li><strong>F2 rehearsal passes 5/5.</strong> The five role cards (finance, legal, HR, procurement, admin) each run end to end in seconds; <code>scripts/f2-rehearsal.mjs</code> records the timing. <a href="./dsh-plugins/f2-session-sheet.html">Human session sheet</a></li>
 <li><strong>Two experiments, both scripted.</strong> <code>f1-retrieval</code> measures whether an everyday question finds the right plugin; <code>first-run-smoke</code> packs a tarball, unpacks it and runs the bundled sample the way a new user would.</li>
+<li><strong>Published upstream.</strong> The family is introduced in the harness’s <a href="https://github.com/deepseek-ai/deepseek-harness/discussions/11954">Show Your Plugins</a> discussion, and the five host-side gaps are filed as <a href="https://github.com/deepseek-ai/deepseek-harness/discussions/11955">a separate idea thread</a>.</li>
 </ul>
 <p class="lede">Family totals: 137 rows, 126 active — 53 compliance checkers, 29 domain tools, 2 suites, 39 mainline plugins, 10 catalog-only entries, 3 infrastructure rows and 3 retired rows.</p>
 </section>
